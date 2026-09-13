@@ -1,0 +1,82 @@
+[
+  {
+    "path": "Mod/About/About.xml",
+    "sha256": "1DA53F1013343CCEB3106D162427273AD45DDC1C016AD572CF53C4F2702F4C1D",
+    "bytes": 4018
+  },
+  {
+    "path": "Mod/About/ModIcon.png",
+    "sha256": "E57828AED13F5D5090BE8A977BCE12EC1A19DDE6109BD9CD4571626EA455AD31",
+    "bytes": 37660
+  },
+  {
+    "path": "Mod/About/Preview.png",
+    "sha256": "FD088CB66DB0BF2BAFB7E64D99180EB93F73CB1FCD15EA44F8739A89A6512724",
+    "bytes": 523196
+  },
+  {
+    "path": "Mod/ATTRIBUTION.md",
+    "sha256": "491A6A6DF23448292199AB9BB6A6B45F8BD0CC1C940F8A66E4FBB521A0BA0390",
+    "bytes": 3937
+  },
+  {
+    "path": "Mod/Defs/BodyDefs.xml",
+    "sha256": "85B346B284FBAAFF32CBAB687048DD796EEC5DBD75D529589B9846C7CA103E0D",
+    "bytes": 6459
+  },
+  {
+    "path": "Mod/Defs/megabee.xml",
+    "sha256": "8E175655AFBBE816EC0F05E2C2A2B522A44A1F25745222607186BD402BED92F0",
+    "bytes": 10019
+  },
+  {
+    "path": "Mod/Defs/ResourceDefs.xml",
+    "sha256": "29536BA39AB85D4692752A2DA5CA1716FCC2D82684BE465716122BDBB1798305",
+    "bytes": 5562
+  },
+  {
+    "path": "Mod/Defs/salveDefs.xml",
+    "sha256": "5051383F36E72740C499BEBF5A3D7ADE76E5C25EACD96B43E85AF891EA772241",
+    "bytes": 1611
+  },
+  {
+    "path": "Mod/Languages/French/DefInjected/BodyDef/Megabees.xml",
+    "sha256": "0C0DCF212BEAB729DB81A358F0BF272C2D138165463B3281DA4368160EDD7BBB",
+    "bytes": 2839
+  },
+  {
+    "path": "Mod/Languages/French/DefInjected/BodyPartDef/Megabees.xml",
+    "sha256": "141612444FE5619CA1CE2198B59B493FEF0EF424E6DE23558D1087F07B7BEC0A",
+    "bytes": 368
+  },
+  {
+    "path": "Mod/Languages/French/DefInjected/PawnKindDef/Megabees.xml",
+    "sha256": "16B8A7352FB673574D5C5B11F50A7C0BBDA25B165D0352F26232C44C62778A7B",
+    "bytes": 351
+  },
+  {
+    "path": "Mod/Languages/French/DefInjected/ThingDef/Megabees.xml",
+    "sha256": "0EFAC563A78A1693FAC0A92511D9C0E56A7E940BA68FBB5644985B2E66B2D277",
+    "bytes": 3568
+  },
+  {
+    "path": "Mod/Textures/Things/Pawn/Animal/Megabee/megabee_east.png",
+    "sha256": "636D4ECA0C55F90849094619237A735D2068B408C1965E230B654098BBBE9D7D",
+    "bytes": 3231
+  },
+  {
+    "path": "Mod/Textures/Things/Pawn/Animal/Megabee/megabee_north.png",
+    "sha256": "8C1E025938D461197D8F34F6CE0D1A66FABFA569F86D897EC68444F9DFC1507C",
+    "bytes": 2777
+  },
+  {
+    "path": "Mod/Textures/Things/Pawn/Animal/Megabee/megabee_south.png",
+    "sha256": "8D464D0C7345AC8EAA846869629A2599943C546C89292C17A5C975AD06C5FD1C",
+    "bytes": 3442
+  },
+  {
+    "path": "Mod/Textures/Things/Pawn/Animal/Megabee/megabeedessi.png",
+    "sha256": "DE033B041272BDFC154A11EFB8FFF3DAA0D97C22C50BD4B33CD57911694F4468",
+    "bytes": 2115
+  }
+]

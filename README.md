@@ -1,4 +1,7 @@
-# Megabees Renew
+# Megabees Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent.
+If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 The megabee, brought forward to RimWorld 1.6.
 
@@ -40,7 +43,7 @@ One line.
   read, and the stat's default is `-1` — outside the range the game uses, so the bee tamed for
   almost nothing instead of sitting at 0.80.
 
-Nothing else needed touching: the rest is valid 1.6 as it stands. No balance value was changed.
+The original balance values are preserved. French translations and presentation assets have been added. Final in-game validation remains pending; see TEST_SCENARIOS.md.
 
 ## Terms
 
@@ -60,3 +63,9 @@ any other of my mods, including publishing a continuation of it. All credit must
 - 1.6 update by nelim. Written with the help of Claude (Anthropic).
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence check and the port in detail.
+
+## Validation
+
+Run `python -m unittest discover -s Tests -v` for the portable XML/resource checks.
+On a Windows RimWorld installation, also run the shared `scripts/Check-DefInjected.ps1`
+with `-TransMod Mod`. See Tests/RESULTS.md and TEST_SCENARIOS.md for scope and pending game checks.

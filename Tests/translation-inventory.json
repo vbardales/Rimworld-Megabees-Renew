@@ -1,0 +1,322 @@
+[
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyPartDef",
+    "defName": "Thorax",
+    "xpath": "label",
+    "key": "Thorax.label",
+    "english": "thorax"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyPartDef",
+    "defName": "MegabeeAbdomen",
+    "xpath": "label",
+    "key": "MegabeeAbdomen.label",
+    "english": "abdomen"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyPartDef",
+    "defName": "Methathorax",
+    "xpath": "label",
+    "key": "Methathorax.label",
+    "english": "metathorax"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyPartDef",
+    "defName": "TrophyBeeStomach",
+    "xpath": "label",
+    "key": "TrophyBeeStomach.label",
+    "english": "Trophylactic Stomach"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyPartDef",
+    "defName": "BeeReproduction",
+    "xpath": "label",
+    "key": "BeeReproduction.label",
+    "english": "Reproductive Tract"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "label",
+    "key": "Megabee.label",
+    "english": "megabee-like"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[1]/customLabel",
+    "key": "Megabee.corePart.parts.left_elytra.customLabel",
+    "english": "left elytra"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[2]/customLabel",
+    "key": "Megabee.corePart.parts.right_elytra.customLabel",
+    "english": "right elytra"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[5]/parts/li[1]/parts/li[2]/customLabel",
+    "key": "Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel",
+    "english": "left eye"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[5]/parts/li[1]/parts/li[3]/customLabel",
+    "key": "Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.right_eye.customLabel",
+    "english": "right eye"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[5]/parts/li[1]/parts/li[4]/customLabel",
+    "key": "Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.left_antenna.customLabel",
+    "english": "left antenna"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[5]/parts/li[1]/parts/li[5]/customLabel",
+    "key": "Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.right_antenna.customLabel",
+    "english": "right antenna"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[6]/parts/li[1]/parts/li[1]/customLabel",
+    "key": "Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.primary_trophylactic_stomach.customLabel",
+    "english": "primary trophylactic stomach"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[6]/parts/li[1]/parts/li[2]/customLabel",
+    "key": "Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.secondary_trophylactic_stomach.customLabel",
+    "english": "secondary trophylactic stomach"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[6]/parts/li[1]/parts/li[3]/customLabel",
+    "key": "Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.tertiary_trophylactic_stomach.customLabel",
+    "english": "tertiary trophylactic stomach"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[6]/parts/li[1]/parts/li[4]/customLabel",
+    "key": "Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.quaternary_trophylactic_stomach.customLabel",
+    "english": "quaternary trophylactic stomach"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[7]/customLabel",
+    "key": "Megabee.corePart.parts.front_left_leg.customLabel",
+    "english": "front left leg"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[8]/customLabel",
+    "key": "Megabee.corePart.parts.front_right_leg.customLabel",
+    "english": "front right leg"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[9]/customLabel",
+    "key": "Megabee.corePart.parts.middle_left_leg.customLabel",
+    "english": "middle left leg"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[10]/customLabel",
+    "key": "Megabee.corePart.parts.middle_right_leg.customLabel",
+    "english": "middle right leg"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[11]/customLabel",
+    "key": "Megabee.corePart.parts.rear_left_leg.customLabel",
+    "english": "rear left leg"
+  },
+  {
+    "file": "Mod/Defs/BodyDefs.xml",
+    "type": "BodyDef",
+    "defName": "Megabee",
+    "xpath": "corePart/parts/li[12]/customLabel",
+    "key": "Megabee.corePart.parts.rear_right_leg.customLabel",
+    "english": "rear right leg"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "ThingDef",
+    "defName": "Megabee",
+    "xpath": "label",
+    "key": "Megabee.label",
+    "english": "megabee"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "ThingDef",
+    "defName": "Megabee",
+    "xpath": "description",
+    "key": "Megabee.description",
+    "english": "A result of rampant genetic engineering, Megabees are somewhat of an anomaly on the rim. They lack a stinger, and are extremely docile, but their huge body size and resemblance to honeybees tends to drive most predators away from attacking them.\\n\\nTheir bodies are heavily optimized for the production of resources; they are able to produce honey independent of any hive or structure, their fur has been engineered to behave more like wool, and they can even lay unfertilized eggs, like chickens.\\n\\nOf course, the downside of being living production machine is that Megabees require a considerable amount of food, and they'll readily eat what they can get; crops, trees, other plants, and everything in between.\\n\\nThough they're very docile creatures, they are somewhat fickle, and have a tendency to wander off. However, once tamed, Megabees can be very affectionate."
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "ThingDef",
+    "defName": "Megabee",
+    "xpath": "tools/li[1]/label",
+    "key": "Megabee.tools.Mandibles.label",
+    "english": "Mandibles"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "ThingDef",
+    "defName": "Megabee",
+    "xpath": "tools/li[2]/label",
+    "key": "Megabee.tools.head.label",
+    "english": "head"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "PawnKindDef",
+    "defName": "Megabee",
+    "xpath": "label",
+    "key": "Megabee.label",
+    "english": "megabee"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "PawnKindDef",
+    "defName": "Megabee",
+    "xpath": "labelMale",
+    "key": "Megabee.labelMale",
+    "english": "megabee drone"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "PawnKindDef",
+    "defName": "Megabee",
+    "xpath": "lifeStages/li[1]/label",
+    "key": "Megabee.lifeStages.brood.label",
+    "english": "brood"
+  },
+  {
+    "file": "Mod/Defs/megabee.xml",
+    "type": "PawnKindDef",
+    "defName": "Megabee",
+    "xpath": "lifeStages/li[1]/labelPlural",
+    "key": "Megabee.lifeStages.brood.labelPlural",
+    "english": "brood"
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "EggMegabeeUnfertilized",
+    "xpath": "label",
+    "key": "EggMegabeeUnfertilized.label",
+    "english": "megabee egg (unfert.)"
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "EggMegabeeUnfertilized",
+    "xpath": "description",
+    "key": "EggMegabeeUnfertilized.description",
+    "english": "An unfertilized megabee egg. It can be eaten raw, but it's much, much better cooked. These human-torso-sized eggs are somewhat unappetizing, but can feed a small family all by themselves."
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "EggMegabeeFertilized",
+    "xpath": "label",
+    "key": "EggMegabeeFertilized.label",
+    "english": "megabee egg (fert.)"
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "EggMegabeeFertilized",
+    "xpath": "description",
+    "key": "EggMegabeeFertilized.description",
+    "english": "A fertilized megabee egg. If all goes well, it should hatch into a baby megabee. It can be eaten raw, but it's much better cooked."
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "MegabeeTallow",
+    "xpath": "label",
+    "key": "MegabeeTallow.label",
+    "english": "megabee tallow"
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "MegabeeTallow",
+    "xpath": "description",
+    "key": "MegabeeTallow.description",
+    "english": "A close relative of giant insect jelly, produced by Megabees. It maintains a somewhat thin consistency until exposed to open air, at which point the outermost layers of the substance gelatinize, making storage remarkably trivial. On worlds capable of raising them, children often snack on large handfuls of \"Megabee Geysers\", which are small dollops of Megabee Tallow allowed to solidify into small candies with a chewy outside and liquid tallow within. It has antimicrobial properties, meaning it will never cause food poisoning, and it can even be fashioned into a salve of similar effectiveness to healroot extract."
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "WoolMegabee",
+    "xpath": "label",
+    "key": "WoolMegabee.label",
+    "english": "megabee wool"
+  },
+  {
+    "file": "Mod/Defs/ResourceDefs.xml",
+    "type": "ThingDef",
+    "defName": "WoolMegabee",
+    "xpath": "description",
+    "key": "WoolMegabee.description",
+    "english": "A stiff, fibrous psuedo-wool harvested from Megabees. Though it's not particularly soft, it has fair all-around temperature regulation and is resistant to heat. It's a good material for clothing or structures thanks to its rather incredible durability, and the sheer bounty of it that can be shorn from even a single megabee."
+  },
+  {
+    "file": "Mod/Defs/salveDefs.xml",
+    "type": "ThingDef",
+    "defName": "MedicineMegabee",
+    "xpath": "label",
+    "key": "MedicineMegabee.label",
+    "english": "megabee tallow salve"
+  },
+  {
+    "file": "Mod/Defs/salveDefs.xml",
+    "type": "ThingDef",
+    "defName": "MedicineMegabee",
+    "xpath": "description",
+    "key": "MedicineMegabee.description",
+    "english": "A salve produced from the fur and tallow of a Megabee. The antimicrobial properties of the tallow make it almost as effective as healroot, while being far more readily available if the colony has access to a megabee."
+  }
+]

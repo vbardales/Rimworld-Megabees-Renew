@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <Megabee.label>mégabeille</Megabee.label>
+  <Megabee.corePart.parts.left_elytra.customLabel>élytre gauche</Megabee.corePart.parts.left_elytra.customLabel>
+  <Megabee.corePart.parts.right_elytra.customLabel>élytre droit</Megabee.corePart.parts.right_elytra.customLabel>
+  <Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel>œil gauche</Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel>
+  <Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.right_eye.customLabel>œil droit</Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.right_eye.customLabel>
+  <Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.left_antenna.customLabel>antenne gauche</Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.left_antenna.customLabel>
+  <Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.right_antenna.customLabel>antenne droite</Megabee.corePart.parts.Pronotum.parts.InsectHead.parts.right_antenna.customLabel>
+  <Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.primary_trophylactic_stomach.customLabel>estomac trophallactique primaire</Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.primary_trophylactic_stomach.customLabel>
+  <Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.secondary_trophylactic_stomach.customLabel>estomac trophallactique secondaire</Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.secondary_trophylactic_stomach.customLabel>
+  <Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.tertiary_trophylactic_stomach.customLabel>estomac trophallactique tertiaire</Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.tertiary_trophylactic_stomach.customLabel>
+  <Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.quaternary_trophylactic_stomach.customLabel>estomac trophallactique quaternaire</Megabee.corePart.parts.Methathorax.parts.MegabeeAbdomen.parts.quaternary_trophylactic_stomach.customLabel>
+  <Megabee.corePart.parts.front_left_leg.customLabel>patte antérieure gauche</Megabee.corePart.parts.front_left_leg.customLabel>
+  <Megabee.corePart.parts.front_right_leg.customLabel>patte antérieure droite</Megabee.corePart.parts.front_right_leg.customLabel>
+  <Megabee.corePart.parts.middle_left_leg.customLabel>patte médiane gauche</Megabee.corePart.parts.middle_left_leg.customLabel>
+  <Megabee.corePart.parts.middle_right_leg.customLabel>patte médiane droite</Megabee.corePart.parts.middle_right_leg.customLabel>
+  <Megabee.corePart.parts.rear_left_leg.customLabel>patte postérieure gauche</Megabee.corePart.parts.rear_left_leg.customLabel>
+  <Megabee.corePart.parts.rear_right_leg.customLabel>patte postérieure droite</Megabee.corePart.parts.rear_right_leg.customLabel>
+</LanguageData>

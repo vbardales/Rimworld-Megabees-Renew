@@ -6,7 +6,7 @@ in game.
 
 ## [1.0.0] — unreleased
 
-On release: add `Mod/About/ModIcon.png` and `Mod/About/Preview.png`, create the `v1.0.0` tag and
+On release, after final in-game validation: create the `v1.0.0` tag and
 the matching GitHub release, then publish to the Workshop.
 
 First release of the 1.6 update of **Megabees**, by zoura3025.
@@ -26,3 +26,10 @@ the salve recipe are byte for byte the author's, and no balance value was change
 The unfertilized egg needed no work here: `EggMegabeeUnfertilized` was already declared, which is
 not the case for most of the egg-layers in this family of ports, where 1.6's `CompEggLayer` throws
 on a null `eggUnfertilizedDef`.
+
+### Audit follow-up — 2026-09-13
+
+- Added complete French DefInjected resources, preserving native English source text.
+- Added unofficial notices and the final GitHub source link.
+- Added delivered artwork, reusable XML/resource tests and functional test scenarios.
+- Verified that the game parser accepts the inherited repeated closing parentheses in colors; gameplay Defs were not changed.

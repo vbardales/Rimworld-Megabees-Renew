@@ -1,0 +1,22 @@
+[
+  {
+    "area": "title",
+    "minimumContrast": 11.42,
+    "pass": true
+  },
+  {
+    "area": "suffix",
+    "minimumContrast": 9.39,
+    "pass": true
+  },
+  {
+    "area": "tag",
+    "minimumContrast": 9.48,
+    "pass": true
+  },
+  {
+    "area": "summary",
+    "minimumContrast": 11.45,
+    "pass": true
+  }
+]

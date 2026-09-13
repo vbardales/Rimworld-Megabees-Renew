@@ -67,3 +67,11 @@ item rather than an animal alone. It leaves the pack to stand on its own, becaus
 follows is that a mod which is dead **and** states nothing gets republished with credit rather than
 kept back. The pack keeps only what cannot be published: sources that are alive in 1.6, and the one
 whose author refuses redistribution.
+
+## 2026-09-13 audit follow-up
+
+The inherited gameplay Defs and textures remain unchanged. French translations,
+validation scripts and the Workshop preview were added with Codex (OpenAI).
+The preview uses OpenAI image generation with the original bee texture as a visual
+reference. The existing bee-smiley icon source was preserved and resized for delivery.
+This addition grants no licence over zoura3025's original material.
