@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Megabees Renew (unofficial)</name>
-  <author>zoura3025 - 1.6 port: nelim</author>
+  <author>zoura3025 - 1.6 adapted by Nelim</author>
   <packageId>nelim.megabeesrenew</packageId>
   <supportedVersions>
     <li>1.6</li>
