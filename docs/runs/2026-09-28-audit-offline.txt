@@ -1,0 +1,1 @@
+2026-09-28 audit offline (no game): HEAD 09b15c9, unittest Tests/ 6/6 ok (wsl python3), Check-DefInjected 40 keys 0 errors. No Pickle run: no suite exists.

@@ -8,7 +8,8 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-stage:        done
+stage:        showcase
+workflow_stage: l10n
 licence:      silent
 licence_at:   2026-09-13
 dependencies: none
@@ -16,14 +17,23 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: In-game scenarios, logs, EN/FR UI, new game and existing save.
-session:      workflow audit
-updated:      2026-09-13
+  - defect: Animal integrations missing (rule 2026-09-28): A Dog Said Animal Prosthetics 2, [XND] Nocturnal Animals, Better Crossbreeding; guarded patches or a written reason each (see BACKLOG.md).
+  - defect: No Tests/Pickle/ and no written justification for its absence (preTest -> done).
+  - feature: Pass maps (minimal, optional, incompatibility with zoura3025.megabees, DLC-absent) declared in TESTING.md, not yet written.
+  - unverified: In-game scenarios, logs, EN/FR UI, new game and existing save; tested gate criteria in TESTING.md (no @wip, conditional scenarios run, no manual test left).
+  - unverified: Codex task title update (set_thread_title unavailable in this session).
+session:      megabeesrenew / showcase
+updated:      2026-09-28
 ---
 
 # Megabees Renew — status
 
-## Fix follow-up — 2026-09-13 (current validation)
+## Audit 2026-09-28 (current decision)
+Was `done`, retained `showcase` / workflow_stage `l10n`: the animal-integration rule of 2026-09-28 (PUBLISHING.md) must be met before `preTest` and no patch exists, so l10n -> preTest fails; preTest -> done also fails (no Tests/Pickle, no justification). Judgment call: the rule sits before `preTest`; owner may prefer `preTest`. Audited HEAD 09b15c9, tree clean except untracked Art/*.ico (now ignored). Replayed offline: unittest 6/6 ok (WSL python3), Check-DefInjected 40 keys / 0 errors (docs/runs/2026-09-28-audit-offline.txt). Plurals: no counted text, n/a. Dependencies/loadAfter/LoadFolders unchanged since 2026-09-13. No publishIdFile: never prepublished, CHANGELOG 0.1.0 not created. Original mod has no git repository (searched), so no upstream PR yet. No .dds tracked, no evidence in git. Icon, Preview and unofficial-notice validations stand. Game not launched. The 2026-09-13 `done` decision below is replaced on 2026-09-28 and kept as history.
+Was  (workflow_stage done), retained  / workflow_stage : the animal-integration rule of 2026-09-28 (PUBLISHING.md) must be met before  and no patch exists, so l10n -> preTest fails; preTest -> done also fails (no Tests/Pickle, no justification). Judgment call: the rule sits before ; owner may prefer . Audited HEAD 09b15c9, tree clean except untracked Art/*.ico (now ignored). Replayed offline: unittest 6/6 ok (via WSL python3), Check-DefInjected 40 keys / 0 errors (docs/runs/2026-09-28-audit-offline.txt). Plurals: no counted text, n/a. Dependencies/loadAfter/LoadFolders unchanged since 2026-09-13 (none, DLC loadAfter only). No publishIdFile: never prepublished, CHANGELOG 0.1.0 not created. Original mod has no git repository (searched), so no upstream PR possible yet. No .dds tracked, no evidence in git. Independent validations (icon, Preview, unofficial notice) stand. Game not launched. The 2026-09-13 "done" decision below is replaced on 2026-09-28 and kept as history.
+
+
+## Fix follow-up — 2026-09-13 (replaced 2026-09-28)
 
 **horsMonoRepo -> done**, ready for final functional validation in game, not tested.
 Base commit remains `96b1f2859cd5cc15798fa2fdd3a36c2e6efaec61`; fixes are local,

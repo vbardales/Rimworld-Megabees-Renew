@@ -11,3 +11,16 @@ desktop.ini
 .DS_Store
 __pycache__/
 *.pyc
+
+# RimWorld converts every PNG to a .dds next to it on first load: a per-machine cache.
+*.dds
+
+# Local Explorer folder icons (desktop.ini already ignored above); never inside Mod/.
+*.ico
+
+# Pickle evidence stays on disk, never in git (screenshots and Player.log grow without bound).
+# What deserves history goes to docs/runs/ as one text line per run.
+Tests/Pickle/Evidence/
+evidence/
+pickle-reports/
+pickle-reports-archive/
