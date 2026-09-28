@@ -22,7 +22,7 @@ remaining:
   - feature: Pass maps (minimal, optional, incompatibility with zoura3025.megabees, DLC-absent) declared in TESTING.md, not yet written.
   - unverified: In-game scenarios, logs, EN/FR UI, new game and existing save; tested gate criteria in TESTING.md (no @wip, conditional scenarios run, no manual test left).
   - unverified: Codex task title update (set_thread_title unavailable in this session).
-session:      megabeesrenew / showcase
+session:      megabeesrenew / l10n
 updated:      2026-09-28
 ---
 
