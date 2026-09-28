@@ -8,8 +8,8 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
-workflow_stage: preTest
+stage:        done
+workflow_stage: done
 licence:      silent
 licence_at:   2026-09-13
 dependencies: none
@@ -17,19 +17,25 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - defect: No Tests/Pickle/ and no written justification for its absence (preTest -> done).
-  - feature: Pass maps (minimal, optional, incompatibility with zoura3025.megabees, DLC-absent) declared in TESTING.md, not yet written.
+  - unverified: Tests/Pickle/ suite (8 features, 5 passes) written and offline-checked 2026-09-28 (Tests/test_pickle_suite.py, 12/12) but never played in game. done -> tested needs all 5 passes requested and read (see BACKLOG.md).
+  - unverified: `dotnet build Tests/Pickle/Source/Megabees.PickleSteps.csproj -c Release` not run in this session; needed once before the first request.
   - unverified: In-game scenarios, logs, EN/FR UI, new game and existing save; tested gate criteria in TESTING.md (no @wip, conditional scenarios run, no manual test left).
   - unverified: Codex task title update (set_thread_title unavailable in this session).
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree against the installed ADS 2 file instead (docs/runs/2026-09-28-animal-integrations.txt). Install lxml and rerun before relying on the suite alone.
-session:      megabeesrenew / preTest
+session:      megabeesrenew / done
 updated:      2026-09-28
 ---
 
 # Megabees Renew — status
 
 ## Audit 2026-09-28 (current decision)
-Was `done`, first retracted to `showcase` / workflow_stage `l10n` (see below): the animal-integration rule of 2026-09-28 (PUBLISHING.md) had to be met before `preTest` and no patch existed. It is now met: `Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds Megabee to `ADS_Cat1/2/3`, guarded (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an `<Operation>`), `loadBefore` declared in About.xml. Classification follows Megabee's own references, not intuition: its life-stage sounds copy `Pawn_Megascarab_*` and its meat is `useMeatFrom Megaspider`; both are in all three ADS 2 categories (`3238353862/1.6/Defs/AnimalCategories/Animal_Categories.xml`, read 2026-09-28). [XND] Nocturnal Animals and Better Crossbreeding get no patch, by written reason: Nocturnal Animals' own Core patches (`2269731409/1.6/Patches/Core/*.xml`, all seven files read) list only `Megasloth` as Nocturnal, no insect analogue, so Megabee stays diurnal, the unpatched default; Better Crossbreeding ships no XML patch for any vanilla animal at all in its installed 1.6 folder, and Megabee's own description names no vanilla animal it derives from or could plausibly pair with, unlike Meffalo ("subspecies of Muffalo") or Boomsloth (explicit megasloth x boomalope mix). Both are documented not applicable, not a defect. Offline: unittest 6 ok + 7 skipped (`CompatibilityPatchTests`, lxml unavailable in this WSL, no pip/sudo to install it); the patch's effect was hand-verified once with plain ElementTree against the real installed ADS 2 file: Megabee appended exactly once to each of the three lists, alongside Megascarab and Megaspider (docs/runs/2026-09-28-animal-integrations.txt). Check-DefInjected: patch operations applied 29 -> 30 (the conditional fired), still 40 keys / 0 errors. `l10n -> preTest` is now established; `stage` moves to `preTest`. `preTest -> done` still fails: no `Tests/Pickle/` and no written justification for its absence.
+Was `done`, first retracted to `showcase` / workflow_stage `l10n` (see below): the animal-integration rule of 2026-09-28 (PUBLISHING.md) had to be met before `preTest` and no patch existed. It is now met: `Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds Megabee to `ADS_Cat1/2/3`, guarded (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an `<Operation>`), `loadBefore` declared in About.xml. Classification follows Megabee's own references, not intuition: its life-stage sounds copy `Pawn_Megascarab_*` and its meat is `useMeatFrom Megaspider`; both are in all three ADS 2 categories (`3238353862/1.6/Defs/AnimalCategories/Animal_Categories.xml`, read 2026-09-28). [XND] Nocturnal Animals and Better Crossbreeding get no patch, by written reason: Nocturnal Animals' own Core patches (`2269731409/1.6/Patches/Core/*.xml`, all seven files read) list only `Megasloth` as Nocturnal, no insect analogue, so Megabee stays diurnal, the unpatched default; Better Crossbreeding ships no XML patch for any vanilla animal at all in its installed 1.6 folder, and Megabee's own description names no vanilla animal it derives from or could plausibly pair with, unlike Meffalo ("subspecies of Muffalo") or Boomsloth (explicit megasloth x boomalope mix). Both are documented not applicable, not a defect. Offline: unittest 6 ok + 7 skipped (`CompatibilityPatchTests`, lxml unavailable in this WSL, no pip/sudo to install it); the patch's effect was hand-verified once with plain ElementTree against the real installed ADS 2 file: Megabee appended exactly once to each of the three lists, alongside Megascarab and Megaspider (docs/runs/2026-09-28-animal-integrations.txt). Check-DefInjected: patch operations applied 29 -> 30 (the conditional fired), still 40 keys / 0 errors. `l10n -> preTest` is now established; `stage` moved to `preTest`.
+
+## Audit follow-up 2026-09-28: preTest -> done
+
+`Tests/Pickle/` written: 8 features (`01-the-megabee` through `08-load-is-clean`), 5 `wsl-deps.*.map` files (`tools`, `avec-ads2`, `incompat-original`, `dlc-absent`), a step assembly (`Source/MegabeesSteps.cs`, model Funny Creatures Renew's suite) and README with the pass matrix and request commands. Their scope is justified: only what a running game can show stays in Gherkin (the engine reading the ported wildness stat, the megabee drawn at two life stages, save/reload, the active language's texts, ADS 2's real recipe list built after load order, the declared incompatibility's actual log symptom, a clean load); milking, shearing, hatching, salve crafting and taming are proved offline or are the engine's own mechanics (TESTING.md, "What was left out of Gherkin"). Offline-checked with a new `Tests/test_pickle_suite.py` (model: Funny Creatures Renew's own), 12/12: every step line matches exactly one known step, no `@wip`, every map well-formed and ending with a newline, every `@requires:<packageId>` staged by the map that plays it, this mod loads before ADS 2 in `wsl-deps.avec-ads2.map`, and every step argument names a real def (checked against the installed Core, this mod's own Defs, and ADS 2's installed recipe defNames). `wsl python3 -m unittest discover -s Tests -v`: still 6 ok + 7 skipped (unrelated, see CompatibilityPatchTests above). AUDIT.md step 8 does not require executing the Pickle suite here, only writing it with a justified scope; that execution is `done -> tested`'s own criterion. `stage` moves to `done`.
+
+Not done in this session: `dotnet build Tests/Pickle/Source/Megabees.PickleSteps.csproj -c Release` (no .NET SDK check run), and no request filed — nothing in this suite has been played. Both are recorded in `remaining` and in BACKLOG.md.
 
 Audited HEAD 09b15c9 (before this session's commits), tree clean except untracked Art/*.ico (fixed since). Replayed offline: unittest 6/6 ok (WSL python3), Check-DefInjected 40 keys / 0 errors (docs/runs/2026-09-28-audit-offline.txt). Plurals: no counted text, n/a. Dependencies/loadAfter/LoadFolders unchanged since 2026-09-13 besides the new `loadBefore` above. No publishIdFile: never prepublished, CHANGELOG 0.1.0 not created. Original mod has no git repository (searched), so no upstream PR possible yet. No .dds tracked, no evidence in git. Independent validations (icon, Preview, unofficial notice) stand. Game not launched. The 2026-09-13 "done" decision below is replaced on 2026-09-28 and kept as history.
 
@@ -104,7 +110,7 @@ this audit; no development, generated artwork, translation or publication was pe
 | preOptions -> options | Independently validated, not applicable | Fixed content; no useful settings contract, empty page or MainButtons shortcut. |
 | options -> l10n | Defect | Native English coverage exists; French resources absent. |
 | l10n -> preTest | Independent static check passed | Core references and optional DLC guards checked; no third-party dependency, patches or LoadFolders. |
-| preTest -> done | Defect / unverified | No written functional scenarios or reusable XML suite. Audit-time XML checks passed; complete loading/regression validation remains unverified. |
+| preTest -> done | Established 2026-09-28 | Tests/Pickle/ suite written (8 features, 5 passes), offline-checked (12/12); XML/resource tests pass (6/13, 7 skip on lxml). No in-game execution required at this gate; complete loading/regression validation remains `done -> tested`'s own criterion, unverified. |
 | done -> tested | Unverified | No attributable results for this revision; no game run, log review, EN/FR UI, new-colony or existing-save validation performed. |
 
 ### Repository and rights

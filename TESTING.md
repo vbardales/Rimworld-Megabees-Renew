@@ -1,12 +1,12 @@
 # Testing — Megabees Renew
 
-Offline: `wsl python3 -m unittest discover -s Tests -v` (6 tests) and `scripts/Check-DefInjected.ps1 -TransMod Mod` (40 keys). Functional scenarios: [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Nothing has run in game.
+Offline: `wsl python3 -m unittest discover -s Tests -v` (13 tests, 7 skip: lxml unavailable in this WSL) and `scripts/Check-DefInjected.ps1 -TransMod Mod` (40 keys). Functional scenarios: [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Pickle suite: [Tests/Pickle/](Tests/Pickle/README.md), 8 features, checked offline with `wsl python3 Tests/test_pickle_suite.py` (12 tests). **Written 2026-09-28, nothing has run in game.**
 
-## Passes required (declared 2026-09-28; none exists yet)
-1. **Minimal**: no `-DepMap`; Core + DLC + Pickle + mod. Own EN and FR runs (`-Language`).
-2. **Optional integration**: `wsl-deps.avec-ads2.map` with A Dog Said... Animal Prosthetics 2 (3238353862), the only integration with a patch (`Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml`); assert Megabee gets surgery options it would lack unpatched. XND Nocturnal Animals and Better Crossbreeding need no pass: neither is patched, so a pass with them present would be a plain minimal pass under another name (written reasons in STATUS.md). EN and FR.
-3. **Declared incompatibility**: `wsl-deps.incompat-megabees.map` mounting `zoura3025.megabees` (2830700043); assert the documented symptom (duplicate defNames, load-order winner), do not expect red.
-4. **Without a DLC** (`!ludeon.rimworld.royalty`, `!ludeon.rimworld.ideology`): the `willNeverEat` `MayRequire` entries raise nothing.
+## Passes (Tests/Pickle/README.md has the full matrix, filters and request commands)
+1. **Minimal** (`tools`): no optional mod, Core + DLC + Pickle + mod + PickleTools' load audit. Own EN and FR runs (`-Language`).
+2. **Optional integration** (`avec-ads2`): `wsl-deps.avec-ads2.map` with A Dog Said... Animal Prosthetics 2 (3238353862), the only integration with a patch (`Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml`); asserts Megabee gets surgery options it would lack unpatched. XND Nocturnal Animals and Better Crossbreeding need no pass: neither is patched, so a pass with them present would be a plain minimal pass under another name (written reasons in STATUS.md).
+3. **Declared incompatibility** (`incompat-original`): `wsl-deps.incompat-original.map` mounting `zoura3025.megabees` (2830700043, installed on this machine); asserts the documented symptom (duplicate defNames, the original's own 1.3-form load fault), does not expect a plain red run.
+4. **DLC absent** (`dlc-absent`): `wsl-deps.dlc-absent.map`, Royalty and Ideology only (the two the `willNeverEat` `MayRequire` entries name); asserts the guards raise nothing and the def still loads and reads the same.
 
 ## `done -> tested` gate (AUDIT.md, step 9, 2026-09-28)
 - No scenario tagged `@wip`: repaired and replayed, or deleted with its reason.

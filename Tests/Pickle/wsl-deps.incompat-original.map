@@ -1,0 +1,8 @@
+# Pass 4: the original mod mounted next to this one, to look at whether the declared incompatibility (About.xml
+# <incompatibleWith>, "both mods define the same defNames") is still true. Select it with
+# `-DepMap wsl-deps.incompat-original.map`; the report carries the pass name `incompat-original`.
+#
+# Unlike Funny Creatures Renew's original, zoura3025.megabees (Workshop 2830700043, 1.3/1.4 only) is installed
+# in this machine's Windows Workshop folder, so it is staged by its real id, not an archived path.
+nelim.pickletools.loadaudit   path:PickleTools/LoadAudit/Mod
+zoura3025.megabees            2830700043

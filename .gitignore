@@ -21,6 +21,10 @@ __pycache__/
 # Pickle evidence stays on disk, never in git (screenshots and Player.log grow without bound).
 # What deserves history goes to docs/runs/ as one text line per run.
 Tests/Pickle/Evidence/
+
+# Pickle step DLL: rebuilt before every run from Tests/Pickle/Source, not versioned.
+Tests/Pickle/Mod/Pickle/Assemblies/
+.build/
 evidence/
 pickle-reports/
 pickle-reports-archive/

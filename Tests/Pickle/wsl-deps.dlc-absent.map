@@ -1,0 +1,11 @@
+# Pass 5: the two expansions this mod's own guards name, left out. Select it with `-DepMap wsl-deps.dlc-absent.map`;
+# the report carries the pass name `dlc-absent`. `!<packageId>` removes an expansion from ModsConfig for that pass;
+# only an expansion can be named, and Core cannot be left out.
+#
+# Only Royalty and Ideology are dropped, not all five: megabee.xml's <willNeverEat> guards only Plant_TreeAnima
+# (Royalty, MayRequire ludeon.rimworld.royalty) and Plant_TreeGauranlen (Ideology, MayRequire
+# ludeon.rimworld.ideology). Biotech, Anomaly and Odyssey are named only in loadAfter and nothing in this mod
+# reads anything of theirs; dropping them would prove nothing this content declares.
+nelim.pickletools.loadaudit   path:PickleTools/LoadAudit/Mod
+!ludeon.rimworld.royalty
+!ludeon.rimworld.ideology

@@ -1,0 +1,15 @@
+# Pass 3: the only optional mod this port patches. Select it with `-DepMap wsl-deps.avec-ads2.map`; the report
+# carries the pass name `avec-ads2`.
+#
+# THE ORDER IS NOT A DETAIL. The staging loads the mods of a map BEFORE the mod under test, and A Dog Said...
+# Animal Prosthetics 2 has to load AFTER it: this mod declares <loadBefore> for it, because ADS 2 copies its
+# category lists once, at its own last patch. A mod of the map that must load after the mod under test obliges
+# the map to NAME the mod under test, before it (the staging does not add it twice). So this mod comes first,
+# then ADS 2.
+#
+# [XND] Nocturnal Animals and Better Crossbreeding are not mounted here: this port ships no patch for either
+# (STATUS.md, "Animal integrations", 2026-09-28), so a pass with them present would be a plain minimal pass
+# under another name.
+nelim.pickletools.loadaudit             path:PickleTools/LoadAudit/Mod
+nelim.megabeesrenew                     path:MegabeesRenew/Mod
+SamBucher.ADogSaidAnimalProsthetics2    3238353862
