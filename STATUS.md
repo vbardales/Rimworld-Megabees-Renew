@@ -12,6 +12,7 @@ stage:        done
 workflow_stage: done
 licence:      silent
 licence_at:   2026-09-13
+upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
 tested_on:

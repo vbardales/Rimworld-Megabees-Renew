@@ -15,6 +15,7 @@ Version = last commit touching the file, in its own repository. Protocol docs (A
 | `PickleTools/TESTING.md` (section "What to keep") | 650adce 2026-09-25 | Evidence keep/delete table, copied into TESTING.md. |
 | `PickleTools/README.md` | c771bef 2026-09-25 | Tool catalogue (LoadAudit, CoatSteps, DefFieldSteps fit an animal mod). |
 | `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | 77ca9d7 2026-09-27 | Filters, DepMap, no SHA in requests, no `.ico`/`desktop.ini` under `Mod/` (`*.ico` now ignored). |
+| `scripts/SEARCHING.md` | 50de695 2026-09-28 | `Search-Workshop.sh` for a corpus-wide defName/class/texture search; not what confirmed `upstream_mod_remotes: N/A` (that was a web search, About.xml/Workshop page reading, done 2026-09-13/28), but this is the tool of record for the next defName-collision recheck. |
 
 ## Read via digest (sub-agent), useful later
 | Document | Version | Note |
@@ -27,7 +28,7 @@ Version = last commit touching the file, in its own repository. Protocol docs (A
 | `STYLE_RIMWORLD.md` | 7311308 2026-09-25 M | Only if icon/Preview is regenerated (owner only). |
 
 ## Not useful now (reread only if version moves)
-`scripts/SEARCHING.md` 372c447 2026-09-23 M (defName corpus search; only for a collision recheck). `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` sections on gallery zoom: publication time.
+`Rimworld-Ticket-Dispatcher/docs/WELCOME.md` sections on gallery zoom: publication time.
 
 ## Other mods read as a model
 `FunnyCreaturesRenew/Mod/Patches/Compat_*.xml` and `FunnyCreaturesRenew/Tests/test_mod.py::CompatibilityPatchTests`, 2026-09-28, for the three animal-integration patches: structure, guards, and the lxml offline-test pattern copied and adapted for a single animal with no crossbreed candidate.
