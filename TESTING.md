@@ -4,7 +4,7 @@ Offline: `wsl python3 -m unittest discover -s Tests -v` (6 tests) and `scripts/C
 
 ## Passes required (declared 2026-09-28; none exists yet)
 1. **Minimal**: no `-DepMap`; Core + DLC + Pickle + mod. Own EN and FR runs (`-Language`).
-2. **Optional integrations**: `wsl-deps.avec-facultatifs.map` with ADS 2, XND Nocturnal Animals, Better Crossbreeding, once their patches exist (see BACKLOG.md). EN and FR.
+2. **Optional integration**: `wsl-deps.avec-ads2.map` with A Dog Said... Animal Prosthetics 2 (3238353862), the only integration with a patch (`Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml`); assert Megabee gets surgery options it would lack unpatched. XND Nocturnal Animals and Better Crossbreeding need no pass: neither is patched, so a pass with them present would be a plain minimal pass under another name (written reasons in STATUS.md). EN and FR.
 3. **Declared incompatibility**: `wsl-deps.incompat-megabees.map` mounting `zoura3025.megabees` (2830700043); assert the documented symptom (duplicate defNames, load-order winner), do not expect red.
 4. **Without a DLC** (`!ludeon.rimworld.royalty`, `!ludeon.rimworld.ideology`): the `willNeverEat` `MayRequire` entries raise nothing.
 

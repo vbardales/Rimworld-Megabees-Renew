@@ -8,8 +8,8 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-stage:        showcase
-workflow_stage: l10n
+stage:        preTest
+workflow_stage: preTest
 licence:      silent
 licence_at:   2026-09-13
 dependencies: none
@@ -17,20 +17,21 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - defect: Animal integrations missing (rule 2026-09-28): A Dog Said Animal Prosthetics 2, [XND] Nocturnal Animals, Better Crossbreeding; guarded patches or a written reason each (see BACKLOG.md).
   - defect: No Tests/Pickle/ and no written justification for its absence (preTest -> done).
   - feature: Pass maps (minimal, optional, incompatibility with zoura3025.megabees, DLC-absent) declared in TESTING.md, not yet written.
   - unverified: In-game scenarios, logs, EN/FR UI, new game and existing save; tested gate criteria in TESTING.md (no @wip, conditional scenarios run, no manual test left).
   - unverified: Codex task title update (set_thread_title unavailable in this session).
-session:      megabeesrenew / l10n
+  - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree against the installed ADS 2 file instead (docs/runs/2026-09-28-animal-integrations.txt). Install lxml and rerun before relying on the suite alone.
+session:      megabeesrenew / preTest
 updated:      2026-09-28
 ---
 
 # Megabees Renew — status
 
 ## Audit 2026-09-28 (current decision)
-Was `done`, retained `showcase` / workflow_stage `l10n`: the animal-integration rule of 2026-09-28 (PUBLISHING.md) must be met before `preTest` and no patch exists, so l10n -> preTest fails; preTest -> done also fails (no Tests/Pickle, no justification). Judgment call: the rule sits before `preTest`; owner may prefer `preTest`. Audited HEAD 09b15c9, tree clean except untracked Art/*.ico (now ignored). Replayed offline: unittest 6/6 ok (WSL python3), Check-DefInjected 40 keys / 0 errors (docs/runs/2026-09-28-audit-offline.txt). Plurals: no counted text, n/a. Dependencies/loadAfter/LoadFolders unchanged since 2026-09-13. No publishIdFile: never prepublished, CHANGELOG 0.1.0 not created. Original mod has no git repository (searched), so no upstream PR yet. No .dds tracked, no evidence in git. Icon, Preview and unofficial-notice validations stand. Game not launched. The 2026-09-13 `done` decision below is replaced on 2026-09-28 and kept as history.
-Was  (workflow_stage done), retained  / workflow_stage : the animal-integration rule of 2026-09-28 (PUBLISHING.md) must be met before  and no patch exists, so l10n -> preTest fails; preTest -> done also fails (no Tests/Pickle, no justification). Judgment call: the rule sits before ; owner may prefer . Audited HEAD 09b15c9, tree clean except untracked Art/*.ico (now ignored). Replayed offline: unittest 6/6 ok (via WSL python3), Check-DefInjected 40 keys / 0 errors (docs/runs/2026-09-28-audit-offline.txt). Plurals: no counted text, n/a. Dependencies/loadAfter/LoadFolders unchanged since 2026-09-13 (none, DLC loadAfter only). No publishIdFile: never prepublished, CHANGELOG 0.1.0 not created. Original mod has no git repository (searched), so no upstream PR possible yet. No .dds tracked, no evidence in git. Independent validations (icon, Preview, unofficial notice) stand. Game not launched. The 2026-09-13 "done" decision below is replaced on 2026-09-28 and kept as history.
+Was `done`, first retracted to `showcase` / workflow_stage `l10n` (see below): the animal-integration rule of 2026-09-28 (PUBLISHING.md) had to be met before `preTest` and no patch existed. It is now met: `Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds Megabee to `ADS_Cat1/2/3`, guarded (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an `<Operation>`), `loadBefore` declared in About.xml. Classification follows Megabee's own references, not intuition: its life-stage sounds copy `Pawn_Megascarab_*` and its meat is `useMeatFrom Megaspider`; both are in all three ADS 2 categories (`3238353862/1.6/Defs/AnimalCategories/Animal_Categories.xml`, read 2026-09-28). [XND] Nocturnal Animals and Better Crossbreeding get no patch, by written reason: Nocturnal Animals' own Core patches (`2269731409/1.6/Patches/Core/*.xml`, all seven files read) list only `Megasloth` as Nocturnal, no insect analogue, so Megabee stays diurnal, the unpatched default; Better Crossbreeding ships no XML patch for any vanilla animal at all in its installed 1.6 folder, and Megabee's own description names no vanilla animal it derives from or could plausibly pair with, unlike Meffalo ("subspecies of Muffalo") or Boomsloth (explicit megasloth x boomalope mix). Both are documented not applicable, not a defect. Offline: unittest 6 ok + 7 skipped (`CompatibilityPatchTests`, lxml unavailable in this WSL, no pip/sudo to install it); the patch's effect was hand-verified once with plain ElementTree against the real installed ADS 2 file: Megabee appended exactly once to each of the three lists, alongside Megascarab and Megaspider (docs/runs/2026-09-28-animal-integrations.txt). Check-DefInjected: patch operations applied 29 -> 30 (the conditional fired), still 40 keys / 0 errors. `l10n -> preTest` is now established; `stage` moves to `preTest`. `preTest -> done` still fails: no `Tests/Pickle/` and no written justification for its absence.
+
+Audited HEAD 09b15c9 (before this session's commits), tree clean except untracked Art/*.ico (fixed since). Replayed offline: unittest 6/6 ok (WSL python3), Check-DefInjected 40 keys / 0 errors (docs/runs/2026-09-28-audit-offline.txt). Plurals: no counted text, n/a. Dependencies/loadAfter/LoadFolders unchanged since 2026-09-13 besides the new `loadBefore` above. No publishIdFile: never prepublished, CHANGELOG 0.1.0 not created. Original mod has no git repository (searched), so no upstream PR possible yet. No .dds tracked, no evidence in git. Independent validations (icon, Preview, unofficial notice) stand. Game not launched. The 2026-09-13 "done" decision below is replaced on 2026-09-28 and kept as history.
 
 
 ## Fix follow-up — 2026-09-13 (replaced 2026-09-28)

@@ -29,5 +29,8 @@ Version = last commit touching the file, in its own repository. Protocol docs (A
 ## Not useful now (reread only if version moves)
 `scripts/SEARCHING.md` 372c447 2026-09-23 M (defName corpus search; only for a collision recheck). `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` sections on gallery zoom: publication time.
 
+## Other mods read as a model
+`FunnyCreaturesRenew/Mod/Patches/Compat_*.xml` and `FunnyCreaturesRenew/Tests/test_mod.py::CompatibilityPatchTests`, 2026-09-28, for the three animal-integration patches: structure, guards, and the lxml offline-test pattern copied and adapted for a single animal with no crossbreed candidate.
+
 ## Mod files
 STATUS.md, README.md, CHANGELOG.md, ATTRIBUTION.md, TEST_SCENARIOS.md, About.xml read. Absent: LICENSE (silent licence, justified), PUBLICATION.md (due before `prepublished`), NOTES.md, BUGS.md (never needed).

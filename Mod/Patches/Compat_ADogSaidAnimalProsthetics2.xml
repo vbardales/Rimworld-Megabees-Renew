@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  A Dog Said... Animal Prosthetics 2 (SamBucher.ADogSaidAnimalProsthetics2, Workshop 3238353862).
+
+  ADS 2 does not read RaceProperties or a body type to decide which animals get surgery. It keeps three
+  abstract RecipeDefs, ADS_Cat1 (medieval replacements), ADS_Cat2 (+ simple prosthetics) and ADS_Cat3
+  (+ bionics), each with a hand-curated <recipeUsers> list, and copies those lists onto the real surgery
+  recipes in its own last patch. An animal absent from all three lists offers only amputation and
+  euthanasia, as if the mod were not installed. Megabee is not listed, so without this file ADS 2 is a
+  silent no-op for it.
+
+  Megabee goes into all three categories. The choice follows its own vanilla-analogue references, not an
+  intuition: its life-stage sounds are copied from Pawn_Megascarab_* (megabee.xml, <soundWounded> etc.)
+  and its meat is Megaspider's (<useMeatFrom>Megaspider</useMeatFrom>). Both Megascarab and Megaspider are
+  in ADS 2's own list (1.6/Defs/AnimalCategories/Animal_Categories.xml, read 2026-09-28) in Cat1, Cat2 and
+  Cat3. The lists are cumulative, so an animal in Cat3 appears in the other two: all three additions are
+  needed.
+
+  The guard is PatchOperationConditional on ADS_Cat1. Without ADS 2 the xpath selects nothing, no
+  <nomatch> is declared, and the operation reports success without logging anything. It is NOT MayRequire:
+  MayRequire on an <Operation> is read by nothing (Verse.PatchOperation has no such field), so the
+  operation would apply whether ADS 2 is loaded or not. Every branch of the predicate repeats @Name=, since
+  [@Name="A" or "B"] is true for every RecipeDef in the document.
+
+  About.xml declares <loadBefore>SamBucher.ADogSaidAnimalProsthetics2</loadBefore>: ADS 2 copies the lists
+  once, at its own patch, so this patch has to run first or it writes into lists nobody reads any more.
+-->
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[
+				@Name="ADS_Cat3" or
+				@Name="ADS_Cat2" or
+				@Name="ADS_Cat1"
+			]/recipeUsers</xpath>
+			<value>
+				<li>Megabee</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>
