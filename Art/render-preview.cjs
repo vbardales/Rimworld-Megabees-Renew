@@ -4,7 +4,7 @@ const http=require('http'),fs=require('fs'),path=require('path');
 const root=__dirname;
 const server=http.createServer((req,res)=>{
  const name=decodeURIComponent(req.url.split('?')[0]).replace(/^\//,'') || 'preview.html';
- if(!['preview.html','preview-palette.json','Preview.png'].includes(name)){res.writeHead(404).end();return;}
+ if(!['preview.html','preview-palette.json','Preview.png','ModIcon-cutout.png'].includes(name)){res.writeHead(404).end();return;}
  res.setHeader('Content-Type',name.endsWith('.png')?'image/png':name.endsWith('.json')?'application/json':'text/html; charset=utf-8');
  res.end(fs.readFileSync(path.join(root,name)));
 });
