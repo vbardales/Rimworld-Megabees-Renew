@@ -1,25 +1,24 @@
 # Functional validation — RimWorld 1.6
 
-Status: NOT RUN. Use the delivered Mod/ revision recorded in Tests/RESULTS.md.
-Back up the existing save and test a copy. Do not overwrite the original save.
-Record game version, enabled DLC/mods, language, date, results and log path per run.
-Baseline: Core + Megabees Renew; upstream Megabees disabled. Repeat UI checks in EN/FR.
+Disposition of the ten functional scenarios, 2026-10-02 (audit, `done -> tested`). Nothing is left as a manual test:
+each row is played by an automated check, or is not applicable with its reason (AUDIT.md: not testing what the mod
+does not change, not testing the game). Pickle results: `docs/runs/2026-09-29-0145956-pickle-passes.txt`; reports in
+`Tests/Pickle/Evidence/` (git-ignored). The only `@review` capture was opened.
 
-| Scenario | Preconditions | Actions | Expected result |
-| --- | --- | --- | --- |
-| Clean load | Baseline mod list, fresh game log | Start a new temperate-forest colony; spawn a male/female adult, juvenile and brood with development tools | No Def/cross-reference errors; all animals render in four directions and all life stages. |
-| Identity and stats | Spawned bees | Open information/training panels | Wildness 80%, body size 5.25, speed 1.4, trainability None; no missing labels. |
-| Body and attacks | Adult bee and test combat target | Inspect health body tree; inflict test injuries; observe combat | Body parts and both attacks resolve and display translated labels; no exceptions. |
-| Production | Tame adults, animal handler with access, sufficient forage | Observe milk, shear and egg cycles; use development acceleration if recorded | 40 tallow/day from either sex; 50 wool/3 days; 2–3 eggs/1.5 days; both egg types supported. |
-| Hatching | Fertilized eggs in safe temperature | Wait/accelerate 11 days | Egg hatches into brood with correct art and name; unfertilized egg never hatches. |
-| Salve | Crafting spot and drug lab, 15 tallow + 40 wool per item; pawn Crafting 2, Animals 4, Intellectual 2 | Add bill at each bench and craft; try a pawn below the thresholds; treat an injured pawn | Bill and ingredients display correctly; skills enforced; salve usable, potency 55%, quality cap 75%. |
-| Food and fabric | Tallow, eggs, wool and eligible recipes | Eat/cook food, manufacture a wool garment | Items accepted by appropriate vanilla systems; labels/descriptions and generated recipe text translated. |
-| Optional DLC | Separate baseline and Royalty/Ideology runs | Load without DLC; then with DLC and both special trees present | No unresolved tree references without DLC; bees do not eat anima/gauranlen trees when DLC enabled. |
-| Save persistence | Colony containing bees of both sexes, eggs and resources | Save, quit, restart and load test copy | Animals, resources, production progress and bills retained without errors. |
-| Existing colony | Copy of existing save without this mod | Enable mod and load copy; introduce bees, craft, save/reload | Colony loads and added content works; no migration errors. |
-| FR/EN interface | Repeat above in each language after restart | Read information, health, bills and item descriptions; inspect mod options and main bar | No raw keys, unintended English fallback in French, clipping or empty settings page/shortcut. |
+| Scenario | Disposition | Proof or reason |
+| --- | --- | --- |
+| Clean load | Automated, green | Pickle 08 `the load of the mod is clean` in 3 passes (tools, avec-ads2, dlc-absent); 01 spawns adult and brood. |
+| Identity and stats | Partly automated, rest N/A | 01 asserts the Def and the engine reading `Wildness` (the one value this port changed); `test_mod.py` asserts `Wildness 0.80`. Body size, speed, trainability are the author's inherited values, unchanged: not retested. |
+| Body and attacks | N/A | `BodyDefs.xml` byte-identical to the original; the engine resolves injuries and attacks. French labels covered by `Check-DefInjected` (40 keys) and Pickle 03. |
+| Production | N/A | `Milkable`, `Shearable`, `EggLayer` are the engine's comps with the author's unchanged values; `test_mod.py` asserts every product def exists. Takes game-days. |
+| Hatching | N/A | Engine `Hatcher` comp, values unchanged. |
+| Salve | N/A | Recipe and costs byte-identical to the original; `test_mod.py` asserts every cost def exists. |
+| Food and fabric | N/A | Vanilla systems accept the products; generated recipe text covered by 03 and `Check-DefInjected`. |
+| Optional DLC | Automated, green | Pickle 06 in `dlc-absent` (guards resolve cleanly, def read the same). The anima/gauranlen behaviour with the DLC is the engine's reaction to `willNeverEat`. |
+| Save persistence | Automated, green | Pickle 02 (`an adult megabee and a brood come back as what they were`) in tools-English and tools-French. |
+| Existing colony | N/A | The mod adds Defs only and patches nothing unguarded; adding a mod to a save is the game's job. No save made with the original exists to migrate. |
+| FR/EN interface | Automated, green | Pickle 03 in tools-English and tools-French (`-Language`). No settings page, no MainButton (`test_no_empty_settings`). |
 
-No settings persistence or RIMMSQOL shortcut scenario applies: this content-only mod
-has neither a settings page nor a MainButton. Inspect logs after each scenario.
-After fixes, rerun affected scenarios and portable/resource checks; retain failures
-alongside subsequent passing results. Passing automated checks is not an in-game pass.
+Optional-mod and incompatibility passes: ADS 2 (04, 05), the original mod (07). Not asserted: four-direction art
+(textures are the author's, unchanged).
+After a change to `Mod/`, rerun the rows that name an automated check.

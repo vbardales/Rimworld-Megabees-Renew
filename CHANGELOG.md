@@ -33,3 +33,10 @@ on a null `eggUnfertilizedDef`.
 - Added unofficial notices and the final GitHub source link.
 - Added delivered artwork, reusable XML/resource tests and functional test scenarios.
 - Verified that the game parser accepts the inherited repeated closing parentheses in colors; gameplay Defs were not changed.
+
+## [0.1.0] — 2026-10-01
+
+Creation of the `About/PublishedFileId.txt` (Workshop item 3811291235). Pre-publication only: the
+item is private, this version is neither public nor a tested release, and `1.0.0` above stays
+unreleased. The upload contained `Mod/` as it stood on 2026-10-01 (the last change to `Mod/` before
+it was `238adf2`, the Preview of 2026-09-29); nothing else changed in it since, apart from this file.

@@ -1,0 +1,5 @@
+2026-09-29 Pickle, Mod/ at 0145956 (Mod/ unchanged since except About/Preview.png, 238adf2): 5 passes via the dispatcher, all exitReason passed, 0 failed.
+tools-English 13 scenarios 8 passed 5 skipped by @requires/@sans; tools-French same counts; avec-ads2-English 11 scenarios 9 passed 2 skipped (07 needs the original mod); incompat-original-English 2/2 passed (07); dlc-absent-English 4/4 passed (06, 08).
+Every @requires scenario played in the pass that mounts its mod: 04 (ADS 2) in avec-ads2, 07 (zoura3025.megabees) in incompat-original, 08 (loadaudit) in tools, avec-ads2, dlc-absent. No @wip. 08 load-is-clean green in 3 passes.
+@review capture opened 2026-10-02: adult megabee and brood drawn side by side, no dev tools visible (Tests/Pickle/Evidence/tools-English-0145956/review-the-adult-and-the-brood.jpg). Four-direction rendering not asserted.
+Evidence minified 2026-10-02: report.html and screenshots/ removed from all five, 32 MB -> 1.1 MB; kept summary.json/md, junit.xml, messages.ndjson, Player.log, evidence-complete.txt, one JPEG.

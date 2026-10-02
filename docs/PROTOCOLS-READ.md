@@ -1,37 +1,37 @@
 # Protocols read, and which version
 
-Version = last commit touching the file, in its own repository. Protocol docs (AGENTS, AUDIT, PUBLISHING, TRANSLATIONS, STYLE_RIMWORLD, MOD_SETTINGS, WORKSHOP_COMMENTS, SEARCHING) live in `../rimworld-protocols.git`: read with `git --git-dir=../rimworld-protocols.git --work-tree=. log -1 -- <file>` from the monorepo root, `git log` there lies. `M` = read as on disk, not committed. Reread when the version moves. Last pass: **2026-09-28**.
+Version = last commit touching the file, in its own repository. Protocol docs (AGENTS, AUDIT, PUBLISHING, TRANSLATIONS, STYLE_RIMWORLD, MOD_SETTINGS, WORKSHOP_COMMENTS, SEARCHING) live in `../rimworld-protocols.git` (from the monorepo root: `git --git-dir=../rimworld-protocols.git --work-tree=. log -1 -- <file>`). Reread a file only when its version moves. Last pass: **2026-10-02**. "Digest" = read in full by a sub-agent, rules relayed.
 
-## Read in full, useful
+## Read in full by this session, useful
 | Document | Version | What it changed here |
 | --- | --- | --- |
-| `AGENTS.md` (collection) | 3a1d2cb 2026-09-24 M | Ordered gates; evidence rules; CI-only publication. |
-| `AGENTS.md` (this mod) | 9391da0 2026-09-13 | Stage change => rename Codex task (`set_thread_title` not available here: pending). |
-| `AUDIT.md` | c5ca0c0 2026-09-26 M | Step 12 audit rule (fall back to last established state), `tested` gate criteria, no game launch, requests only via `Submit-PickleRun.ps1`. |
-| `TRANSLATIONS.md` | f5c2d9d 2026-09-25 | Plural rule: no counted text in this mod, n/a. |
-| `MOD_SETTINGS.md` | b83933b 2026-09-23 | `not_applicable` stands (no settings, no page, no shortcut). |
-| `PUBLISHING.md` | 95c6dfd 2026-09-28 M | Read: origin-repo rule, **animal integrations rule (ADS 2, XND, Better Crossbreeding) before preTest**. Rest skimmed by headings; reread fully at `prepublished`. |
-| `PickleTools/Authoring/README.md` | 8d3ca6d 2026-09-26 | Suite layout, pass matrix, timeouts (watchdog 120 s). |
-| `PickleTools/TESTING.md` (section "What to keep") | 650adce 2026-09-25 | Evidence keep/delete table, copied into TESTING.md. |
-| `PickleTools/README.md` | c771bef 2026-09-25 | Tool catalogue (LoadAudit, CoatSteps, DefFieldSteps fit an animal mod). |
-| `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | 77ca9d7 2026-09-27 | Filters, DepMap, no SHA in requests, no `.ico`/`desktop.ini` under `Mod/` (`*.ico` now ignored). |
-| `scripts/SEARCHING.md` | 50de695 2026-09-28 | `Search-Workshop.sh` for a corpus-wide defName/class/texture search; not what confirmed `upstream_mod_remotes: N/A` (that was a web search, About.xml/Workshop page reading, done 2026-09-13/28), but this is the tool of record for the next defName-collision recheck. |
+| `AUDIT.md` | 5a975b5 2026-10-02 | `tested` gate (no `@wip`, `@requires` scenarios played, no manual test left), step 12 fall-back rule, prepublication `0.1.0` and CHANGELOG, pass-order rule, session title `<packageId sans nelim.> / <workflow_stage>`. |
+| `PUBLISHING.md` | 4e44398 2026-10-02 | Read in full. **Dogs mate** joins the animal-integration rules (written no for Megabee), `0-` gallery naming, PublishedFileId commit, fail-fast policy for `prepublished`. |
+| `TRANSLATIONS.md` | af8427f 2026-10-02 | Read in full. French review by Virginie keeps `translation_fr` at `partial`; reference generator is now `scripts/Make-FrenchReview.ps1` (this mod's `_tools/Generate-FrenchReview.ps1` predates it; same table format). |
+| `AGENTS.md` (collection) | 7fd7475 2026-09-29 (digest) | Evidence retention; `docs/runs/` one line per run; CI-only publication. |
+| `AGENTS.md` (this mod) | 9391da0 2026-09-13 | Stage change => rename Codex task (`set_thread_title` not available here). |
 
-## Read via digest (sub-agent), useful later
+## Read via digest, useful
 | Document | Version | Note |
 | --- | --- | --- |
-| `PickleTools/Headless/README.md` | ed4e73a 2026-09-26 | Needed when writing the suite. |
-| `PickleTools/docs/steps.md` | 09f9c0e 2026-09-28 | Spawn/animal steps; life-stage assertion has no step. |
-| `Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | d07b2b8 2026-09-26 | Needed at first run request. |
-| `Rimworld-Release-Admin/docs/OPERATIONS.md` | 3c03f51 2026-09-26 | Needed at `prepublished`/`published`. |
-| `WORKSHOP_COMMENTS.md` | 5dcb0c7 2026-09-28 M | Needed at publication; no row for the original page yet. |
-| `STYLE_RIMWORLD.md` | 7311308 2026-09-25 M | Only if icon/Preview is regenerated (owner only). |
+| `MOD_SETTINGS.md` | b83933b 2026-09-23 | `not_applicable` stands. |
+| `Rimworld-Release-Admin/docs/OPERATIONS.md` | 3c03f51 2026-09-26 | Needed at `prepublished`/`published`: CHANGELOG `## [version]`, PUBLICATION `### version` block. |
+| `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | 77ca9d7 2026-09-27 | No SHA in a request, no `.ico`/`desktop.ini` in `Mod/`, delete evidence with `robocopy /MIR`. |
+| `Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | d07b2b8 2026-09-26 | Only if another run is submitted. |
+| `PickleTools/Headless/README.md` | ed4e73a 2026-09-26 | Only if another run is submitted. |
+| `STYLE_RIMWORLD.md` | 4e44398 2026-10-02 | Only if icon/Preview is regenerated (owner only). |
 
-## Not useful now (reread only if version moves)
-`Rimworld-Ticket-Dispatcher/docs/WELCOME.md` sections on gallery zoom: publication time.
+## Read, not useful now (reread only if the version moves)
+| Document | Version | Why |
+| --- | --- | --- |
+| `WORKSHOP_COMMENTS.md` | 4e44398 2026-10-02 | Publication time only; no row for the original page (2830700043) yet. |
+| `scripts/SEARCHING.md` | 50de695 2026-09-28 | Only for a corpus-wide defName/class search. |
+| `PickleTools/README.md` | ff20d89 2026-09-29 (M) | Tool catalogue; suite already written. |
+| `PickleTools/docs/steps.md` | da7c3b0 2026-09-28 (M) | Only before writing a new step. |
+| `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` gallery-zoom section | | Publication time. |
 
 ## Other mods read as a model
-`FunnyCreaturesRenew/Mod/Patches/Compat_*.xml` and `FunnyCreaturesRenew/Tests/test_mod.py::CompatibilityPatchTests`, 2026-09-28, for the three animal-integration patches: structure, guards, and the lxml offline-test pattern copied and adapted for a single animal with no crossbreed candidate.
+`FunnyCreaturesRenew/Mod/Patches/Compat_*.xml` and `Tests/test_mod.py::CompatibilityPatchTests`, 2026-09-28. Dogs mate groups read directly in `2441132298/1.6/Defs/CompatibleSpecies/` 2026-10-02.
 
 ## Mod files
-STATUS.md, README.md, CHANGELOG.md, ATTRIBUTION.md, TEST_SCENARIOS.md, About.xml read. Absent: LICENSE (silent licence, justified), PUBLICATION.md (due before `prepublished`), NOTES.md, BUGS.md (never needed).
+STATUS.md, README.md, CHANGELOG.md, ATTRIBUTION.md, TESTING.md, BACKLOG.md, TEST_SCENARIOS.md, FRENCH_REVIEW.md, `docs/runs/`, `Tests/Pickle/` read or checked. Absent and justified: LICENSE (silent licence), PUBLICATION.md (due before `prepublished`), NOTES.md, BUGS.md (never needed).

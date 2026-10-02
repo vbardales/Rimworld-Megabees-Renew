@@ -8,24 +8,23 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-stage:        done
-workflow_stage: done
+stage:        tested
+workflow_stage: tested
 licence:      silent
 licence_at:   2026-09-13
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
-tested_on:
-workshop:
+tested_on:    2026-09-29 (Pickle, 5 passes on Mod/ at 0145956; docs/runs/2026-09-29-0145956-pickle-passes.txt)
+workshop:     3811291235 (private item, prepublished 0.1.0 on 2026-10-01; not public)
 remaining:
-  - unverified: Tests/Pickle/ suite (8 features, 5 passes) written and offline-checked 2026-09-28 (Tests/test_pickle_suite.py, 12/12) but never played in game. done -> tested needs all 5 passes requested and read (see BACKLOG.md).
-  - unverified: `dotnet build Tests/Pickle/Source/Megabees.PickleSteps.csproj -c Release` not run in this session; needed once before the first request.
-  - unverified: In-game scenarios, logs, EN/FR UI, new game and existing save; tested gate criteria in TESTING.md (no @wip, conditional scenarios run, no manual test left).
-  - unverified: Codex task title update (set_thread_title unavailable in this session).
-  - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree against the installed ADS 2 file instead (docs/runs/2026-09-28-animal-integrations.txt). Install lxml and rerun before relying on the suite alone.
   - unverified: French review by Virginie (TRANSLATIONS.md, "Systematic French review by Virginie"). FRENCH_REVIEW.md generated 2026-09-30 by `_tools/Generate-FrenchReview.ps1`; no session marks its own French reviewed.
-session:      megabeesrenew / l10n
-updated:      2026-09-30
+  - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
+  - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
+  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `tested`.
+  - feature: `1.0.0` stays unreleased until `prepublished` (PUBLICATION.md, gallery, Workshop comments, notes), then `published`.
+session:      megabeesrenew / tested
+updated:      2026-10-02
 ---
 
 # Megabees Renew — status
@@ -53,7 +52,25 @@ All 30 rows resolved (no "not found"); none flagged `?`.
 its own French reviewed; `remaining` carries the open "French review by Virginie" line until she
 reviews `FRENCH_REVIEW.md` and this line is replaced with her dated entry.
 
-## Audit 2026-09-28 (current decision)
+## Audit 2026-10-02 (current decision): done -> tested
+
+Audited HEAD 6aa0500 (+ untracked PublishedFileId.txt, now committed as 8996319). Was `done`, now `tested` (`workflow_stage: tested`). Replaces the 2026-09-28 "current decision" below, whose "never played in game" line was out of date: the five passes ran on 2026-09-29 and had not been recorded here.
+
+**Gate `done -> tested`** (AUDIT.md step 9, version of 2026-10-02):
+- Pickle suites run and green: tools-English, tools-French, avec-ads2-English, incompat-original-English, dlc-absent-English, all `exitReason: passed`, 0 failed; 43 scenario entries, 31 passed, 12 skipped by requirement in passes that do not mount that mod. `setName` of each report read. Mod/ at the run was 0145956; the only `Mod/` change since is About/Preview.png (238adf2), no game content. Details: docs/runs/2026-09-29-0145956-pickle-passes.txt.
+- No `@wip` (checked by `test_pickle_suite.py`). Every `@requires` scenario played in the pass that mounts its mod: 04 in avec-ads2 (3/3), 07 in incompat-original (2/2), 08 in tools, avec-ads2 and dlc-absent. Skipped by requirement elsewhere is not counted as passed.
+- No manual test left: TEST_SCENARIOS.md now gives each of the ten scenarios an automated check or a written not-applicable reason (not testing what the mod does not change, not testing the game).
+- `@review` capture opened 2026-10-02: adult megabee beside a brood, drawn, no dev tools in frame. Logs: 08 green in 3 passes. EN and FR UI: 03 in both languages. Options/MainButtons: none exist (`test_no_empty_settings`). Save: 02 in both. Existing save: not applicable.
+- Replayed offline today (WSL python3): `unittest discover` 25 tests OK, 8 skipped (lxml); `test_pickle_suite.py` 12 OK, 1 skipped.
+- Not played, written as not applicable: four-direction art (textures unchanged from the author), production values, hatching, salve (engine comps, values byte-identical).
+
+**Rule added 2026-10-01, Dogs mate (PUBLISHING.md, animal mods).** Not treated before. Read 2026-10-02 in `2441132298/1.6/Defs/CompatibleSpecies/`: groups are `Canidae`, `Felidae`, `Mammalia`, `Rodentia`, `Not_implemented_yet`, mammals only, and neither Megascarab nor Megaspider (the analogues of Megabee) is listed. Megabee is an egg-laying insect (`EggLayer` + `Hatcher`): no group fits, so no patch, by written reason. Not a defect.
+
+**Other checks.** No `.dds` in git or under `Mod/` (`*.dds` ignored). No Pickle evidence in git; `Tests/Pickle/Evidence/` ignored and minified (report.html and screenshots/ removed, 32 MB to 1.1 MB, one @review JPEG kept; no field cites a removed report). No Megabees archive in `pickle-reports-archive/`. Original mod: still no git repository found (GitHub web search 2026-10-02, About.xml has no `<url>`); `upstream_mod_remotes: N/A` stands, no PR possible. `translation_fr: partial` is the standing French-review item, a verification, not a defect (AUDIT.md step 12). CHANGELOG now opens its history with `0.1.0` (publishIdFile). Game not launched by this session.
+
+Next: `prepublished` needs PUBLICATION.md (not written), the gallery (Art/Workshop holds only the Preview copy), Workshop comments, a dry-run of the exact SHA, and Virginie's French review.
+
+## Audit 2026-09-28 (replaced 2026-10-02)
 Was `done`, first retracted to `showcase` / workflow_stage `l10n` (see below): the animal-integration rule of 2026-09-28 (PUBLISHING.md) had to be met before `preTest` and no patch existed. It is now met: `Mod/Patches/Compat_ADogSaidAnimalProsthetics2.xml` adds Megabee to `ADS_Cat1/2/3`, guarded (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an `<Operation>`), `loadBefore` declared in About.xml. Classification follows Megabee's own references, not intuition: its life-stage sounds copy `Pawn_Megascarab_*` and its meat is `useMeatFrom Megaspider`; both are in all three ADS 2 categories (`3238353862/1.6/Defs/AnimalCategories/Animal_Categories.xml`, read 2026-09-28). [XND] Nocturnal Animals and Better Crossbreeding get no patch, by written reason: Nocturnal Animals' own Core patches (`2269731409/1.6/Patches/Core/*.xml`, all seven files read) list only `Megasloth` as Nocturnal, no insect analogue, so Megabee stays diurnal, the unpatched default; Better Crossbreeding ships no XML patch for any vanilla animal at all in its installed 1.6 folder, and Megabee's own description names no vanilla animal it derives from or could plausibly pair with, unlike Meffalo ("subspecies of Muffalo") or Boomsloth (explicit megasloth x boomalope mix). Both are documented not applicable, not a defect. Offline: unittest 6 ok + 7 skipped (`CompatibilityPatchTests`, lxml unavailable in this WSL, no pip/sudo to install it); the patch's effect was hand-verified once with plain ElementTree against the real installed ADS 2 file: Megabee appended exactly once to each of the three lists, alongside Megascarab and Megaspider (docs/runs/2026-09-28-animal-integrations.txt). Check-DefInjected: patch operations applied 29 -> 30 (the conditional fired), still 40 keys / 0 errors. `l10n -> preTest` is now established; `stage` moved to `preTest`.
 
 ## Audit follow-up 2026-09-28: preTest -> done

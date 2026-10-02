@@ -10,11 +10,15 @@ Mod-local TODO (not the monorepo's).
 
 ## Blocking `done` -> `tested` (suite written 2026-09-28)
 - [x] `Tests/Pickle/` written: 8 features, 5 `wsl-deps.*.map` files, offline-checked (`Tests/test_pickle_suite.py`, 12/12). Nothing played in game.
-- [ ] `dotnet build Tests/Pickle/Source/Megabees.PickleSteps.csproj -c Release` before the first request (no .NET SDK checked in this session).
-- [ ] File the 5 requests (see Tests/Pickle/README.md), keep the tree unchanged from submission to each `RUN_DONE`, read `exitReason` and the `@review` capture before recording a result.
+- [x] Step assembly built and the suite requested: five passes played 2026-09-29, all green.
+- [x] 5 requests played; `exitReason`, counts and the `@review` capture read 2026-10-02. `tested` established.
 
 ## Upstream
 - [ ] Pull request to the original author: none possible today. Searched 2026-09-28: no repository for `zoura3025.megabees` (About.xml has no `<url>`, Workshop page 2830700043 links none, GitHub search finds only this port). Recheck if the author publishes one; then the PR is systematic (needs Virginie's OK, public).
 
-## Later
-- [ ] `PUBLICATION.md` (before `prepublished`), WORKSHOP_COMMENTS.md row for the original page.
+## Later (`tested -> prepublished`)
+- [ ] `PUBLICATION.md`: description block, change notes `### 0.1.0`/`### 1.0.0`, gallery order, adult-content answers, dependencies/DLC, thanks drafts.
+- [ ] Gallery: `Art/Workshop/` holds only `0-preview` copy of the Preview (renamed `00-` to `0-` on 2026-10-02, the current rule, byte-identical to Mod/About/Preview.png); page captures with the megabee dressed to stand out, none yet.
+- [ ] WORKSHOP_COMMENTS.md row for the original page (2830700043), ADS 2, XND, Better Crossbreeding, Dogs mate (read 2026-10-02, not patched).
+- [ ] Virginie: French review of FRENCH_REVIEW.md; reply stamped in STATUS.md.
+- [ ] Publish `0.1.0` is done; `1.0.0` by CI dry-run then `publish` with the full SHA.
