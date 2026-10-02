@@ -22,3 +22,11 @@ Mod-local TODO (not the monorepo's).
 - [ ] WORKSHOP_COMMENTS.md row for the original page (2830700043), ADS 2, XND, Better Crossbreeding, Dogs mate (read 2026-10-02, not patched).
 - [ ] Virginie: French review of FRENCH_REVIEW.md; reply stamped in STATUS.md.
 - [ ] Publish `0.1.0` is done; `1.0.0` by CI dry-run then `publish` with the full SHA.
+
+## Gallery plan (rule of 2026-10-02: staged photos, except menus) — draft, not yet shot
+Story: a handler's apiary on a sunlit meadow; the megabee is the star, its products are the plot. Common set for all shots: ScreenshotStudio flower meadow (`the flower meadow studio is prepared`), same ground and light, decor placed, shot, removed (`the decor is removed`), next. `0-preview` = Preview copy (done).
+1. `1-megabee-and-brood`: adult and brood close together (`adult animals ... spawned close together`, `I frame the animals of kind`), a lamp and plants for scale. Most demonstrative image, goes first after the Preview.
+2. `2-harvest`: tallow, wool and eggs laid out by the decor step on a shelf beside the bee, a handler dressed in a palette that contrasts with the yellow-black stripes (teal/olive, as the Preview accent), body and face chosen, never random.
+3. `3-salve`: the salve item on a crafting spot, same set.
+Menus (health tab, bill) would be plain screenshots, not staged; none planned.
+Steps: all exist in PickleTools (spawn close together, frame, studio, decor place/remove, hair/body/tattoo/dye, screenshot mode, developer mode off). Possibly missing: a step that places a named item stack (eggs, wool) on a cell, and one that spawns the brood beside a chosen adult; check `docs/steps.md` "place" section, else ask NPT via the TicketDispatcher. Nothing requested yet.
