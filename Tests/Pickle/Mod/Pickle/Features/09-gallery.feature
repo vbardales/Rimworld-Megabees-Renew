@@ -7,7 +7,7 @@ Feature: Megabees Renew, Workshop gallery captures
   #
   # The story. First light in the barn of the sanctuary. The queen has laid, the brood has hatched, and the apiary
   # wakes up: she is shown with her brood, then with what the colony gives (wool, tallow, eggs), then with the salve
-  # the handlers make from it. Same set for the three pictures: the barn as it is (not emptied: GALERIE.md, "Aucun lieu ne convient"), six lit torch lamps
+  # the handlers make from it. Same set for the three pictures: the barn emptied of its own furniture (allowed for a named place, GALERIE.md), six lit torch lamps
   # around the animals ((190, 239), (196, 239), (189, 234), (197, 234), (193, 241), (193, 231)), enough light to
   # replace taking the roof off, put up before the picture and taken down after it;
   # the animals of one picture are taken away before the next. Noon and clear weather (the save is from 23 h).
@@ -28,6 +28,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And I set the hour to 12
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the animals are removed from the sanctuary "barn"
+    And Nelim's Pickle Tools: the sanctuary "barn" is emptied
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (190, 239)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 239)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (189, 234)
