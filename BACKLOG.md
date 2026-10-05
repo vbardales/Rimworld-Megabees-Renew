@@ -24,7 +24,7 @@ Mod-local TODO (not the monorepo's).
 - [ ] Publish `0.1.0` is done; `1.0.0` by CI dry-run then `publish` with the full SHA.
 
 ## Gallery (rule of 2026-10-02: staged photos, except menus)
-Written 2026-10-05: `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`, pass 6 `sanctuary` (`wsl-deps.sanctuary.map`), in Nelim's sanctuary, place "barn". Story: first light in the barn, the apiary wakes: 1 the queen and her brood, 2 the harvest (wool, tallow, eggs) laid out before her, 3 the salve at the feet of a worker and the brood. Same set (barn emptied, six lit torch lamps, no roof removal), animals removed between shots, noon and clear. Offline-checked (`test_pickle_suite.py` 12 ok); never played.
+Written 2026-10-05: `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`, pass 6 `sanctuary` (`wsl-deps.sanctuary.map`), in Nelim's sanctuary, place "barn". Story: first light in the barn, the apiary wakes: 1 the queen and her brood, 2 the harvest (wool, tallow, eggs) laid out before her, 3 the salve at the feet of a worker and the brood. Same set (barn as it is, six lit torch lamps, no roof removal), animals removed between shots, noon and clear. Offline-checked (`test_pickle_suite.py` 12 ok); never played.
 - [ ] Wait for PickleTools' message that the final Nelims-tribe fixture is installed (docs/GALERIE.md), then file pass 6 as one request.
 - [ ] Open the three captures; verify the decor defs (TorchLamp, WoolMegabee, placement cells in the barn) and that the brood stage 0 shows; adjust cells if a step names one that is not standable.
 - [ ] Copy the retained images to `Art/Gallery/1-…`, `2-…`, `3-…` (only own images).

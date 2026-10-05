@@ -31,7 +31,6 @@ LOAD_AUDIT = ["Nelim's Pickle Tools: the load of the mod {string} is clean",
 # Steps of PickleTools' ScreenshotStudio and StageDecor (docs/SANCTUAIRE-LIEUX.md, GALERIE.md; read 2026-10-05), used by 09-gallery.
 GALLERY = ["Nelim's Pickle Tools: the screen is clear",
            "Nelim's Pickle Tools: the animals are removed from the sanctuary {string}",
-           "Nelim's Pickle Tools: the sanctuary {string} is emptied",
            "Nelim's Pickle Tools: I place the decor {string} at \({int}, {int}\)",
            "Nelim's Pickle Tools: the decor {string} at \({int}, {int}\) is lit",
            "Nelim's Pickle Tools: the decor is removed",
