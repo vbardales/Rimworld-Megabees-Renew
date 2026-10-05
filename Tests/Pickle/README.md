@@ -62,6 +62,7 @@ that is what the run is for.
 | `@requires:<packageId>` | Skipped when that package is absent, and **counted** as skipped. It does not stage it: the map of the pass does |
 | `@sans-facultatifs` | Only meaningful in the pass that mounts no optional mod; excluded from pass 3 |
 | `@dlc-absent` | Only meaningful with Royalty and Ideology out; excluded from passes 1 to 4 |
+| `@gallery` | Staged Workshop photographs (09), played only by pass 6, in Nelim's sanctuary; excluded from passes 1 to 3 |
 | `@clean-load` | The load audit; excluded from pass 4, where the original's duplicates are attributed to this mod |
 | `@allow-errors` | The errors are the point of the scenario (feature 07) |
 | `@review` | Attaches a capture that a person must open. Its green says the path ran, not that the image shows the megabee |
@@ -70,7 +71,7 @@ There is no `@wip`, and `test_pickle_suite.py` refuses one: a scenario put aside
 
 ## The passes, and the request that plays each
 
-Five requests, none with `-IncludeWip`. `<sha>` is the commit the tree is on: **a request carries no SHA and the tree is
+Five requests for passes 1 to 5 (pass 6 is the gallery, held until the fixture is ready), none with `-IncludeWip`. `<sha>` is the commit the tree is on: **a request carries no SHA and the tree is
 staged when the ticket plays**, so keep the tree of this repository unchanged until the `RUN_DONE` of each. Give a new
 `-EvidenceDir` every time, so an older report is never read as the result. The full command form, options and exit codes
 are in `Rimworld-Ticket-Dispatcher/docs/SUBMIT.md`.
@@ -83,11 +84,13 @@ powershell.exe -ExecutionPolicy Bypass -File C:\Users\nelim\Documents\rimworld\R
 
 | # | Pass | `-DepMap` | `-Language` | `-Filter` | Plays |
 |---|---|---|---|---|---|
-| 1 | `tools` (the bare set) | `wsl-deps.tools.map` | English | `'Megabees Renew - Pickle tests,!@dlc-absent'` | 01 to 03, 05, 08; **04 and 07 are skipped by requirement** |
+| 1 | `tools` (the bare set) | `wsl-deps.tools.map` | English | `'Megabees Renew - Pickle tests,!@dlc-absent,!@gallery'` | 01 to 03, 05, 08; **04 and 07 are skipped by requirement** |
 | 2 | `tools` | `wsl-deps.tools.map` | French | the same | the same, in French: the point is 03 |
-| 3 | `avec-ads2` | `wsl-deps.avec-ads2.map` | English | `'Megabees Renew - Pickle tests,!@sans-facultatifs,!@dlc-absent'` | 01 to 04 and 08; 05 excluded; 07 skipped by requirement |
+| 3 | `avec-ads2` | `wsl-deps.avec-ads2.map` | English | `'Megabees Renew - Pickle tests,!@sans-facultatifs,!@dlc-absent,!@gallery'` | 01 to 04 and 08; 05 excluded; 07 skipped by requirement |
 | 4 | `incompat-original` | `wsl-deps.incompat-original.map` | English | `'07-the-original-mod'` | 07 |
 | 5 | `dlc-absent` | `wsl-deps.dlc-absent.map` | English | `'06-dlc-absent,08-load-is-clean'` | 06 and 08 |
+
+| 6 | `sanctuary` | `wsl-deps.sanctuary.map` | English | `'09-gallery'` | 09: three staged gallery photographs (queen and brood, harvest, salve). **Not a test**: its green says the path ran, the three `@review` images are to be opened. **Do not submit before PickleTools announces the final Nelims-tribe fixture** (docs/GALERIE.md) |
 
 The report of every pass carries its name (`-pickle-set-name`), so the passes can be set side by side. Pass 3 runs the
 whole suite on purpose, not only 04: it is the pass that shows the mod stands in the game it will really be loaded in.

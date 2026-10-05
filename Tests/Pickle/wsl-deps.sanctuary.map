@@ -1,0 +1,9 @@
+# Pass sanctuary: Nelim's sanctuary fixture (Nelims-tribe), the stage decor, the animal steps and the clear screen, for the
+# staged gallery captures (09-gallery). Copy of PickleTools/Tests/Pickle/wsl-deps.sanctuary.map minus the tools this suite
+# does not use. Select it with `-DepMap wsl-deps.sanctuary.map`; the report carries the pass name `sanctuary`.
+# GALERIE.md: submit no gallery ticket before PickleTools announces that the final fixture is installed.
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
+nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
+nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod

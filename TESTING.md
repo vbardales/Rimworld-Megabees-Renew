@@ -8,6 +8,9 @@ Offline: `wsl python3 -m unittest discover -s Tests -v` (13 tests, 7 skip: lxml 
 3. **Declared incompatibility** (`incompat-original`): `wsl-deps.incompat-original.map` mounting `zoura3025.megabees` (2830700043, installed on this machine); asserts the documented symptom (duplicate defNames, the original's own 1.3-form load fault), does not expect a plain red run.
 4. **DLC absent** (`dlc-absent`): `wsl-deps.dlc-absent.map`, Royalty and Ideology only (the two the `willNeverEat` `MayRequire` entries name); asserts the guards raise nothing and the def still loads and reads the same.
 
+## Pass 6, the gallery (`sanctuary`)
+`09-gallery` stages three Workshop photographs (BACKLOG.md). It proves nothing about the mod; excluded from passes 1 to 3 by `!@gallery`. Filed once, after PickleTools' fixture message.
+
 ## `done -> tested` gate (AUDIT.md, step 9, version of 2026-10-02): all met
 - Order of passes (Virginie, 2026-10-02): what never ran or is red is replayed alone, in small tickets; the non-regression passes (full suite, both languages) are filed together, last, on the final revision. A scenario with a green run on the current logic is non-regression; a change to `Mod/` or to a step it uses makes it new again.
 - No scenario tagged `@wip`: repaired and replayed, or deleted with its reason.

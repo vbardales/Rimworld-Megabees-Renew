@@ -21,12 +21,23 @@ WORKSHOP = Path(os.environ.get('RIMWORLD_WORKSHOP',
                                r'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100'))
 
 PREFIX = 'Megabees Renew:'
-ALLOWED_TAGS = {'review', 'allow-errors', 'sans-facultatifs', 'dlc-absent', 'clean-load'}
+ALLOWED_TAGS = {'review', 'allow-errors', 'sans-facultatifs', 'dlc-absent', 'clean-load', 'gallery'}
 REQUIRES = re.compile(r'^requires:[A-Za-z0-9_.]+$')
 DLC = {'ludeon.rimworld.royalty', 'ludeon.rimworld.ideology'}
 # The two steps of PickleTools' load audit, from PickleTools/docs/steps.md (the tool is staged by every pass map).
 LOAD_AUDIT = ["Nelim's Pickle Tools: the load of the mod {string} is clean",
               "Nelim's Pickle Tools: the load of the mod {string} is clean, apart from {string}"]
+
+# Steps of PickleTools' ScreenshotStudio and StageDecor (docs/SANCTUAIRE-LIEUX.md, GALERIE.md; read 2026-10-05), used by 09-gallery.
+GALLERY = ["Nelim's Pickle Tools: the screen is clear",
+           "Nelim's Pickle Tools: the animals are removed from the sanctuary {string}",
+           "Nelim's Pickle Tools: the sanctuary {string} is emptied",
+           "Nelim's Pickle Tools: I place the decor {string} at \({int}, {int}\)",
+           "Nelim's Pickle Tools: the decor is removed",
+           "Nelim's Pickle Tools: an adult animal of kind {string} named {string} is spawned at \({int}, {int}\)",
+           "Nelim's Pickle Tools: an animal of kind {string} named {string} is spawned at \({int}, {int}\) at life stage {int}",
+           "Nelim's Pickle Tools: I frame the animal {string} at zoom {int}",
+           "Nelim's Pickle Tools: studio presentation mode is enabled"]
 
 
 def to_regex(expression):
@@ -112,7 +123,7 @@ class PickleSuiteTests(unittest.TestCase):
     def setUpClass(cls):
         cls.steps, cls.features = parse_features()
         cls.custom = custom_steps()
-        cls.known = builtin_steps() + LOAD_AUDIT + cls.custom
+        cls.known = builtin_steps() + LOAD_AUDIT + GALLERY + cls.custom
         cls.compiled = [(e, to_regex(e)) for e in cls.known]
 
     def test_there_are_features_and_steps(self):
@@ -182,7 +193,7 @@ class PickleSuiteTests(unittest.TestCase):
     def test_every_map_is_well_formed_and_ends_with_a_newline(self):
         maps = sorted(PICKLE.glob('wsl-deps.*.map'))
         self.assertEqual([m.name for m in maps], ['wsl-deps.avec-ads2.map', 'wsl-deps.dlc-absent.map',
-                                                  'wsl-deps.incompat-original.map', 'wsl-deps.tools.map'])
+                                                  'wsl-deps.incompat-original.map', 'wsl-deps.sanctuary.map', 'wsl-deps.tools.map'])
         for path in maps:
             with self.subTest(map=path.name):
                 # `read` drops a last line with no newline, without a word, and the mod on it is never staged.
@@ -217,6 +228,8 @@ class PickleSuiteTests(unittest.TestCase):
             'SamBucher.ADogSaidAnimalProsthetics2': 'wsl-deps.avec-ads2.map',
             'zoura3025.megabees': 'wsl-deps.incompat-original.map',
             'nelim.pickletools.loadaudit': 'wsl-deps.tools.map',
+            'nelim.pickletools.screenshotstudio': 'wsl-deps.sanctuary.map',
+            'nelim.pickletools.stagedecor': 'wsl-deps.sanctuary.map',
         }
         for file, (tags, _) in self.features.items():
             for tag in tags:
@@ -260,7 +273,7 @@ class PickleSuiteTests(unittest.TestCase):
 
     def test_passes_are_selectable_by_the_filters_written_in_the_readme(self):
         readme = (PICKLE / 'README.md').read_text(encoding='utf-8')
-        for tag in ('@sans-facultatifs', '@dlc-absent', '@clean-load'):
+        for tag in ('@sans-facultatifs', '@dlc-absent', '@clean-load', '@gallery'):
             self.assertIn(tag, readme, tag + ' is used by a feature and must be explained where the passes are')
         for name in sorted(f.stem for f in FEATURES.glob('*.feature')):
             self.assertIn(name, readme, name + ' is not placed in a pass of the README')

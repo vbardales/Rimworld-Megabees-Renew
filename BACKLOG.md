@@ -23,10 +23,9 @@ Mod-local TODO (not the monorepo's).
 - [ ] Virginie: French review of FRENCH_REVIEW.md; reply stamped in STATUS.md.
 - [ ] Publish `0.1.0` is done; `1.0.0` by CI dry-run then `publish` with the full SHA.
 
-## Gallery plan (rule of 2026-10-02: staged photos, except menus) — draft, not yet shot
-Story: a handler's apiary on a sunlit meadow; the megabee is the star, its products are the plot. Common set for all shots: ScreenshotStudio flower meadow (`the flower meadow studio is prepared`), same ground and light, decor placed, shot, removed (`the decor is removed`), next. `0-preview` = Preview copy (done).
-1. `1-megabee-and-brood`: adult and brood close together (`adult animals ... spawned close together`, `I frame the animals of kind`), a lamp and plants for scale. Most demonstrative image, goes first after the Preview.
-2. `2-harvest`: tallow, wool and eggs laid out by the decor step on a shelf beside the bee, a handler dressed in a palette that contrasts with the yellow-black stripes (teal/olive, as the Preview accent), body and face chosen, never random.
-3. `3-salve`: the salve item on a crafting spot, same set.
-Menus (health tab, bill) would be plain screenshots, not staged; none planned.
-Steps: all exist in PickleTools (spawn close together, frame, studio, decor place/remove, hair/body/tattoo/dye, screenshot mode, developer mode off). Possibly missing: a step that places a named item stack (eggs, wool) on a cell, and one that spawns the brood beside a chosen adult; check `docs/steps.md` "place" section, else ask NPT via the TicketDispatcher. Nothing requested yet.
+## Gallery (rule of 2026-10-02: staged photos, except menus)
+Written 2026-10-05: `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`, pass 6 `sanctuary` (`wsl-deps.sanctuary.map`), in Nelim's sanctuary, place "barn". Story: first light in the barn, the apiary wakes: 1 the queen and her brood, 2 the harvest (wool, tallow, eggs) laid out before her, 3 the salve at the feet of a worker and the brood. Same set (barn emptied, two torch lamps), animals removed between shots, noon and clear. Offline-checked (`test_pickle_suite.py` 12 ok); never played.
+- [ ] Wait for PickleTools' message that the final Nelims-tribe fixture is installed (docs/GALERIE.md), then file pass 6 as one request.
+- [ ] Open the three captures; verify the decor defs (TorchLamp, WoolMegabee, placement cells in the barn) and that the brood stage 0 shows; adjust cells if a step names one that is not standable.
+- [ ] Copy the retained images to `Art/Gallery/1-…`, `2-…`, `3-…` (only own images).
+- Missing steps asked of NPT 2026-10-05: stack of N as decor and facing, both non-blocking, not requested again.
