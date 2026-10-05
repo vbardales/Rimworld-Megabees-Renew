@@ -7,12 +7,13 @@ Feature: Megabees Renew, Workshop gallery captures
   #
   # The story. First light in the barn of the sanctuary. The queen has laid, the brood has hatched, and the apiary
   # wakes up: she is shown with her brood, then with what the colony gives (wool, tallow, eggs), then with the salve
-  # the handlers make from it. Same set for the three pictures: the barn emptied of its own furniture, a torch lamp
-  # on each side of the animals at (190, 239) and (196, 239), put up before the picture and taken down after it;
+  # the handlers make from it. Same set for the three pictures: the barn emptied of its own furniture, six lit torch lamps
+  # around the animals ((190, 239), (196, 239), (189, 234), (197, 234), (193, 241), (193, 231)), enough light to
+  # replace taking the roof off, put up before the picture and taken down after it;
   # the animals of one picture are taken away before the next. Noon and clear weather (the save is from 23 h).
   # Colour: the megabee is olive yellow and near black, so the warm light of the lamps and the pale goods
   # (cream eggs, cream wool, beige tallow) stand out against the dark earth floor of the barn.
-  #   1 the queen (adult) and her brood side by side, a lamp at each side;
+  #   1 the queen (adult) and her brood side by side, lamps all around;
   #   2 the queen with wool, tallow and a clutch of eggs in a row on the floor in front of her;
   #   3 a worker (adult) and the brood, the salve laid at their feet.
   # Gallery order on the page: 0 Preview, 1 queen and brood, 2 harvest, 3 salve. The interface is the game's
@@ -30,6 +31,16 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: the sanctuary "barn" is emptied
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (190, 239)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 239)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (189, 234)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (197, 234)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (193, 241)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (193, 231)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (190, 239) is lit
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 239) is lit
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (189, 234) is lit
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (197, 234) is lit
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 241) is lit
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 231) is lit
 
   @review
   Scenario: gallery 1, the queen and her brood in the barn at first light
