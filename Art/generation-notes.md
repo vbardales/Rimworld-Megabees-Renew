@@ -1,9 +1,24 @@
-# Preview generation — 2026-09-13
+# Preview generation
 
-Built-in imagegen, using `Mod/Textures/Things/Pawn/Animal/Megabee/megabee_south.png`
-as animal-design reference. Result visually inspected and saved as Art/Preview.png.
-The existing icon was preserved, not regenerated. Source and final paths are tracked
-in STATUS.md. Render the text overlay with render-preview.cjs and Playwright/Chrome.
+The text-free illustration is preserved as `Preview-source.png`. The bespoke megabee
+line-art is committed at its final render size in `echo.png`, and the clean transparent
+badge artwork is `ModIcon-source.png`.
+
+All copy, palette and placement settings live in `Preview.config.json`. Render from the
+mod root with the shared renderer:
+
+```powershell
+node ../scripts/Render-Preview.cjs
+```
+
+It writes `Mod/About/Preview.png`, `Art/Gallery/0-preview.png`, `Art/Preview.ico` and
+`Art/ModIcon.ico`; reproducible layout checks are generated under `Art/.render/`.
+
+`Megabees` uses the RimWorld title font. `Renew`, `(unofficial)` and the description use
+Segoe UI; `Renew (unofficial)` stays on one line at one size. The line-art is flipped
+horizontally and the ModIcon sits bottom-left at 15 degrees.
+
+## Original background prompt
 
 Prompt used:
 

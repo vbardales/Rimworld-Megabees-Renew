@@ -1,0 +1,55 @@
+{
+  "title": "Megabees Renew (unofficial)",
+  "titleSize": 46,
+  "titleParts": [
+    {
+      "text": "Megabees"
+    }
+  ],
+  "suffix": "Renew",
+  "tag": "(unofficial)",
+  "tagInline": true,
+  "copyLines": [
+    "Giant, docile honeybees.",
+    "Wool, eggs, tallow and salve."
+  ],
+  "layout": "panel",
+  "panelAnchor": "top-left",
+  "backgroundFile": "Preview-source.png",
+  "backgroundPosition": "center",
+  "backgroundSize": "cover",
+  "echo": {
+    "file": "echo.png",
+    "preSized": true,
+    "mode": "alpha",
+    "color": "var(--accent)",
+    "width": 170,
+    "height": 170,
+    "opacity": 1,
+    "veil": false,
+    "panelTop": 35,
+    "panelRight": 1,
+    "panelWidth": 30,
+    "flipX": true
+  },
+  "iconBadge": {
+    "file": "ModIcon-source.png",
+    "corner": "bottom-left",
+    "width": 180,
+    "translate": "12%, -12%",
+    "rotate": 15,
+    "radius": 48,
+    "outline": false,
+    "veil": "radial",
+    "veilSize": 250,
+    "veilLeft": -45,
+    "veilBottom": -45
+  },
+  "palette": {
+    "veil": "#262A1D",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#D3D88C",
+    "accent": "#48C9C1",
+    "badgeInk": "#17120E"
+  }
+}
