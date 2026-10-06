@@ -48,6 +48,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (189, 232)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 232)
     And Nelim's Pickle Tools: I place the decor "Stool" at (196, 236)
+    And Nelim's Pickle Tools: "Nelim" is undressed
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (26, 140, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (104, 112, 48)
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (150, 70, 40)
@@ -57,7 +58,8 @@ Feature: Megabees Renew, Workshop gallery captures
     Given Nelim's Pickle Tools: an adult animal of kind "Megabee" named "Queen" is spawned at (193, 237)
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (195, 236) at life stage 0
     And Nelim's Pickle Tools: "Nelim" stands at (191, 235) facing East
-    When Nelim's Pickle Tools: I frame the animal "Queen" at zoom 11
+    When Nelim's Pickle Tools: I am at the sanctuary "barn"
+    And Nelim's Pickle Tools: I frame the cell (192, 237) at zoom 7
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery-1-queen-and-brood"
     And Nelim's Pickle Tools: the decor is removed
@@ -73,7 +75,8 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I place the decor "EggMegabeeFertilized" at (191, 238)
     And Nelim's Pickle Tools: I place the decor "EggMegabeeFertilized" at (192, 238)
     And Nelim's Pickle Tools: "Nelim" stands at (190, 237) facing East
-    When Nelim's Pickle Tools: I frame the animal "Queen" at zoom 11
+    When Nelim's Pickle Tools: I am at the sanctuary "barn"
+    And Nelim's Pickle Tools: I frame the cell (192, 237) at zoom 7
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery-2-harvest"
     And Nelim's Pickle Tools: the decor is removed
@@ -85,7 +88,8 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (195, 235) at life stage 0
     And Nelim's Pickle Tools: I place the decor "MedicineMegabee" at (192, 237)
     And Nelim's Pickle Tools: "Nelim" stands at (190, 237) facing East
-    When Nelim's Pickle Tools: I frame the animal "Worker" at zoom 11
+    When Nelim's Pickle Tools: I am at the sanctuary "barn"
+    And Nelim's Pickle Tools: I frame the cell (192, 237) at zoom 7
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery-3-salve"
     And Nelim's Pickle Tools: the decor is removed
