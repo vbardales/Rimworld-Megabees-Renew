@@ -38,7 +38,10 @@ GALLERY = ["Nelim's Pickle Tools: the screen is clear",
            "Nelim's Pickle Tools: an adult animal of kind {string} named {string} is spawned at \({int}, {int}\)",
            "Nelim's Pickle Tools: an animal of kind {string} named {string} is spawned at \({int}, {int}\) at life stage {int}",
            "Nelim's Pickle Tools: I frame the animal {string} at zoom {int}",
-           "Nelim's Pickle Tools: studio presentation mode is enabled"]
+           "Nelim's Pickle Tools: studio presentation mode is enabled",
+           "Nelim's Pickle Tools: {string} stands at \({int}, {int}\) facing {word}",
+           "Nelim's Pickle Tools: {string} wears {string} dyed rgb \({int}, {int}, {int}\)",
+           "Nelim's Pickle Tools: {string} hair colour is rgb \({int}, {int}, {int}\)"]
 
 
 def to_regex(expression):
@@ -231,6 +234,7 @@ class PickleSuiteTests(unittest.TestCase):
             'nelim.pickletools.loadaudit': 'wsl-deps.tools.map',
             'nelim.pickletools.screenshotstudio': 'wsl-deps.sanctuary.map',
             'nelim.pickletools.stagedecor': 'wsl-deps.sanctuary.map',
+            'nelim.pickletools.colonistrace': 'wsl-deps.sanctuary.map',
         }
         for file, (tags, _) in self.features.items():
             for tag in tags:
