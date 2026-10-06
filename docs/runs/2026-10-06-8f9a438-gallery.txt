@@ -1,0 +1,3 @@
+2026-10-06 Pickle sanctuary-English (09-gallery, barn), Mod/ at 8f9a438: exitReason passed, 3 scenarios 3 passed, 0 failed (ticket 3dc3).
+Captures opened 2026-10-06: the barn is the earth room between the enclosure and the workshop; the queen, the brood, six lit torches, and the goods (wool, tallow, one egg, the salve) are drawn; no dev tools in frame. Raw frames are wide (workshop and enclosure at the sides) and the goods small with a "1" stack label; crops of 800x450 enlarged to 1280x720 kept as candidates in Tests/Pickle/Evidence/sanctuary-English-8f9a438/candidate-*.jpg, not yet copied to Art/Gallery (Virginie decides).
+Evidence minified: report.html and screenshots/ removed, 1.6 MB left.
