@@ -22,7 +22,7 @@ Feature: Megabees Renew, Workshop gallery captures
   # Gallery order on the page: 0 Preview, 1, 2, 3. The interface is the game's screenshot mode (studio presentation
   # mode). KNOWN ANOMALY, reported to PickleTools 2026-10-06: stack counters ("1") stay drawn under items despite the
   # presentation mode; a picture that shows it is not used until NPT answers (PUBLISHING.md, 2026-10-06 rule).
-  # Body and face of Nelim are left as the fixture has them: to confirm with Virginie.
+  # Nelim is already in NPT's fixture with her body and face (Virginie, 2026-10-06): this suite only dresses her.
 
   Background:
     Given the save "Nelims-tribe" is loaded
