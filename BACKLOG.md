@@ -26,7 +26,7 @@ Mod-local TODO (not the monorepo's).
 ## Gallery (rule of 2026-10-02: staged photos, except menus)
 Written 2026-10-05: `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`, pass 6 `sanctuary` (`wsl-deps.sanctuary.map`), in Nelim's sanctuary, place "barn". Story: first light in the barn, the apiary wakes: 1 the queen and her brood, 2 the harvest (wool, tallow, eggs) laid out before her, 3 the salve at the feet of a worker and the brood. Same set (barn emptied, six lit torch lamps, no roof removal), animals removed between shots, noon and clear. Offline-checked (`test_pickle_suite.py` 12 ok); never played.
 - [x] Pass 6 played 2026-10-06 (docs/runs/2026-10-06-8f9a438-gallery.txt), green, captures opened.
-- [ ] Virginie: pick or reject the three candidate crops (Evidence/sanctuary-English-8f9a438/candidate-*.jpg); goods are small, stack labels "1" show; consider a stack-size step from NPT or more props. Then copy to Art/Gallery/1-…, 2-…, 3-….
+- [ ] PAUSED by Virginie 2026-10-06: no more gallery generations with a pawn. Ticket 81e8 (commit 2b7c234, undressed + zoom 7) cancelled before it ran. Resume when she says so; candidates of run d31e are not used (clothes not visible).
 - [ ] Copy the retained images to `Art/Gallery/1-…`, `2-…`, `3-…` (only own images).
 - Missing steps asked of NPT 2026-10-05: stack of N as decor and facing, both non-blocking, not requested again.
 
