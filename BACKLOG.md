@@ -41,3 +41,6 @@ The run-3 candidates meet the technical rules (undressed then dressed, no counte
 
 ## Idea: flight (asked 2026-10-07, not decided)
 1.6 (Odyssey) gives flight through two stats under `statBases`, `MaxFlightTime` and `FlightCooldown` (read in `Odyssey/Defs/ThingDefs_Races/Races_Animal_Birds.xml` and `Races_Animal_Insect.xml`). The megabee declares neither, so it does not fly (read from the files, not seen in game); its body (`BodyDefs.xml`) has no wings, as the author made it. Adding the stats would be a new feature, not a port: it changes balance (a body size 5.25 animal crossing walls and fences), contradicts "wingless", and breaks the rule that no balance value is touched. If Virginie decides yes: add both stats, note it in `CHANGELOG.md` as a change from the original, add a Pickle step or test that reads them, and replay pass 1.
+
+### Gallery anomaly reported to NPT 2026-10-07 (run 5924, commit 424b650)
+Clothing items lie on the ground in the three frames (grey cloak and a small yellow garment near (150, 210)): dropped by `"Nelim" is undressed` or by `wears` replacing layers, contrary to "goes to the inventory". Asked NPT for a fix; not redeposited until it answers. Also open: the queen is spawned lying down in shots 1 and 3 (random resting pose); Nelim overlaps the queen in 2 and 3.
