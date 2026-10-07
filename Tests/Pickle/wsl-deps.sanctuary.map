@@ -1,10 +1,33 @@
-# Pass sanctuary: Nelim's sanctuary fixture (Nelims-tribe), the stage decor, the animal steps and the clear screen, for the
-# staged gallery captures (09-gallery). Copy of PickleTools/Tests/Pickle/wsl-deps.sanctuary.map minus the tools this suite
-# does not use. Select it with `-DepMap wsl-deps.sanctuary.map`; the report carries the pass name `sanctuary`.
-# GALERIE.md: submit no gallery ticket before PickleTools announces that the final fixture is installed.
+# Pass sanctuary: the gallery captures (09-gallery) in Nelim's Sanctuary. Base: SanctuaryBacklot/Tests/Pickle/wsl-deps.sanctuary.map (minimum
+# list, 2026-10-08), plus the SanctuaryBacklot mod itself (fixture Nelims-tribe, "Nelim's Sanctuary:" place steps) and ColonistRace.
+# The fixture lives in SanctuaryBacklot: do not stage ScreenshotStudio's copy. Seeds: config/sanctuary/ (copied from the Backlot).
+# Select it with `-DepMap wsl-deps.sanctuary.map`; the report carries the pass name `sanctuary`.
+nelim.sanctuarybacklot path:SanctuaryBacklot/Mod
 nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
 nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
 nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
 nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
 nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
+# The bundle is committed under PickleTools/Mod: this shell replaces it, so the tools above are the only copy of their steps (see StandaloneBase).
+nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+# Minimum list, 2026-10-07/08 (owner). The staging activates in file order, then sorts by loadAfter/dependencies.
+# Bodies and trousers, as proven by Venus Touch Waistlines' gallery pass WITHOUT TailorMade (VenusTouchWaistlines/docs/runs/2026-10-08_gallery-no-tailormade-1):
+# Female Body Variants and Female Apparel Variants load BEFORE WDI (else their Naked_*_Female textures shadow WDI's); AB's Visible Pants is indispensable (without it Venus does nothing).
+# Seeds: Tests/Pickle/config/sanctuary/ (AB's settings; Venus's, whose name must be Mod_local-<packageId>_<Class>.xml because it is staged by path:).
+# Not staged: TailorMade (not needed), Paper Adapter / APP / THIGAPPE (redo the same fitting, not tested together; for a separate comparison pass), Kas.GeneralCollection (optional, Workshop id not found), Reel's textures (second pass).
+tiagocc0.FemaleBodyVariants 3798082132
+tiagocc0.FemaleApparelVariants 3799726535
+wdi.realistic.bodies 3527486510
+ab.vplrf 2986402536
+nelim.venustouch.waistlines path:VenusTouchWaistlines/Mod
+# Facial animation: base, experimentals, Vanilla Textures Expanded, Akeron Extras (needs VTE), EyeGenes3, the performance patch, then VFAE (hard-requires the first four of this block, adopts the VTE and Reel placement adjustments, includes blinking).
+Nals.FacialAnimation 1635901197
+nals.facialanimationexperimentals 2581693737
+VanillaExpanded.VTEXE.FacialAnims 2816938779
+Newton.AKNExtras.FacialAnimations 2889716301
+lucius.eyegenes3 3745223213
+astryl.FacialAnimationPerformancePatch 3790129900
+sd.fa.movingvanillaeyes 3753978140
 nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod

@@ -28,10 +28,10 @@ DLC = {'ludeon.rimworld.royalty', 'ludeon.rimworld.ideology'}
 LOAD_AUDIT = ["Nelim's Pickle Tools: the load of the mod {string} is clean",
               "Nelim's Pickle Tools: the load of the mod {string} is clean, apart from {string}"]
 
-# Steps of PickleTools' ScreenshotStudio and StageDecor (docs/SANCTUAIRE-LIEUX.md, GALERIE.md; read 2026-10-05), used by 09-gallery.
+# Steps used by 09-gallery: "Nelim's Sanctuary:" (SanctuaryBacklot, docs/steps.md, place steps) and "Nelim's Pickle Tools:" (NPT, generic tools).
 GALLERY = ["Nelim's Pickle Tools: the screen is clear",
-           "Nelim's Pickle Tools: the animals are removed from the sanctuary {string}",
-           "Nelim's Pickle Tools: the sanctuary {string} is emptied",
+           "Nelim's Sanctuary: the animals are removed from the sanctuary {string}",
+           "Nelim's Sanctuary: the sanctuary {string} is emptied",
            "Nelim's Pickle Tools: I place the decor {string} at \({int}, {int}\)",
            "Nelim's Pickle Tools: the decor {string} at \({int}, {int}\) is lit",
            "Nelim's Pickle Tools: the decor is removed",
@@ -42,7 +42,7 @@ GALLERY = ["Nelim's Pickle Tools: the screen is clear",
            "Nelim's Pickle Tools: I frame the animal {string} at zoom {int}",
            "Nelim's Pickle Tools: studio presentation mode is enabled",
            "Nelim's Pickle Tools: {string} is undressed",
-           "Nelim's Pickle Tools: I am at the sanctuary {string}",
+           "Nelim's Sanctuary: I am at the sanctuary {string}",
            "Nelim's Pickle Tools: I frame the cell \({int}, {int}\) at zoom {float}",
            "Nelim's Pickle Tools: {string} stands at \({int}, {int}\) facing {word}",
            "Nelim's Pickle Tools: {string} wears {string} dyed rgb \({int}, {int}, {int}\)",
@@ -237,6 +237,7 @@ class PickleSuiteTests(unittest.TestCase):
             'SamBucher.ADogSaidAnimalProsthetics2': 'wsl-deps.avec-ads2.map',
             'zoura3025.megabees': 'wsl-deps.incompat-original.map',
             'nelim.pickletools.loadaudit': 'wsl-deps.tools.map',
+            'nelim.sanctuarybacklot': 'wsl-deps.sanctuary.map',
             'nelim.pickletools.screenshotstudio': 'wsl-deps.sanctuary.map',
             'nelim.pickletools.stagedecor': 'wsl-deps.sanctuary.map',
             'nelim.pickletools.colonistrace': 'wsl-deps.sanctuary.map',

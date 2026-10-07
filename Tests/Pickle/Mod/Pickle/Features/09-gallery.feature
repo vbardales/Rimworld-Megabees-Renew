@@ -1,4 +1,4 @@
-@gallery @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace
+@gallery @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace
 Feature: Megabees Renew, Workshop gallery captures
 
   # Staged photographs for the Steam page (PUBLISHING.md, rules of 2026-10-02 to 2026-10-06). Pass: wsl-deps.sanctuary.map
@@ -35,7 +35,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: the screen is clear
     And I set the hour to 12
     And I set the weather to "Clear"
-    And Nelim's Pickle Tools: the animals are removed from the sanctuary "enclosure-south"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (154, 206)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (161, 206)
     And Nelim's Pickle Tools: I place the decor "Stool" at (162, 209)
@@ -51,7 +51,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (162, 211) at life stage 0
     And Nelim's Pickle Tools: "Nelim" stands at (156, 208) facing East
     And game speed is paused
-    And Nelim's Pickle Tools: I am at the sanctuary "enclosure-south"
+    And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I frame the cell (158, 211) at zoom 9
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery-1-noon-arrival"
@@ -68,7 +68,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" stands at (158, 212) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "WoolMegabee"
     And game speed is paused
-    And Nelim's Pickle Tools: I am at the sanctuary "enclosure-south"
+    And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I frame the cell (158, 211) at zoom 8
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery-2-the-harvest"
@@ -83,7 +83,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: "Nelim" stands at (158, 212) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "MedicineMegabee"
     And game speed is paused
-    And Nelim's Pickle Tools: I am at the sanctuary "enclosure-south"
+    And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I frame the cell (158, 211) at zoom 7
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "gallery-3-the-salve"

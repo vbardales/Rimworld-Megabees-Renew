@@ -90,7 +90,7 @@ powershell.exe -ExecutionPolicy Bypass -File C:\Users\nelim\Documents\rimworld\R
 | 4 | `incompat-original` | `wsl-deps.incompat-original.map` | English | `'07-the-original-mod'` | 07 |
 | 5 | `dlc-absent` | `wsl-deps.dlc-absent.map` | English | `'06-dlc-absent,08-load-is-clean'` | 06 and 08 |
 
-| 6 | `sanctuary` | `wsl-deps.sanctuary.map` | English | `'09-gallery'` | 09: three staged gallery photographs (queen and brood, harvest, salve). **Not a test**: its green says the path ran, the three `@review` images are to be opened. **Do not submit before PickleTools announces the final Nelims-tribe fixture** (docs/GALERIE.md) |
+| 6 | `sanctuary` | `wsl-deps.sanctuary.map` | English | `'09-gallery'` | 09: three staged gallery photographs (queen and brood, harvest, salve). **Not a test**: its green says the path ran, the three `@review` images are to be opened. Map from SanctuaryBacklot (2026-10-08): fixture and place steps `Nelim's Sanctuary:` come from `nelim.sanctuarybacklot`, generic tools stay `Nelim's Pickle Tools:`; seeds in `config/sanctuary/`. Not replayed since the migration |
 
 The report of every pass carries its name (`-pickle-set-name`), so the passes can be set side by side. Pass 3 runs the
 whole suite on purpose, not only 04: it is the pass that shows the mod stands in the game it will really be loaded in.
