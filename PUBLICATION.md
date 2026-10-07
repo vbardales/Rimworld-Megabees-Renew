@@ -62,7 +62,7 @@ The update work, code, tests and documentation, was done with the help of AI ass
 **THANKS**
 
 - zoura3025, for the megabee, its body, its products and its textures.
-- SamBucher, for A Dog Said... Animal Prosthetics 2; Mlie and XeoNovaDan, for Nocturnal Animals; DizzyEevee, for Better Crossbreeding; Mlie, for Dogs mate. Their files were read to decide what the megabee needed, and nothing of theirs was copied.
+- SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862); Mlie and XeoNovaDan, for [Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); DizzyEevee, for [Better Crossbreeding](https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842); Mlie and Revolus, for [Dogs mate (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2441132298). Their files were read to decide what the megabee needed, and nothing of theirs was copied.
 - The tools this was tested with, for development only and never a dependency: [Pickle](https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), [RimLogging](https://steamcommunity.com/sharedfiles/filedetails/?id=3733484696) and PickleTools.
 
 Licence and sources: the original states no licence anywhere, and this port rests on the Workshop's own custom for abandoned mods, named credit and a takedown on request. `ATTRIBUTION.md`, in the mod folder and on GitHub, has the licence check and the port in detail.
@@ -101,6 +101,8 @@ the images to upload numbered `0-`, `1-`, `2-`… and nothing else. `0-preview.p
 | 2 | The harvest: wool, tallow, eggs | `09-gallery` scenario 2 | What the animal gives |
 | 3 | The salve | `09-gallery` scenario 3 | The craftable item |
 
+**Shooting plan (PUBLISHING.md, rules of 2026-10-02 to 2026-10-06): the current series does not meet it yet.** The three candidates in `Art/Gallery/` (`candidate-*.jpg`, to rename or delete before any upload) are one set repeated: the barn emptied, the same frame, no time passing between images, no line-per-image plan in the header of `09-gallery.feature`, the optional ADS 2 integration not shown, and the megabee's body plan not shown. The rewrite is the owner's call (see `BACKLOG.md`, "Gallery, rewrite").
+
 **Held.** The three captures are paused by the owner (2026-10-06, pawns); the last run read (`d31e`) showed the dyed shirt and trousers
 hidden by Nelim's cloak, and the next run (`3f14`, undressed, zoom 7) was queued. The story, the set and the history are in `BACKLOG.md`
 and `docs/runs/`. The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner,
@@ -117,7 +119,7 @@ whether one is still needed. Read 2026-10-07: no row for the original page.
 | A Dog Said... Animal Prosthetics 2 | 3238353862 | `posted` | Add this mod to `Covers`. Post nothing |
 | [XND] Nocturnal Animals (Continued), Mlie and XeoNovaDan | 2269731409 | `posted` | Files read, no patch (the megabee has no insect analogue listed nocturnal). Add this mod to `Covers`. Post nothing |
 | Better Crossbreeding (DizzyEevee) | 3520675842 | `drafted` | Files read, no patch. Add this mod to `Covers`; the draft that exists is Funny Creatures Renew's. Post nothing from here |
-| Dogs mate (Continued) (Mlie) | 2441132298 | `drafted` | Groups read 2026-10-02, no patch (mammals only). Add this mod to `Covers`. Post nothing from here |
+| Dogs mate (Continued) (Mlie, update of Revolus's mod) | 2441132298 | `drafted` | Groups read 2026-10-02, no patch (mammals only). Add this mod to `Covers`. Post nothing from here |
 | Pickle, RimLogging | 3791648678, 3733484696 | `posted` | Add this mod to `Covers`. Post nothing |
 | PickleTools | 3806142401 | `not_applicable` | Same author |
 | Harmony | 2009463077 | `posted` | Add this mod to `Covers` only if a pass stages it in the final list. Post nothing |
