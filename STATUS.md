@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: unchecked
 settings_audit: not_applicable
 mod:          Megabees Renew (unofficial)
 packageId:    nelim.megabeesrenew
@@ -24,7 +24,7 @@ remaining:
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `tested`.
   - feature: `1.0.0` stays unreleased until `prepublished` (PUBLICATION.md, gallery, Workshop comments, notes), then `published`.
 session:      megabeesrenew / tested
-updated:      2026-10-02
+updated:      2026-10-07
 ---
 
 # Megabees Renew — status
@@ -51,6 +51,10 @@ All 30 rows resolved (no "not found"); none flagged `?`.
 `translation_fr: partial` — audit and script done, but per TRANSLATIONS.md a session never marks
 its own French reviewed; `remaining` carries the open "French review by Virginie" line until she
 reviews `FRENCH_REVIEW.md` and this line is replaced with her dated entry.
+
+## French sex-agreement audit 2026-10-07
+
+Entities whose sex can change a text: the individual megabee (`PawnKindDef` label, female `mégabeille`, male `faux-bourdon de mégabeille`, both through the engine's label and labelMale, no neutral needed for an animal), `Megabee.description`, the fertilized egg description (future sex unknown) and the resources (generic species names, no branch). No `{PAWN_*}` token or grammar rule exists. One sentence claimed that every megabee lays unfertilized eggs, shown on a drone too: the French now says "Les femelles peuvent même pondre des œufs non fécondés" (`DefInjected/ThingDef/Megabees.xml`, Megabee.description). English left as the author wrote it. Check-DefInjected 40 keys, 0 errors; unittest 25 ok. A French file changed, so `translation_fr` is back to `unchecked` (TRANSLATIONS.md) and `FRENCH_REVIEW.md` is regenerated; Virginie's review stays open.
 
 ## Audit 2026-10-02 (current decision): done -> tested
 
