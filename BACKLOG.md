@@ -17,7 +17,7 @@ Mod-local TODO (not the monorepo's).
 - [ ] Pull request to the original author: none possible today. Searched 2026-09-28: no repository for `zoura3025.megabees` (About.xml has no `<url>`, Workshop page 2830700043 links none, GitHub search finds only this port). Recheck if the author publishes one; then the PR is systematic (needs Virginie's OK, public).
 
 ## Later (`tested -> prepublished`)
-- [ ] `PUBLICATION.md`: description block, change notes `### 0.1.0`/`### 1.0.0`, gallery order, adult-content answers, dependencies/DLC, thanks drafts.
+- [x] `PUBLICATION.md` drafted 2026-10-07 (description, notes, gallery order, comment for zoura3025, dependencies); open items are listed at its end.
 - [ ] Gallery: `Art/Workshop/` holds only `0-preview` copy of the Preview (renamed `00-` to `0-` on 2026-10-02, the current rule, byte-identical to Mod/About/Preview.png); page captures with the megabee dressed to stand out, none yet.
 - [ ] WORKSHOP_COMMENTS.md row for the original page (2830700043), ADS 2, XND, Better Crossbreeding, Dogs mate (read 2026-10-02, not patched).
 - [ ] Virginie: French review of FRENCH_REVIEW.md; reply stamped in STATUS.md.
