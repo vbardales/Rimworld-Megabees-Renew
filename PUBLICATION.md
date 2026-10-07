@@ -57,7 +57,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 **AI-GENERATED**
 
-The update work, code, tests and documentation, was done with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The Preview was generated with OpenAI image generation; the icon source is an AI-generated image too.
+The update work, code, tests and documentation, was done with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon was generated with DALL-E, by OpenAI. The Preview illustration was generated with OpenAI image generation.
 
 **THANKS**
 
@@ -70,8 +70,7 @@ Licence and sources: the original states no licence anywhere, and this port rest
 [Source code on GitHub](https://github.com/vbardales/Rimworld-Megabees-Renew)
 ```
 
-To check before the dry-run: the `AI-GENERATED` line names Claude and Codex as in the current `About.xml`; the icon source line is new (`ModIcon-source.png`, AI-generated, owner's own file): the owner confirms the wording and the tool.
-
+Settled by the owner, 2026-10-07: DALL-E for the icon, Claude and Codex for everything else. The Preview illustration line keeps the wording of the current `About.xml` (OpenAI image generation); the owner corrects it if another tool made it.
 ## Steam change notes
 
 Written now, sent when `1.0.0` goes up; they start with the version, alone on the first line, in BBCode. The `0.1.0` upload only created
