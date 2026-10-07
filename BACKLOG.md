@@ -44,3 +44,4 @@ The run-3 candidates meet the technical rules (undressed then dressed, no counte
 
 ### Gallery anomaly reported to NPT 2026-10-07 (run 5924, commit 424b650)
 Clothing items lie on the ground in the three frames (grey cloak and a small yellow garment near (150, 210)): dropped by `"Nelim" is undressed` or by `wears` replacing layers, contrary to "goes to the inventory". Asked NPT for a fix; not redeposited until it answers. Also open: the queen is spawned lying down in shots 1 and 3 (random resting pose); Nelim overlaps the queen in 2 and 3.
+Second anomaly reported to NPT 2026-10-07: in shot 2 the egg and the tallow (decor placed at (148, 213) and (148, 215)) are drawn under the flowers of enclosure-south, hidden in part. Asked NPT for a draw-above step or the plant-free cells (maybe the bare grey patch left of the frame, x 140-146, z 212-218 by eye). Not redeposited until it answers; then the items move to bare cells.
