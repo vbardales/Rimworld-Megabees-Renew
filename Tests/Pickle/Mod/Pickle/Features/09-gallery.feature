@@ -34,6 +34,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And game speed is fast
     And Nelim's Pickle Tools: the screen is clear
     And I set the hour to 12
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And I set the weather to "Clear"
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (154, 206)
@@ -50,7 +51,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: an adult animal of kind "Megabee" named "Queen" is spawned at (160, 212)
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (162, 211) at life stage 0
     And Nelim's Pickle Tools: "Nelim" stands at (156, 208) facing East
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And game speed is paused
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I frame the cell (158, 211) at zoom 9
@@ -67,7 +68,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I place the decor "EggMegabeeFertilized" at (156, 209)
     And Nelim's Pickle Tools: I place the decor "MegabeeTallow" at (158, 210)
     And Nelim's Pickle Tools: "Nelim" stands at (158, 212) facing East
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful2"
     And Nelim's Pickle Tools: "Nelim" carries the item "WoolMegabee"
     And game speed is paused
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
@@ -83,7 +84,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: an adult animal of kind "Megabee" named "Worker" is spawned at (161, 212)
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (162, 210) at life stage 0
     And Nelim's Pickle Tools: "Nelim" stands at (158, 212) facing East
-    And Nelim's Pickle Tools: "Nelim" face kit is "calm"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+DoBill"
     And Nelim's Pickle Tools: "Nelim" carries the item "MedicineMegabee"
     And game speed is paused
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
