@@ -46,7 +46,7 @@ GALLERY = ["Nelim's Pickle Tools: the screen is clear",
            "Nelim's Pickle Tools: I frame the cell \({int}, {int}\) at zoom {float}",
            "Nelim's Pickle Tools: {string} stands at \({int}, {int}\) facing {word}",
            "Nelim's Pickle Tools: {string} wears {string} dyed rgb \({int}, {int}, {int}\)",
-           "Nelim's Pickle Tools: {string} hair colour is rgb ({int}, {int}, {int})",
+           "Nelim's Pickle Tools: {string} hair colour is rgb \({int}, {int}, {int}\)",
            "Nelim's Pickle Tools: {string} face kit is {string}"]
 
 
