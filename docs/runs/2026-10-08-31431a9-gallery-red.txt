@@ -1,0 +1,2 @@
+2026-10-08 Pickle sanctuary-English (09-gallery, face kits), Mod/ at 31431a9: RED 0/3 (ticket 543c), same error as 0c4f: No lid type "LidCheerful"/"LidSimple"; valid LidGeek, LidNormal, LidSharp.
+Context: the map played lacked VEFA (sd.fa.movingvanillaeyes) and its seed, back in SanctuaryBacklot's map since 6c8a593/220a909 (2026-10-08); VEFA reads the VTE lids and mouths. Map and seeds resynced afterwards; replay follows.
