@@ -40,7 +40,7 @@ class ModTests(unittest.TestCase):
         self.assertEqual(a.findtext('name'),'Megabees Renew (unofficial)')
         self.assertEqual(a.findtext('supportedVersions/li'),'1.6')
         self.assertTrue(a.findtext('description').startswith('UNOFFICIAL.'))
-        self.assertTrue(a.findtext('description').endswith('[url='+a.findtext('url')+']Source code on GitHub[/url]'))
+        self.assertTrue(a.findtext('description').endswith('Source code on GitHub ('+a.findtext('url')+')'))
         self.assertEqual((R/'ATTRIBUTION.md').read_bytes(),(R/'Mod/ATTRIBUTION.md').read_bytes())
 
     def test_production_and_save_identity(self):

@@ -13,9 +13,7 @@ the exact SHA. The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, ste
 ## Steam description
 
 The single source, in Markdown: the CI converts it to the Steam description (BBCode) and to the plain-text `<description>` of
-`Mod/About/About.xml`, and stops when they differ. **`About.xml` still carries the hand-written text of 2026-09-13; it is regenerated
-from this block, not the other way round, once `Mod/` is free to change** (a Pickle request is staged from the working tree when it
-plays). The block below keeps that text, with the sections the rules add: it opens with the UNOFFICIAL paragraph, has `IF I GO
+`Mod/About/About.xml`, and stops when they differ. **`About.xml` was regenerated from this block on 2026-10-08 (plain text: bold marks dropped, links written `text (url)`); it is regenerated from this block, not the other way round.** The block below keeps that text, with the sections the rules add: it opens with the UNOFFICIAL paragraph, has `IF I GO
 QUIET`, `AI-GENERATED` and `THANKS` in that order after the body, then the pointer to `ATTRIBUTION.md` and the licence, and ends with
 the source link. It contains no code fence.
 
