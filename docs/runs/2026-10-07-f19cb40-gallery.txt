@@ -1,3 +1,3 @@
 2026-10-07 Pickle sanctuary-English (09-gallery "Noon at the apiary", enclosure-south), Mod/ at f19cb40: exitReason passed, 3/3 passed, 0 failed (ticket 6d8d; replaces 424b650 and 5fdd41a).
 Captures opened 2026-10-07: no clothing on the ground (NPT fix), egg and tallow readable above the flowers in 2, the queen standing in all three, teal shirt readable, salve held in 3, no counters or names. Weak points: Nelim small at the gate in 1, olive trousers not readable, a brazier behind the queen in 2 and 3.
-Crops (16:9, 1280x720) kept in Tests/Pickle/Evidence/sanctuary-English-f19cb40/crops/ and Art/Gallery/candidate-*.jpg (to rename 1-, 2-, 3- or delete before an upload).
+Crops (16:9, 1280x720) kept in Tests/Pickle/Evidence/sanctuary-English-f19cb40/crops/ and Art/Gallery/N-candidate-*.jpg (accepted: drop the word candidate; refused: delete).

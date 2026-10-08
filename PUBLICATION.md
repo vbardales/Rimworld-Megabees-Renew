@@ -97,16 +97,13 @@ the images to upload numbered `0-`, `1-`, `2-`… and nothing else. `0-preview.p
 | # | Image | Source | Why here |
 |---|---|---|---|
 | 0 | `Art/Gallery/0-preview.png`, byte-identical copy | the `About/Preview.png` of this same build | Owner rule 2026-09-29 |
-| 1 | The queen and her brood, with Nelim greeting them | `09-gallery` scenario 1, the barn of the Sanctuary | Shows what is being installed: the adult and the young stage side by side |
+| 1 | The queen and her brood, with Nelim greeting them | `09-gallery` scenario 1, `enclosure-south` of the Sanctuary | Shows what is being installed: the adult and the young stage side by side |
 | 2 | The harvest: wool, tallow, eggs | `09-gallery` scenario 2 | What the animal gives |
 | 3 | The salve | `09-gallery` scenario 3 | The craftable item |
 
-**Shooting plan (PUBLISHING.md, rules of 2026-10-02 to 2026-10-06): the current series does not meet it yet.** The three candidates in `Art/Gallery/` (`candidate-*.jpg`, to rename or delete before any upload) are one set repeated: the barn emptied, the same frame, no time passing between images, no line-per-image plan in the header of `09-gallery.feature`, the optional ADS 2 integration not shown, and the megabee's body plan not shown. The rewrite is the owner's call (see `BACKLOG.md`, "Gallery, rewrite").
+**Shooting plan (PUBLISHING.md rules of 2026-10-02 to 2026-10-06).** One story, "Noon at the apiary", in the flower enclosure `enclosure-south` of the Sanctuary (SanctuaryBacklot), noon then +5 min then +10 min, with the plan line per image in the header of `09-gallery.feature`. Candidates in `Art/Gallery/` are named `N-candidate-<name>.jpg`: accepted ones lose the word `candidate`, refused ones are deleted (each under 2 MB, all under 8 MB). Latest run read: `83c5` at `36bc227` (`docs/runs/2026-10-08-36bc227-gallery.txt`); the owner chooses. Not shown: the optional ADS 2 integration and the megabee's body plan tab (`BACKLOG.md`, "Gallery, rewrite"); the face expression waits for an NPT step.
 
-**Held.** The three captures are paused by the owner (2026-10-06, pawns); the last run read (`d31e`) showed the dyed shirt and trousers
-hidden by Nelim's cloak, and the next run (`3f14`, undressed, zoom 7) was queued. The story, the set and the history are in `BACKLOG.md`
-and `docs/runs/`. The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner,
-2026-09-26).
+**Held earlier.** The pawn captures were paused on 2026-10-06 and re-enabled by the owner. The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner, 2026-09-26).
 
 ## Thanks to post
 
