@@ -278,3 +278,6 @@ holds this mod:
 `licence` vocabulary: `open` an explicit licence, `silent` no licence and a dead source,
 `alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
 to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
+
+## Code review
+Last code-review: 2026-10-08, range 8996319 (0.1.0, publishIdFile) to 898cf93, level low. One finding (French dangling opening phrase in Megabee.description, reported to Virginie, not applied: her wording). Next review starts at 898cf93.
