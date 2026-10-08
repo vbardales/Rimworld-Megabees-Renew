@@ -1,0 +1,3 @@
+2026-10-08 Pickle sanctuary-English (09-gallery, no face kit), Mod/ at 64d9436: exitReason passed, 3/3 passed, 0 failed (ticket b3f3). Replaces 36bc227 and the red c8a9d0f (0c4f).
+Captures opened 2026-10-08: same composition as the accepted 1-, 2-, 3- images (queen standing in 2 and 3, lying in 1; egg and tallow in 2; salve in 3; no clothing on the ground); the map without VFAE and with Show Hair plays; Nelim's face is too small to read at these zooms. The accepted images in Art/Gallery stay.
+Face kits: red run 0c4f (docs/runs/2026-10-08-c8a9d0f-gallery-red.txt); cause not established (NPT's lists have no VFAE either; NPT ticket 4606 checks).
