@@ -50,6 +50,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: an adult animal of kind "Megabee" named "Queen" is spawned at (160, 212)
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (162, 211) at life stage 0
     And Nelim's Pickle Tools: "Nelim" stands at (156, 208) facing East
+    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And game speed is paused
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I frame the cell (158, 211) at zoom 9
@@ -66,6 +67,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: I place the decor "EggMegabeeFertilized" at (156, 209)
     And Nelim's Pickle Tools: I place the decor "MegabeeTallow" at (158, 210)
     And Nelim's Pickle Tools: "Nelim" stands at (158, 212) facing East
+    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Pickle Tools: "Nelim" carries the item "WoolMegabee"
     And game speed is paused
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
@@ -81,6 +83,7 @@ Feature: Megabees Renew, Workshop gallery captures
     And Nelim's Pickle Tools: an adult animal of kind "Megabee" named "Worker" is spawned at (161, 212)
     And Nelim's Pickle Tools: an animal of kind "Megabee" named "Brood" is spawned at (162, 210) at life stage 0
     And Nelim's Pickle Tools: "Nelim" stands at (158, 212) facing East
+    And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" carries the item "MedicineMegabee"
     And game speed is paused
     And Nelim's Sanctuary: I am at the sanctuary "enclosure-south"
