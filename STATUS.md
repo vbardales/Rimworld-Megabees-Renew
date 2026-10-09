@@ -8,23 +8,23 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   private
 detached:     yes
-stage:        prepublished
-workflow_stage: prepublished
+stage:        published
+workflow_stage: published
 licence:      silent
 licence_at:   2026-09-13
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
 tested_on:    2026-09-29 (Pickle, 5 passes on Mod/ at 0145956; docs/runs/2026-09-29-0145956-pickle-passes.txt)
-workshop:     3811291235 (private item, prepublished 0.1.0 on 2026-10-01; not public)
+workshop:     3811291235 (1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb; item still private until Virginie makes it public)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `prepublished`.
-  - feature: `1.0.0` stays unreleased until `published` (CI publish of the exact SHA, owner approves `steam-production`; non-regression after deploy, fail fast).
+  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published`.
+  - unverified: public page (description, change note, preview) not yet read: the item is private until Virginie makes it public by hand, subscribes to its comments and watches its activity; then verify and post zoura3025's comment (PUBLICATION.md). Non-regression after deploy, fail fast.
 code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabeesrenew / prepublished
+session:      megabeesrenew / published
 updated:      2026-10-09
 ---
 
@@ -291,3 +291,7 @@ Last code-review: 2026-10-09, range 898cf93 to 50dd0d4 (last PUBLICATION.md upda
 ## Dry-run 2026-10-09
 
 `publish-tag.yml` generated (template `82de20b8aa50`, `.github/`, commit `fb51a82`) and dry-run on `1.0.0` with `update_description=true update_preview=true`. Two red runs fixed first: `37932772949` (the `### 1.0.0` change note was inside its fence: heading moved out, `44a484b`) and `37932906658` (`About.xml` description not the plain text of PUBLICATION.md: backticks, resynced, `02ceebb`). **Green: run `37933045333`, SHA `02ceebb13739e2e80e090a60029ae1c1b24aec9c`**, version 1.0.0, 18 files / 0.70 MB staged, preview 611,741 bytes, description 4,504 characters, `DRY RUN: nothing was sent to Steam`. `publish` must take that exact SHA; any later commit to the repository needs a new dry-run only if it is the one published. `publication_changelog_review_sha` (313b07d) is stale: PUBLICATION.md changed in `44a484b` (heading only). Not launched: `publish` (Virginie approves `steam-production`).
+
+## Publication 2026-10-09
+
+`publish` run `37934952391` on `02ceebb13739e2e80e090a60029ae1c1b24aec9c`, version 1.0.0, `--preview --description`, approved by Virginie. Upload: SteamCMD "Committing update... Success." (a steamcmd download warning in the log did not stop it). Tag `v1.0.0` on that SHA and GitHub release "Megabees Renew 1.0.0" created by the CI. `stage: published`. Not verified: the public Steam page (item private; Virginie makes it public, subscribes, watches). Gallery images (`Art/Gallery/`) are uploaded by hand on the Steam page.
