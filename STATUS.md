@@ -297,3 +297,5 @@ Last code-review: 2026-10-09, range 898cf93 to 50dd0d4 (last PUBLICATION.md upda
 `publish` run `37934952391` on `02ceebb13739e2e80e090a60029ae1c1b24aec9c`, version 1.0.0, `--preview --description`, approved by Virginie. Upload: SteamCMD "Committing update... Success." (a steamcmd download warning in the log did not stop it). Tag `v1.0.0` on that SHA and GitHub release "Megabees Renew 1.0.0" created by the CI. `stage: published`. Not verified: the public Steam page (item private; Virginie makes it public, subscribes, watches). Gallery images (`Art/Gallery/`) are uploaded by hand on the Steam page.
 
 Gallery uploaded by hand on the Steam page, reported by Virginie 2026-10-09: `0-preview.png`, `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg`. Still open: item public, subscription, comments.
+
+Description updated by hand on the Steam page by Virginie, 2026-10-09, from `output/description.bbcode.txt` (generated from PUBLICATION.md at 4bea73e: h1 headings, links to the original Megabees and PickleTools). Required items: none (`modDependencies` empty). Content descriptors: nothing to declare. Still open: item public, subscription, "Watch all activity".
