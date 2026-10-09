@@ -22,6 +22,7 @@ remaining:
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `tested`.
   - feature: `1.0.0` stays unreleased until `prepublished` (PUBLICATION.md, gallery, Workshop comments, notes), then `published`.
+code_review_sha: 50dd0d47d78fda59187df56fca7cdf93188bbe9a
 session:      megabeesrenew / tested
 updated:      2026-10-09
 ---
@@ -284,3 +285,4 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 
 ## Code review
 Last code-review: 2026-10-08, range 8996319 (0.1.0, publishIdFile) to 898cf93, level low. One finding (French dangling opening phrase in Megabee.description, reported to Virginie, not applied: her wording). Next review starts at 898cf93.
+Last code-review: 2026-10-09, range 898cf93 to 50dd0d4 (last PUBLICATION.md update), level low. No finding. Next review starts at 50dd0d4 (`code_review_sha`).
