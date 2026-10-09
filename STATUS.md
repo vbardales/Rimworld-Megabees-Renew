@@ -299,3 +299,7 @@ Last code-review: 2026-10-09, range 898cf93 to 50dd0d4 (last PUBLICATION.md upda
 Gallery uploaded by hand on the Steam page, reported by Virginie 2026-10-09: `0-preview.png`, `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg`. Still open: item public, subscription, comments.
 
 Description updated by hand on the Steam page by Virginie, 2026-10-09, from `output/description.bbcode.txt` (generated from PUBLICATION.md at 4bea73e: h1 headings, links to the original Megabees and PickleTools). Required items: none (`modDependencies` empty). Content descriptors: nothing to declare. Still open: item public, subscription, "Watch all activity".
+
+## Public 2026-10-09
+
+Item 3811291235 public (reported by Virginie; the Steam API `GetPublishedFileDetails` returns it with `visibility: 0`, tags `Mod` and `1.6`, 1 subscription, description with the `[h1]` headings and the link to the original). Subscription to comments and "Watch all activity" not reported yet. Fail fast: non-regression requests (passes 1 to 5) filed right after, label `<sha> <pass>`; verdicts go to `docs/runs/`. Next: zoura3025's comment (posted by Virginie, page re-read first).
