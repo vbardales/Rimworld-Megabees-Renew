@@ -303,3 +303,5 @@ Description updated by hand on the Steam page by Virginie, 2026-10-09, from `out
 ## Public 2026-10-09
 
 Item 3811291235 public (reported by Virginie; the Steam API `GetPublishedFileDetails` returns it with `visibility: 0`, tags `Mod` and `1.6`, 1 subscription, description with the `[h1]` headings and the link to the original). Subscription to comments and "Watch all activity" not reported yet. Fail fast: non-regression requests (passes 1 to 5) filed right after, label `<sha> <pass>`; verdicts go to `docs/runs/`. Next: zoura3025's comment (posted by Virginie, page re-read first).
+
+Virginie reported subscribed to the item's comments, 2026-10-09. "Watch all activity" (mod and parents) not reported yet.
