@@ -19,7 +19,7 @@ Mod-local TODO (not the monorepo's).
 ## Later (`tested -> prepublished`)
 - [x] `PUBLICATION.md` drafted 2026-10-07 (description, notes, gallery order, comment for zoura3025, dependencies); open items are listed at its end.
 - [x] Gallery: `Art/Gallery/` holds `0-preview.png` (byte-identical to Mod/About/Preview.png) and the three accepted captures `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg` (accepted 2026-10-08). Closed 2026-10-09; the sections below are history.
-- [ ] WORKSHOP_COMMENTS.md row for the original page (2830700043), ADS 2, XND, Better Crossbreeding, Dogs mate (read 2026-10-02, not patched).
+- [x] WORKSHOP_COMMENTS.md updated 2026-10-09: row `drafted` for the original page (2830700043); this mod added to `Covers` of ADS 2, XND, Better Crossbreeding, Dogs mate, Pickle, RimLogging, Harmony, PickleTools. Only zoura3025's comment remains to post, after the item is public and its page re-read.
 - [ ] Virginie: French review of FRENCH_REVIEW.md; reply stamped in STATUS.md.
 - [ ] Publish `0.1.0` is done; `1.0.0` by CI dry-run then `publish` with the full SHA.
 

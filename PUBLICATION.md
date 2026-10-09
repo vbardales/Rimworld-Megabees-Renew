@@ -106,18 +106,18 @@ the images to upload numbered `0-`, `1-`, `2-`… and nothing else. `0-preview.p
 ## Thanks to post
 
 Only after the item is visible to its readers, and only what is true. One comment per page, ever; `WORKSHOP_COMMENTS.md` decides
-whether one is still needed. Read 2026-10-07: no row for the original page.
+whether one is still needed. Register updated 2026-10-09 (`WORKSHOP_COMMENTS.md`): row added for the original page, this mod added to `Covers` of the others.
 
 | Recipient | Workshop | Registry | Action |
 |---|---|---|---|
-| Megabees (zoura3025) | 2830700043 | no row | Draft below. It is also how the author can reach me to ask for a takedown. Add the row, `drafted` |
-| A Dog Said... Animal Prosthetics 2 | 3238353862 | `posted` | Add this mod to `Covers`. Post nothing |
-| [XND] Nocturnal Animals (Continued), Mlie and XeoNovaDan | 2269731409 | `posted` | Files read, no patch (the megabee has no insect analogue listed nocturnal). Add this mod to `Covers`. Post nothing |
-| Better Crossbreeding (DizzyEevee) | 3520675842 | `drafted` | Files read, no patch. Add this mod to `Covers`; the draft that exists is Funny Creatures Renew's. Post nothing from here |
-| Dogs mate (Continued) (Mlie, update of Revolus's mod) | 2441132298 | `drafted` | Groups read 2026-10-02, no patch (mammals only). Add this mod to `Covers`. Post nothing from here |
-| Pickle, RimLogging | 3791648678, 3733484696 | `posted` | Add this mod to `Covers`. Post nothing |
-| PickleTools | 3806142401 | `not_applicable` | Same author |
-| Harmony | 2009463077 | `posted` | Add this mod to `Covers` only if a pass stages it in the final list. Post nothing |
+| Megabees (zoura3025) | 2830700043 | no row | Row added 2026-10-09, `drafted`; draft below (343 characters with the link, within the 150-350 guide). It is also how the author can reach me to ask for a takedown. Page not re-read (Steam answered 429): read its last comments right before posting |
+| A Dog Said... Animal Prosthetics 2 | 3238353862 | `posted` | Done 2026-10-09: this mod is in `Covers`. Post nothing |
+| [XND] Nocturnal Animals (Continued), Mlie and XeoNovaDan | 2269731409 | `posted` | Files read, no patch (the megabee has no insect analogue listed nocturnal). Done 2026-10-09: this mod is in `Covers`. Post nothing |
+| Better Crossbreeding (DizzyEevee) | 3520675842 | `drafted` | Files read, no patch. Done 2026-10-09: this mod is in `Covers`; the draft that exists is Funny Creatures Renew's. Post nothing from here |
+| Dogs mate (Continued) (Mlie, update of Revolus's mod) | 2441132298 | `drafted` | Groups read 2026-10-02, no patch (mammals only). Done 2026-10-09: this mod is in `Covers`. Post nothing from here |
+| Pickle, RimLogging | 3791648678, 3733484696 | `posted` | Done 2026-10-09: this mod is in `Covers`. Post nothing |
+| PickleTools | 3806142401 | `not_applicable` | Same author; `Covers` updated 2026-10-09 |
+| Harmony | 2009463077 | `posted` | Every pass stages it: added to `Covers` 2026-10-09. Post nothing |
 
 `<ID>` is `3811291235`, the id of this mod's item (known).
 
