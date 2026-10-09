@@ -42,3 +42,5 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 - **Compatibility.** Optional ADS 2 patch (`loadBefore`); no patch for XND Nocturnal Animals, Better Crossbreeding, Dogs mate (written reasons in `docs/runs`). Declared incompatible with the original (`zoura3025.megabees`). Hard dependencies: none.
 - **Upstream.** Original has no repository (About.xml has no `<url>`); no PR possible. Licence `silent`; ATTRIBUTION.md identical in `Mod/`.
 - **Next.** Test with Make Honey EVEN MORE Compatible (2959585309), after the non-regression. The cleanup of evidence and WSL waits for that test.
+
+WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
