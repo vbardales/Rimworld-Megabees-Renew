@@ -1,0 +1,3 @@
+2026-10-09 Pickle sanctuary-English (09-gallery, normal+moodCheerful / moodCheerful2 / DoBill, temperature 20), Mod/ at 3ca8c88: exitReason passed, 3/3 passed, 0 failed (tickets c698 and 7aba, one launch for both; c698 played the same tree).
+Captures opened 2026-10-09: the expression steps play without error, but Nelim's face is still unreadable at zoom 7 to 9 (NPT reads these animations at zoom 4), and the queen lies on her side in all three (random pose), worse than the accepted 1-, 2-, 3-. The accepted images in Art/Gallery stay.
+Superseded: 64d9436, f8d3ffe, 31431a9 (face kits: red until VEFA was staged; green 4606 at NPT), kept as history in docs/runs/.
