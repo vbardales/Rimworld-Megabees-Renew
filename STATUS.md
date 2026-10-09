@@ -8,8 +8,8 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   private
 detached:     yes
-stage:        published
-workflow_stage: published
+stage:        published[1.0.0]
+workflow_stage: published[1.0.0]
 licence:      silent
 licence_at:   2026-09-13
 upstream_mod_remotes: N/A
@@ -20,11 +20,11 @@ workshop:     3811291235 (1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02c
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published`.
+  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
   - unverified: public page (description, change note, preview) not yet read: the item is private until Virginie makes it public by hand, subscribes to its comments and watches its activity; then verify and post zoura3025's comment (PUBLICATION.md). Non-regression after deploy, fail fast.
 code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabeesrenew / published
+session:      megabeesrenew / published[1.0.0]
 updated:      2026-10-09
 ---
 

@@ -4,10 +4,9 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
-## [1.0.0] — unreleased
+## [1.0.0] — 2026-10-09
 
-On release, after final in-game validation: create the `v1.0.0` tag and
-the matching GitHub release, then publish to the Workshop.
+Published to the Workshop by the CI (run 37934952391, commit 02ceebb), tag `v1.0.0`.
 
 First release of the 1.6 update of **Megabees**, by zoura3025.
 
