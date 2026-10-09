@@ -9,7 +9,7 @@ repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
 stage:        published[1.0.0]
-workflow_stage: published[1.0.0]
+workflow_stage: preTest
 licence:      silent
 licence_at:   2026-09-13
 upstream_mod_remotes: N/A
@@ -19,12 +19,12 @@ tested_on:    2026-10-09 (non-regression after deploy, 5 passes at 3875ccc, all 
 workshop:     3811291235 (public; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
-  - unverified: test with Make Honey EVEN MORE Compatible (TSP) (Workshop 2959585309): requested by Virginie 2026-10-09; not read, not staged, no Pickle map yet. Read the mod, decide patch or none, then a pass (`wsl-deps.<name>.map`).
+  - feature: `1.0.1` in progress (unreleased): optional patch `Compat_MakeHoneyEvenMoreCompatible.xml` (Make Honey EVEN MORE Compatible, Workshop 2959585309) written 2026-10-09 after reading its `Recipes_HoneySyrup.xml`: its `KYD_HoneySyrup` names `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so the port is left out. Pass 7 `make-honey` (feature 10, new step) written, offline checks green (test_pickle_suite 12 ok, unittest 25 ok); `dotnet build` of the step assembly 0 errors 0 warnings; pass 7 requested, nothing played yet. Next: read its report, replay the five others at the final SHA, then `prepublished`.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
 code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabeesrenew / published[1.0.0]
+session:      megabeesrenew / preTest
 updated:      2026-10-09
 ---
 

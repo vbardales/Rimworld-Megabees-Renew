@@ -41,8 +41,9 @@ One line of the original. Wildness stopped being a field of RaceProperties in 1.
 
 # COMPATIBILITY
 
-Nothing is required. One patch applies only when the other mod is loaded, and changes nothing otherwise.
+Nothing is required. Two patches apply only when the other mod is loaded, and change nothing otherwise.
 
+- [Make Honey EVEN MORE Compatible](https://steamcommunity.com/sharedfiles/filedetails/?id=2959585309): its honey syrup recipe accepts the megabee tallow again. It named the original Megabees by its package id, which this port does not carry.
 - [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): the megabee gets its surgeries, in the same categories as the megascarab and the megaspider.
 
 The original [Megabees](https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043) defines the same defs and is declared incompatible. This is a content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
@@ -58,6 +59,7 @@ The update work—code, tests and documentation—was carried out with the help 
 # THANKS
 
 - zoura3025, for [the megabee](https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043), its body, its products and its textures.
+- Zaljerem, Steaplay and TurtleShroom, for [Make Honey EVEN MORE Compatible](https://steamcommunity.com/sharedfiles/filedetails/?id=2959585309), whose recipe file was read to see how it names the megabee.
 - SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862); Mlie and XeoNovaDan, for [Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); DizzyEevee, for [Better Crossbreeding](https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842); Mlie and Revolus, for [Dogs mate (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2441132298). Their files were read to decide what the megabee needed, and nothing of theirs was copied.
 - The tools this was tested with, for development only and never a dependency: [Pickle](https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), [RimLogging](https://steamcommunity.com/sharedfiles/filedetails/?id=3733484696) and [PickleTools](https://steamcommunity.com/sharedfiles/filedetails/?id=3806142401).
 
@@ -68,6 +70,17 @@ Licence and sources: the original states no licence anywhere, and this port rest
 
 Settled by the owner, 2026-10-07: DALL-E for the icon and the Preview illustration, Claude and Codex for everything else.
 ## Steam change notes
+
+### 1.0.1
+
+```text
+[b]1.0.1[/b]
+The honey syrup recipe of Make Honey EVEN MORE Compatible accepts the megabee tallow again.
+[list]
+[*] Optional patch: that mod named the original Megabees by its package id, so the 1.6 port was left out of its recipe.
+[*] Description: headings, and links to the original Megabees and to PickleTools.
+[/list]
+```
 
 Each version needs a `### <version>` heading, then a fenced block whose first line is a BBCode line carrying the exact version
 (`[b]1.0.1[/b]`); the CI refuses it otherwise. `1.0.0` was sent on 2026-10-09 (text in `docs/runs/2026-10-09-1.0.0-change-note.txt`).
@@ -102,12 +115,19 @@ whether one is still needed. Register updated 2026-10-09 (`WORKSHOP_COMMENTS.md`
 | A Dog Said... Animal Prosthetics 2 | 3238353862 | `posted` | Done 2026-10-09: this mod is in `Covers`. Post nothing |
 | [XND] Nocturnal Animals (Continued), Mlie and XeoNovaDan | 2269731409 | `posted` | Files read, no patch (the megabee has no insect analogue listed nocturnal). Done 2026-10-09: this mod is in `Covers`. Post nothing |
 | Better Crossbreeding (DizzyEevee) | 3520675842 | `drafted` | Files read, no patch. Done 2026-10-09: this mod is in `Covers`; the draft that exists is Funny Creatures Renew's. Post nothing from here |
+| Make Honey EVEN MORE Compatible (Zaljerem, Steaplay, TurtleShroom) | 2959585309 | none | Row to add in `WORKSHOP_COMMENTS.md`, `drafted`; draft below. Post only after `1.0.1` is public and the page's last comments are read |
 | Dogs mate (Continued) (Mlie, update of Revolus's mod) | 2441132298 | `drafted` | Groups read 2026-10-02, no patch (mammals only). Done 2026-10-09: this mod is in `Covers`. Post nothing from here |
 | Pickle, RimLogging | 3791648678, 3733484696 | `posted` | Done 2026-10-09: this mod is in `Covers`. Post nothing |
 | PickleTools | 3806142401 | `not_applicable` | Same author; `Covers` updated 2026-10-09 |
 | Harmony | 2009463077 | `posted` | Every pass stages it: added to `Covers` 2026-10-09. Post nothing |
 
 `<ID>` is `3811291235`, the id of this mod's item (known).
+
+**For Make Honey EVEN MORE Compatible** (page 2959585309; authors per its About.xml: Zaljerem, Steaplay, TurtleShroom), not read yet:
+
+```
+Hi :) your honey syrup recipe lists megabee tallow behind the original Megabees' package id, so the 1.6 port was left out. I repointed it on my side, nothing of yours is copied: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew (unofficial)[/url]. Thanks for the patch!
+```
 
 **For zoura3025**, on the page of the original:
 
@@ -122,6 +142,7 @@ Hi zoura3025 :) your megabee was stuck at 1.4, so I carried it to 1.6, credit an
 | Hard dependency | **None** | The mod is XML only. `modDependencies` is empty (offline suite) |
 | Expansions | None required | `loadAfter` names Core and the five expansions, which only orders loading; `willNeverEat` `MayRequire` on Royalty and Ideology; pass 5 (`dlc-absent`, 4/4 green 2026-09-29) shows it resolves without them |
 | A Dog Said... Animal Prosthetics 2 | Optional, `loadBefore` | It copies its category lists once, at its own last patch, so this mod has to load first; pass 3 (`avec-ads2`) green |
+| Make Honey EVEN MORE Compatible (`TSP.zal.patchhoney2`) | Optional, no order | `Compat_MakeHoneyEvenMoreCompatible.xml`, guarded by `PatchOperationFindMod` on its name; patches run on the merged document, so no `loadBefore` or `loadAfter`. Not a dependency of this mod; it needs Universal Processor and Make Honey Compatibile Patch itself. Pass 7 (`make-honey`) written 2026-10-09, not played |
 | [XND] Nocturnal Animals, Better Crossbreeding, Dogs mate | No patch, no order | Written reasons in `STATUS.md` |
 | The original Megabees (`zoura3025.megabees`) | `incompatibleWith` | Same defNames; pass 4 (`incompat-original`) green, the symptom still holds |
 

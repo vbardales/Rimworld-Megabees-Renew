@@ -1,0 +1,14 @@
+# Pass 7: Make Honey EVEN MORE Compatible (TSP.zal.patchhoney2), the optional mod this port patches for its honey syrup
+# recipe. Select it with `-DepMap wsl-deps.make-honey.map`; the report carries the pass name `make-honey`.
+#
+# Its two hard dependencies (About.xml, read 2026-10-09) are staged before it: Universal Processor
+# (syrchalis.processor.framework) and Make Honey Compatibile Patch (zal.patchhoney). The recipe under test is
+# KYD_HoneySyrup, defined in that mod's own 1.6 Defs; its ingredient list names `zal.patchhoney` categories, so
+# the base patch has to be there for the recipe to load without errors.
+#
+# Order does not matter for the patch (patches run on the merged document), so this mod is not named in the map:
+# the staging adds it after the mods of the map.
+nelim.pickletools.loadaudit             path:PickleTools/LoadAudit/Mod
+syrchalis.processor.framework           2633514537
+zal.patchhoney                          2919554065
+TSP.zal.patchhoney2                     2959585309

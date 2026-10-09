@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Make Honey EVEN MORE Compatible (TSP.zal.patchhoney2, Workshop 2959585309, Zaljerem, Steaplay, TurtleShroom).
+
+  Its honey syrup recipe KYD_HoneySyrup (1.6/Defs/RecipeDefs/Recipes_HoneySyrup.xml, read 2026-10-09) accepts the
+  original Megabees' tallow, but only through <li MayRequire="zoura3025.megabees">MegabeeTallow</li>, once in the
+  ingredient filter and once in the fixedIngredientFilter. This port has another packageId
+  (nelim.megabeesrenew) and the same defName, so that MayRequire never matches and the recipe refuses the
+  tallow. Nothing else of that mod names the megabee in 1.6 (its 1.5 patches do, but 1.5 is not loaded).
+
+  The fix is to point those two attributes at this mod: PatchOperationAttributeSet on the exact <li>, so no
+  second entry is added. MayRequire is still in the document when patches run (it is resolved when the Defs
+  are parsed), which is why the xpath can read it.
+
+  The guard is PatchOperationFindMod on the DISPLAYED NAME of that mod (FindMod reads names, not packageIds)
+  and, inside it, a PatchOperationConditional on the <li>: with that mod absent nothing is touched, and with it
+  present but the recipe changed by an update the patch does nothing instead of logging a failure. It is NOT
+  MayRequire on an <Operation>: nothing reads it there.
+
+  No loadAfter is needed: patches run on the merged document after every mod's Defs are read.
+-->
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>TurtleShroom Productions Proudly Presents: Make Honey EVEN MORE Compatible</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/ingredients/li/filter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
+					<match Class="PatchOperationAttributeSet">
+						<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/ingredients/li/filter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
+						<attribute>MayRequire</attribute>
+						<value>nelim.megabeesrenew</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/fixedIngredientFilter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
+					<match Class="PatchOperationAttributeSet">
+						<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/fixedIngredientFilter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
+						<attribute>MayRequire</attribute>
+						<value>nelim.megabeesrenew</value>
+					</match>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

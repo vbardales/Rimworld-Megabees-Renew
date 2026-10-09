@@ -204,7 +204,8 @@ class PickleSuiteTests(unittest.TestCase):
     def test_every_map_is_well_formed_and_ends_with_a_newline(self):
         maps = sorted(PICKLE.glob('wsl-deps.*.map'))
         self.assertEqual([m.name for m in maps], ['wsl-deps.avec-ads2.map', 'wsl-deps.dlc-absent.map',
-                                                  'wsl-deps.incompat-original.map', 'wsl-deps.sanctuary.map', 'wsl-deps.tools.map'])
+                                                  'wsl-deps.incompat-original.map', 'wsl-deps.make-honey.map', 'wsl-deps.sanctuary.map',
+                                                  'wsl-deps.tools.map'])
         for path in maps:
             with self.subTest(map=path.name):
                 # `read` drops a last line with no newline, without a word, and the mod on it is never staged.
@@ -238,6 +239,7 @@ class PickleSuiteTests(unittest.TestCase):
         staged = {
             'SamBucher.ADogSaidAnimalProsthetics2': 'wsl-deps.avec-ads2.map',
             'zoura3025.megabees': 'wsl-deps.incompat-original.map',
+            'TSP.zal.patchhoney2': 'wsl-deps.make-honey.map',
             'nelim.pickletools.loadaudit': 'wsl-deps.tools.map',
             'nelim.sanctuarybacklot': 'wsl-deps.sanctuary.map',
             'nelim.pickletools.screenshotstudio': 'wsl-deps.sanctuary.map',

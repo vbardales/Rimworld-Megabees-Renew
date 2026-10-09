@@ -4,6 +4,16 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
+## [1.0.1] — unreleased
+
+### Added
+
+- **Optional patch for Make Honey EVEN MORE Compatible** (`TSP.zal.patchhoney2`, Workshop 2959585309): its honey syrup recipe `KYD_HoneySyrup` lists `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so this port was left out. `Mod/Patches/Compat_MakeHoneyEvenMoreCompatible.xml` repoints both attributes at `nelim.megabeesrenew`, guarded by `PatchOperationFindMod`.
+
+### Changed
+
+- Description: `[h1]` headings, links to the original Megabees and PickleTools. No change to the mod's defs.
+
 ## [1.0.0] — 2026-10-09
 
 Published to the Workshop by the CI (run 37934952391, commit 02ceebb), tag `v1.0.0`.

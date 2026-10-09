@@ -131,6 +131,25 @@ namespace MegabeesRenew.PickleSteps
                 $"{raceDefName} does not offer {recipeDefName}. it offers {race.AllRecipes.Count} recipes");
         }
 
+        /// <summary>
+        /// Make Honey EVEN MORE Compatible names the megabee tallow in its honey syrup recipe behind a MayRequire on
+        /// the ORIGINAL mod's packageId, so a port with another packageId is left out unless this mod's patch
+        /// repoints it. The recipe the game built is asked, both ways a player meets it: the filter of its
+        /// ingredient (what the cook may use) and its fixedIngredientFilter (what the bill dialog offers).
+        /// </summary>
+        [Then("Megabees Renew: the recipe {string} accepts the thing {string}")]
+        public void RecipeAcceptsThing(PickleContext ctx, string recipeDefName, string thingDefName)
+        {
+            RecipeDef recipe = DefDatabase<RecipeDef>.GetNamedSilentFail(recipeDefName);
+            ctx.Require(recipe != null, $"no RecipeDef named '{recipeDefName}': is the mod that defines it loaded?");
+            ThingDef thing = DefDatabase<ThingDef>.GetNamedSilentFail(thingDefName);
+            ctx.Require(thing != null, $"no ThingDef named '{thingDefName}'");
+            ctx.Assert(recipe.fixedIngredientFilter != null && recipe.fixedIngredientFilter.Allows(thing),
+                $"{recipeDefName} does not offer {thingDefName} in its fixed ingredient filter");
+            ctx.Assert(recipe.ingredients.Any(i => i.filter.Allows(thing)),
+                $"{recipeDefName} has no ingredient that accepts {thingDefName}");
+        }
+
         private static ThingDef RequireRace(PickleContext ctx, string defName)
         {
             ThingDef race = DefDatabase<ThingDef>.GetNamedSilentFail(defName);

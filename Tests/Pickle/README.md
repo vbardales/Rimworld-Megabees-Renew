@@ -18,6 +18,7 @@ Tests/Pickle/
   wsl-deps.avec-ads2.map                  pass 3: A Dog Said... Animal Prosthetics 2
   wsl-deps.incompat-original.map          pass 4: the original mod next to this one
   wsl-deps.dlc-absent.map                 pass 5: Royalty and Ideology left out
+  wsl-deps.make-honey.map                 pass 7: Make Honey EVEN MORE Compatible (TSP.zal.patchhoney2)
   Source/                                 the C# of the step assembly (Megabees.PickleSteps.csproj)
   Mod/                                    the test companion, nelim.megabeesrenew.pickletests
     About/About.xml
@@ -54,6 +55,7 @@ that is what the run is for.
 | `06-dlc-absent` | (Load order) | With Royalty and Ideology out, the megabee loads and reads the same, and its `willNeverEat` guards raise nothing |
 | `07-the-original-mod` | L | The declared incompatibility is still true: the game logs the original's own 1.3-form fault |
 | `08-load-is-clean` | (Logs) | Nothing in the game's log, from the start, is attributed to this mod |
+| `10-make-honey` | S | Make Honey EVEN MORE Compatible's honey syrup recipe accepts the megabee tallow: its `MayRequire` named the original's packageId, the patch repoints it; asked on the recipe the game built |
 
 ## Tags
 
@@ -91,6 +93,8 @@ powershell.exe -ExecutionPolicy Bypass -File C:\Users\nelim\Documents\rimworld\R
 | 5 | `dlc-absent` | `wsl-deps.dlc-absent.map` | English | `'06-dlc-absent,08-load-is-clean'` | 06 and 08 |
 
 | 6 | `sanctuary` | `wsl-deps.sanctuary.map` | English | `'09-gallery'` | 09: three staged gallery photographs (queen and brood, harvest, salve). **Not a test**: its green says the path ran, the three `@review` images are to be opened. Map from SanctuaryBacklot (2026-10-08): fixture and place steps `Nelim's Sanctuary:` come from `nelim.sanctuarybacklot`, generic tools stay `Nelim's Pickle Tools:`; seeds in `config/sanctuary/`. Not replayed since the migration |
+
+| 7 | `make-honey` | `wsl-deps.make-honey.map` | English | `'10-make-honey'` | 10: the honey syrup recipe of Make Honey EVEN MORE Compatible accepts the tallow (control: its own honey wort). Skipped by requirement in passes 1 to 5 |
 
 The report of every pass carries its name (`-pickle-set-name`), so the passes can be set side by side. Pass 3 runs the
 whole suite on purpose, not only 04: it is the pass that shows the mod stands in the game it will really be loaded in.
