@@ -31,7 +31,7 @@ does.
 
 No DLC required. No Harmony, no framework, no dependency of any kind.
 
-Content mod: removing it mid-save will lose any megabee, and any wool, tallow, egg or salve already
+This is a content mod: removing it mid-save will lose any megabee, and any wool, tallow, egg or salve already
 in play.
 
 ## What changed in the 1.6 update

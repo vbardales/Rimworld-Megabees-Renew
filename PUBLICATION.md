@@ -4,9 +4,9 @@ What the Workshop page asks for and the repository holds nowhere else: the descr
 captures, the messages to the mods this one is built on, the dependencies, and the answer to the content questions. It serves
 twice: for the first upload of `1.0.0`, and for whoever takes the mod over.
 
-**State, 2026-10-07: a draft.** The item `3811291235` exists, created by the prepublication `0.1.0` of 2026-10-01
+**State, 2026-10-09: a draft, gallery and content questions done.** The item `3811291235` exists, created by the prepublication `0.1.0` of 2026-10-01
 (`Mod/About/PublishedFileId.txt`, commit `8996319`); it is private and stays private until the owner makes it public by hand.
-The stage is `tested`; `prepublished` still needs the gallery, the owner's French review (`FRENCH_REVIEW.md`) and a green dry-run of
+The stage is `tested`; `prepublished` still needs the owner's French review (`FRENCH_REVIEW.md`) and a green dry-run of
 the exact SHA. The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, steps `tested -> prepublished` and
 `prepublished -> published`.
 
@@ -47,7 +47,7 @@ Nothing is required. One patch applies only when the other mod is loaded, and ch
 
 - [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): the megabee gets its surgeries, in the same categories as the megascarab and the megaspider.
 
-The original Megabees defines the same defs and is declared incompatible. Content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
+The original Megabees defines the same defs and is declared incompatible. This is a content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
 
 **IF I GO QUIET**
 
@@ -55,7 +55,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 **AI-GENERATED**
 
-The update work, code, tests and documentation, was done with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon and the Preview illustration were generated with DALL-E, by OpenAI.
+The update work—code, tests and documentation—was carried out with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon and the Preview illustration were generated with DALL-E, by OpenAI.
 
 **THANKS**
 
@@ -87,7 +87,7 @@ First release of the 1.6 update of Megabees, by zoura3025.
 
 ## Gallery
 
-**Not produced.** The gallery is a manual step on the Steam page (SteamCMD sends the header image only), from `Art/Gallery/`, which holds
+**Produced.** The gallery is a manual step on the Steam page (SteamCMD sends the header image only), from `Art/Gallery/`, which holds
 the images to upload numbered `0-`, `1-`, `2-`… and nothing else. `0-preview.png` is a byte-identical copy of `About/Preview.png`
 (owner rule of 2026-09-29). Every capture is a staged photograph and is opened and read before it goes in (`PUBLISHING.md`, rules of
 2026-10-02 and 2026-10-06).
@@ -99,9 +99,9 @@ the images to upload numbered `0-`, `1-`, `2-`… and nothing else. `0-preview.p
 | 2 | The harvest: wool, tallow, eggs | `09-gallery` scenario 2 | What the animal gives |
 | 3 | The salve | `09-gallery` scenario 3 | The craftable item |
 
-**Shooting plan (PUBLISHING.md rules of 2026-10-02 to 2026-10-06).** One story, "Noon at the apiary", in the flower enclosure `enclosure-south` of the Sanctuary (SanctuaryBacklot), noon then +5 min then +10 min, with the plan line per image in the header of `09-gallery.feature`. Candidates in `Art/Gallery/` are named `N-candidate-<name>.jpg` until accepted; accepted 2026-10-08 by the owner: `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg` (each under 2 MB, all under 8 MB). Latest run read: `83c5` at `36bc227` (`docs/runs/2026-10-08-36bc227-gallery.txt`); the owner chooses. Not shown: the optional ADS 2 integration and the megabee's body plan tab (`BACKLOG.md`, "Gallery, rewrite"); the face expression waits for an NPT step.
+**Shooting plan (PUBLISHING.md rules of 2026-10-02 to 2026-10-06).** One story, "Noon at the apiary", in the flower enclosure `enclosure-south` of the Sanctuary (SanctuaryBacklot), noon then +5 min then +10 min, with the plan line per image in the header of `09-gallery.feature`. Candidates in `Art/Gallery/` are named `N-candidate-<name>.jpg` until accepted; accepted 2026-10-08 by the owner (all four final images are in `Art/Gallery/`): `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg` (each under 2 MB, all under 8 MB). Latest run read: `83c5` at `36bc227` (`docs/runs/2026-10-08-36bc227-gallery.txt`); the owner chooses. Not shown: the optional ADS 2 integration and the megabee's body plan tab (`BACKLOG.md`, "Gallery, rewrite"); the face expression waits for an NPT step.
 
-**Held earlier.** The pawn captures were paused on 2026-10-06 and re-enabled by the owner. The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner, 2026-09-26).
+**Held earlier.** The pawn captures were paused on 2026-10-06; the owner re-enabled them and the pause is closed. The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner, 2026-09-26).
 
 ## Thanks to post
 
@@ -139,9 +139,9 @@ Hi zoura3025 :) your megabee was stuck at 1.4, so I carried it to 1.6, credit an
 
 ## Content questions
 
-Answered only when the gallery exists and its images have been opened: a file name does not say what a picture holds, and these boxes
-commit the page. **Not answered yet.** The likely answer is that there is nothing to declare: one large insect-like animal and its
-products, no gore, no nudity. It stands on the images actually chosen.
+Answered 2026-10-09 from the four final images in `Art/Gallery/`: a file name does not say what a picture holds, and these boxes
+commit the page. **Nothing adult to declare.** One large insect-like animal, its young, wool, tallow, eggs and a salve, and a clothed
+colonist; no gore, no nudity, no sexual content.
 
 ## After the upload, which cannot be caught up
 
@@ -155,8 +155,7 @@ products, no gore, no nudity. It stands on the images actually chosen.
 
 ## Open, and the owner's
 
-1. **The gallery**, and with it the answer to the content questions (paused, pawns).
-2. **The French review** of `FRENCH_REVIEW.md` (`translation_fr: partial`).
-3. **The rollback target**, chosen before publishing: the last commit whose runs are all green. None published yet, so none.
-4. **Regenerate `About.xml`** from the Markdown block above once the runs are done and `Mod/` is free.
-5. **Visibility**: public, by hand, after subscribing to the item and testing it.
+1. **The French review** of `FRENCH_REVIEW.md` (`translation_fr: partial`).
+2. **The rollback target**, chosen before publishing: the last commit whose runs are all green. None published yet, so none.
+3. **Regenerate `About.xml`** from the Markdown block above once the runs are done and `Mod/` is free.
+4. **Visibility**: public, by hand, after subscribing to the item and testing it.

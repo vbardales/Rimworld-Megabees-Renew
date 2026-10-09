@@ -36,7 +36,7 @@ Nothing is required. One patch applies only when the other mod is loaded, and ch
 
 - A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): the megabee gets its surgeries, in the same categories as the megascarab and the megaspider.
 
-The original Megabees defines the same defs and is declared incompatible. Content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
+The original Megabees defines the same defs and is declared incompatible. This is a content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
 
 IF I GO QUIET
 
@@ -44,7 +44,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 AI-GENERATED
 
-The update work, code, tests and documentation, was done with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon and the Preview illustration were generated with DALL-E, by OpenAI.
+The update work—code, tests and documentation—was carried out with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon and the Preview illustration were generated with DALL-E, by OpenAI.
 
 THANKS
 

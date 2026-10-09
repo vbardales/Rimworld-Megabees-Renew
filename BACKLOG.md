@@ -18,16 +18,16 @@ Mod-local TODO (not the monorepo's).
 
 ## Later (`tested -> prepublished`)
 - [x] `PUBLICATION.md` drafted 2026-10-07 (description, notes, gallery order, comment for zoura3025, dependencies); open items are listed at its end.
-- [ ] Gallery: `Art/Workshop/` holds only `0-preview` copy of the Preview (renamed `00-` to `0-` on 2026-10-02, the current rule, byte-identical to Mod/About/Preview.png); page captures with the megabee dressed to stand out, none yet.
+- [x] Gallery: `Art/Gallery/` holds `0-preview.png` (byte-identical to Mod/About/Preview.png) and the three accepted captures `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg` (accepted 2026-10-08). Closed 2026-10-09; the sections below are history.
 - [ ] WORKSHOP_COMMENTS.md row for the original page (2830700043), ADS 2, XND, Better Crossbreeding, Dogs mate (read 2026-10-02, not patched).
 - [ ] Virginie: French review of FRENCH_REVIEW.md; reply stamped in STATUS.md.
 - [ ] Publish `0.1.0` is done; `1.0.0` by CI dry-run then `publish` with the full SHA.
 
-## Gallery (rule of 2026-10-02: staged photos, except menus)
+## Gallery (rule of 2026-10-02: staged photos, except menus) — closed 2026-10-09, kept as history
 Written 2026-10-05: `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`, pass 6 `sanctuary` (`wsl-deps.sanctuary.map`), in Nelim's sanctuary, place "barn". Story: first light in the barn, the apiary wakes: 1 the queen and her brood, 2 the harvest (wool, tallow, eggs) laid out before her, 3 the salve at the feet of a worker and the brood. Same set (barn emptied, six lit torch lamps, no roof removal), animals removed between shots, noon and clear. Offline-checked (`test_pickle_suite.py` 12 ok); never played.
 - [x] Pass 6 played 2026-10-06 (docs/runs/2026-10-06-8f9a438-gallery.txt), green, captures opened.
-- [ ] PAUSED by Virginie 2026-10-06: no more gallery generations with a pawn. Ticket 81e8 (commit 2b7c234, undressed + zoom 7) cancelled before it ran. Resume when she says so; candidates of run d31e are not used (clothes not visible).
-- [ ] Copy the retained images to `Art/Gallery/1-…`, `2-…`, `3-…` (only own images).
+- [x] Pause of 2026-10-06 (no gallery generation with a pawn): lifted by Virginie, gallery done. Ticket 81e8 (commit 2b7c234) was cancelled before it ran; candidates of run d31e were never used.
+- [x] Retained images copied to `Art/Gallery/1-…`, `2-…`, `3-…` (only own images).
 - Missing steps asked of NPT 2026-10-05: stack of N as decor and facing, both non-blocking, not requested again.
 
 ### Choice of place for the gallery (2026-10-06, all 60 named places read in docs/SANCTUAIRE-LIEUX.md, fixture final)

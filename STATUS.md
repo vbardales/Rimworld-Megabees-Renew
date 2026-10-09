@@ -1,12 +1,12 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: unchecked
+translation_fr: complete
 settings_audit: not_applicable
 mod:          Megabees Renew (unofficial)
 packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
-visibility:   public
+visibility:   private
 detached:     yes
 stage:        tested
 workflow_stage: tested
@@ -18,13 +18,12 @@ showcase:     complete
 tested_on:    2026-09-29 (Pickle, 5 passes on Mod/ at 0145956; docs/runs/2026-09-29-0145956-pickle-passes.txt)
 workshop:     3811291235 (private item, prepublished 0.1.0 on 2026-10-01; not public)
 remaining:
-  - unverified: French review by Virginie (TRANSLATIONS.md, "Systematic French review by Virginie"). FRENCH_REVIEW.md generated 2026-09-30 by `scripts/Make-FrenchReview.ps1` (was `_tools/Generate-FrenchReview.ps1`, removed 2026-10-05); no session marks its own French reviewed.
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `tested`.
   - feature: `1.0.0` stays unreleased until `prepublished` (PUBLICATION.md, gallery, Workshop comments, notes), then `published`.
 session:      megabeesrenew / tested
-updated:      2026-10-07
+updated:      2026-10-09
 ---
 
 # Megabees Renew — status
@@ -51,6 +50,10 @@ All 30 rows resolved (no "not found"); none flagged `?`.
 `translation_fr: partial` — audit and script done, but per TRANSLATIONS.md a session never marks
 its own French reviewed; `remaining` carries the open "French review by Virginie" line until she
 reviews `FRENCH_REVIEW.md` and this line is replaced with her dated entry.
+
+## French review by Virginie 2026-10-09
+
+Virginie reviewed `FRENCH_REVIEW.md` (French at `599723f`, including the female/male wording of `Megabee.description`) and validated it on 2026-10-09 ("je valide"). `translation_fr: complete`; the `remaining` line is removed. Same day she validated the documentation fixes: PUBLICATION.md gallery and content questions, BACKLOG.md gallery closed, `visibility: private` (item 3811291235 not yet public).
 
 ## French sex-agreement audit 2026-10-07
 
