@@ -4,11 +4,9 @@ What the Workshop page asks for and the repository holds nowhere else: the descr
 captures, the messages to the mods this one is built on, the dependencies, and the answer to the content questions. It serves
 twice: for the first upload of `1.0.0`, and for whoever takes the mod over.
 
-**State, 2026-10-09: a draft, gallery and content questions done.** The item `3811291235` exists, created by the prepublication `0.1.0` of 2026-10-01
-(`Mod/About/PublishedFileId.txt`, commit `8996319`); it is private and stays private until the owner makes it public by hand.
-The stage is `tested`; `prepublished` still needs the owner's French review (`FRENCH_REVIEW.md`) and a green dry-run of
-the exact SHA. The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, steps `tested -> prepublished` and
-`prepublished -> published`.
+**State, 2026-10-09: published `1.0.0`.** The item `3811291235` was created by the prepublication `0.1.0` of 2026-10-01
+(`Mod/About/PublishedFileId.txt`, commit `8996319`), uploaded as `1.0.0` by CI run `37934952391` on 2026-10-09 and made public by the owner.
+The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, steps `tested -> prepublished` and `prepublished -> published`.
 
 ## Steam description
 
@@ -71,20 +69,9 @@ Licence and sources: the original states no licence anywhere, and this port rest
 Settled by the owner, 2026-10-07: DALL-E for the icon and the Preview illustration, Claude and Codex for everything else.
 ## Steam change notes
 
-Written now, sent when `1.0.0` goes up; they start with the version, alone on the first line, in BBCode. The `0.1.0` upload only created
-the item and had no notes of its own.
-
-### 1.0.0
-
-```text
-[b]1.0.0[/b]
-First release of the 1.6 update of Megabees, by zoura3025.
-[list]
-[*] Wildness is read again: the old form was silently ignored in 1.6, so the bee tamed for almost nothing instead of at 0.80.
-[*] Optional patch for A Dog Said... Animal Prosthetics 2: the megabee gets its surgeries.
-[*] French translation.
-[/list]
-```
+Each version needs a `### <version>` heading, then a fenced block whose first line is a BBCode line carrying the exact version
+(`[b]1.0.1[/b]`); the CI refuses it otherwise. `1.0.0` was sent on 2026-10-09 (text in `docs/runs/2026-10-09-1.0.0-change-note.txt`).
+Next version: add its `### x.y.z` block here and its `## [x.y.z]` section in `CHANGELOG.md`.
 
 ## Gallery
 
@@ -102,7 +89,7 @@ the images to upload numbered `0-`, `1-`, `2-`… and nothing else. `0-preview.p
 
 **Shooting plan (PUBLISHING.md rules of 2026-10-02 to 2026-10-06).** One story, "Noon at the apiary", in the flower enclosure `enclosure-south` of the Sanctuary (SanctuaryBacklot), noon then +5 min then +10 min, with the plan line per image in the header of `09-gallery.feature`. Candidates in `Art/Gallery/` are named `N-candidate-<name>.jpg` until accepted; accepted 2026-10-08 by the owner (all four final images are in `Art/Gallery/`): `1-noon-arrival.jpg`, `2-the-harvest.jpg`, `3-the-salve.jpg` (each under 2 MB, all under 8 MB). Latest run read: `83c5` at `36bc227` (`docs/runs/2026-10-08-36bc227-gallery.txt`); the owner chooses. Not shown: the optional ADS 2 integration and the megabee's body plan tab (`BACKLOG.md`, "Gallery, rewrite"); the face expression waits for an NPT step.
 
-**Held earlier.** The pawn captures were paused on 2026-10-06; the owner re-enabled them and the pause is closed. The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner, 2026-09-26).
+The zoom must be close enough that the bee is seen; on the default scale an animal is lost in the map (owner, 2026-09-26).
 
 ## Thanks to post
 
@@ -144,19 +131,11 @@ Answered 2026-10-09 from the four final images in `Art/Gallery/`: a file name do
 commit the page. **Nothing adult to declare.** One large insect-like animal, its young, wool, tallow, eggs and a salve, and a clothed
 colonist; no gore, no nudity, no sexual content.
 
-## After the upload, which cannot be caught up
+## After an upload
 
-- `Mod/About/PublishedFileId.txt` is already committed (`8996319`). Never delete it: lost, the next upload creates a second item.
-- The item is **private** and RimWorld never sets its visibility. The owner subscribes to it, tests it, then makes it public by hand,
-  subscribes to its comments and watches its activity and its parents' (`PUBLISHING.md`).
-- `CHANGELOG.md` opens with `## [0.1.0]`, "creation of a publishIdFile", and `## [1.0.0]` stays `unreleased` above it until the CI
-  publishes it. The CI creates the tag and the release after a good upload: not by hand.
+- `Mod/About/PublishedFileId.txt` is committed (`8996319`). Never delete it: lost, the next upload creates a second item.
+- RimWorld and the CI never set visibility; the item is public since 2026-10-09 and the owner did the production checklist by hand.
+- `CHANGELOG.md` holds `## [1.0.0] - 2026-10-09` above `## [0.1.0]`. The CI creates the tag and the release after a good upload: not by hand.
 - The publication is by CI: a dry-run of the exact SHA first, `publish` with the 40-character SHA, and only the owner approves
-  `steam-production`. `generate-publish-workflow.sh` writes into `.github/` and waits for the owner's word.
-
-## Open, and the owner's
-
-1. **The French review** of `FRENCH_REVIEW.md` (`translation_fr: partial`).
-2. **The rollback target**, chosen before publishing: the last commit whose runs are all green. None published yet, so none.
-3. **Regenerate `About.xml`** from the Markdown block above once the runs are done and `Mod/` is free.
-4. **Visibility**: public, by hand, after subscribing to the item and testing it.
+  `steam-production`. A new description goes with `update_description`, or by hand on the page from the converter's output.
+- **Rollback** is a new publication: `ref` = the last good SHA (`02ceebb` for `1.0.0`) and a higher version.
