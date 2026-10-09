@@ -8,8 +8,8 @@ packageId:    nelim.megabeesrenew
 repo:         Rimworld-Megabees-Renew
 visibility:   private
 detached:     yes
-stage:        tested
-workflow_stage: tested
+stage:        prepublished
+workflow_stage: prepublished
 licence:      silent
 licence_at:   2026-09-13
 upstream_mod_remotes: N/A
@@ -20,11 +20,11 @@ workshop:     3811291235 (private item, prepublished 0.1.0 on 2026-10-01; not pu
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `tested`.
-  - feature: `1.0.0` stays unreleased until `prepublished` (PUBLICATION.md, gallery, Workshop comments, notes), then `published`.
+  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `prepublished`.
+  - feature: `1.0.0` stays unreleased until `published` (CI publish of the exact SHA, owner approves `steam-production`; non-regression after deploy, fail fast).
 code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
-publication_changelog_review_sha: 50dd0d47d78fda59187df56fca7cdf93188bbe9a
-session:      megabeesrenew / tested
+publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
+session:      megabeesrenew / prepublished
 updated:      2026-10-09
 ---
 
@@ -286,4 +286,4 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 
 ## Code review
 Last code-review: 2026-10-08, range 8996319 (0.1.0, publishIdFile) to 898cf93, level low. One finding (French dangling opening phrase in Megabee.description, reported to Virginie, not applied: her wording). Next review starts at 898cf93.
-Last code-review: 2026-10-09, range 898cf93 to 50dd0d4 (last PUBLICATION.md update), level low. No finding. Code-review 2026-10-09 (second), range 898cf93 to e306e4c, level low: no finding (Mod/ changes are About.xml text and one French sentence; the rest is gallery fixtures). Next review starts at e306e4c (`code_review_sha`). `publication_changelog_review_sha` = last PUBLICATION.md/CHANGELOG.md update read by Virginie (50dd0d4; PUBLICATION.md changed again in 313b07d, so stale until she confirms again).
+Last code-review: 2026-10-09, range 898cf93 to 50dd0d4 (last PUBLICATION.md update), level low. No finding. Code-review 2026-10-09 (second), range 898cf93 to e306e4c, level low: no finding (Mod/ changes are About.xml text and one French sentence; the rest is gallery fixtures). Next review starts at e306e4c (`code_review_sha`). `publication_changelog_review_sha` = last PUBLICATION.md/CHANGELOG.md commit read by Virginie (313b07d, confirmed in chat 2026-10-09).
