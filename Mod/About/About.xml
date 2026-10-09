@@ -34,7 +34,7 @@ COMPATIBILITY
 
 Nothing is required. Two patches apply only when the other mod is loaded, and change nothing otherwise.
 
-- Make Honey EVEN MORE Compatible (https://steamcommunity.com/sharedfiles/filedetails/?id=2959585309): its honey syrup recipe accepts the megabee tallow again. It named the original Megabees by its package id, which this port does not carry.
+- Make Honey EVEN MORE Compatible (https://steamcommunity.com/sharedfiles/filedetails/?id=2959585309): its category for the megabee tallow gets an icon that loads, instead of the red error square.
 - A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862): the megabee gets its surgeries, in the same categories as the megascarab and the megaspider.
 
 The original Megabees (https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043) defines the same defs and is declared incompatible. This is a content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
@@ -70,6 +70,8 @@ Source code on GitHub (https://github.com/vbardales/Rimworld-Megabees-Renew)</de
     <li>Ludeon.RimWorld.Biotech</li>
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>Ludeon.RimWorld.Odyssey</li>
+    <!-- Compat_MakeHoneyEvenMoreCompatible.xml edits a category that mod adds by its own patch. -->
+    <li>TSP.zal.patchhoney2</li>
   </loadAfter>
   <!-- ADS 2 copies its recipeUsers lists at its own last patch: Compat_ADogSaidAnimalProsthetics2.xml
        has to run before that, or it writes into lists nobody reads any more. -->

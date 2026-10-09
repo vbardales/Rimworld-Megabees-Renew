@@ -8,8 +8,7 @@ packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-stage:        published[1.0.0]
-workflow_stage: preTest
+workflow_stage: published[1.0.0]
 licence:      silent
 licence_at:   2026-09-13
 upstream_mod_remotes: N/A
@@ -22,10 +21,12 @@ remaining:
   - feature: `1.0.1` in progress (unreleased): optional patch `Compat_MakeHoneyEvenMoreCompatible.xml` (Make Honey EVEN MORE Compatible, Workshop 2959585309) written 2026-10-09 after reading its `Recipes_HoneySyrup.xml`: its `KYD_HoneySyrup` names `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so the port is left out. Pass 7 `make-honey` (feature 10, new step) written, offline checks green (test_pickle_suite 12 ok, unittest 25 ok); `dotnet build` of the step assembly 0 errors 0 warnings; pass 7 requested, nothing played yet. Next: read its report, replay the five others at the final SHA, then `prepublished`.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
+  - unverified: echo review (AGENTS.md closing pass step 4, AUDIT.md step 10): with the gallery captures in hand, decide whether `Art/echo.png` still fits (keep or redo, with the reason) and record `echo_review: <date> keep|redo - <reason>`; required before `prepublished` of the next version. Not done.
 code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabees / preTest
+session:      megabees / published[1.0.0]
 updated:      2026-10-09
+protocols_read_sha: 83a2aadef0db6a0f1239dec6eb06f6b651d9e32f
 ---
 
 # Megabees Renew — status
@@ -46,3 +47,5 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
 
 Item taken out of public by Virginie 2026-10-09 (reported): 2 subscribers (herself included), before the packageId change `nelim.megabeesrenew` to `nelim.megabees` ships in 1.0.1. The item is private again until `1.0.1` is published and tested.
+
+Pass 7 findings 2026-10-09 (make-honey): a control run without any patch of this port showed Make Honey EVEN MORE Compatible already accepts `MegabeeTallow` in `KYD_HoneySyrup` (its root patch puts the tallow in a category under Honey), so the first version of the patch (repointing two `MayRequire` attributes) was dropped. The real defect is its category icon `oldmegabee_east`, a texture only the original ships: the game logs "Could not load Texture2D" and the category shows the red square. `Compat_MakeHoneyEvenMoreCompatible.xml` repoints it at `megabee_east`; `About.xml` gains `<loadAfter>TSP.zal.patchhoney2</loadAfter>`. Control without the patch: scenario 3 failed as expected (`make-honey-icon-nopatch`, "the icon ... did not load").

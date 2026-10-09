@@ -2,22 +2,23 @@
 <!--
   Make Honey EVEN MORE Compatible (TSP.zal.patchhoney2, Workshop 2959585309, Zaljerem, Steaplay, TurtleShroom).
 
-  Its honey syrup recipe KYD_HoneySyrup (1.6/Defs/RecipeDefs/Recipes_HoneySyrup.xml, read 2026-10-09) accepts the
-  original Megabees' tallow, but only through <li MayRequire="zoura3025.megabees">MegabeeTallow</li>, once in the
-  ingredient filter and once in the fixedIngredientFilter. This port has another packageId
-  (nelim.megabees) and the same defName, so that MayRequire never matches and the recipe refuses the
-  tallow. Nothing else of that mod names the megabee in 1.6 (its 1.5 patches do, but 1.5 is not loaded).
+  That mod already supports the megabee by defName (its root Patches/TSP_MegaBee_CanIntoHoney.xml, read
+  2026-10-09): MegabeeTallow joins a "Mega Bees" category under Honey, so its honey syrup recipe takes the tallow
+  without any help from this port. A run without this file confirmed it (docs/runs, 2026-10-09): the recipe
+  accepted the tallow either way.
 
-  The fix is to point those two attributes at this mod: PatchOperationAttributeSet on the exact <li>, so no
-  second entry is added. MayRequire is still in the document when patches run (it is resolved when the Defs
-  are parsed), which is why the xpath can read it.
+  What it does NOT do for this port is the category icon. It points iconPath at
+  Things/Pawn/Animal/Megabee/oldmegabee_east, a texture the ORIGINAL Megabees ships and this port does not, so
+  every game start with both mods logs "Could not load Texture2D ... oldmegabee_east" and the category shows the
+  red error square. This patch repoints that one path at megabee_east, which this port ships.
 
-  The guard is PatchOperationFindMod on the DISPLAYED NAME of that mod (FindMod reads names, not packageIds)
-  and, inside it, a PatchOperationConditional on the <li>: with that mod absent nothing is touched, and with it
-  present but the recipe changed by an update the patch does nothing instead of logging a failure. It is NOT
-  MayRequire on an <Operation>: nothing reads it there.
+  The guard is PatchOperationFindMod on the DISPLAYED NAME of that mod (FindMod reads names, not packageIds) and,
+  inside it, PatchOperationConditional on the category def: with that mod absent nothing is touched, and if an
+  update of it drops the category the patch does nothing instead of logging a failure. It is NOT MayRequire on an
+  <Operation>: nothing reads it there.
 
-  No loadAfter is needed: patches run on the merged document after every mod's Defs are read.
+  ORDER MATTERS: the category is added by that mod's own patch, so this one has to run after it. About.xml
+  declares <loadAfter>TSP.zal.patchhoney2</loadAfter>.
 -->
 <Patch>
 
@@ -25,28 +26,14 @@
 		<mods>
 			<li>TurtleShroom Productions Proudly Presents: Make Honey EVEN MORE Compatible</li>
 		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-
-				<li Class="PatchOperationConditional">
-					<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/ingredients/li/filter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
-					<match Class="PatchOperationAttributeSet">
-						<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/ingredients/li/filter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
-						<attribute>MayRequire</attribute>
-						<value>nelim.megabees</value>
-					</match>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/fixedIngredientFilter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
-					<match Class="PatchOperationAttributeSet">
-						<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/fixedIngredientFilter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
-						<attribute>MayRequire</attribute>
-						<value>nelim.megabees</value>
-					</match>
-				</li>
-
-			</operations>
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/ThingCategoryDef[defName="TSP_ZOURA_MegaBee_Honey_Category"]/iconPath</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/ThingCategoryDef[defName="TSP_ZOURA_MegaBee_Honey_Category"]/iconPath</xpath>
+				<value>
+					<iconPath>Things/Pawn/Animal/Megabee/megabee_east</iconPath>
+				</value>
+			</match>
 		</match>
 	</Operation>
 

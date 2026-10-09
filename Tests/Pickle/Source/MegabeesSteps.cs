@@ -150,6 +150,21 @@ namespace MegabeesRenew.PickleSteps
                 $"{recipeDefName} has no ingredient that accepts {thingDefName}");
         }
 
+        /// <summary>
+        /// Make Honey EVEN MORE Compatible gives the megabee tallow a category whose icon is a texture of the
+        /// ORIGINAL Megabees. A category icon is loaded when the game finishes loading, and a missing texture
+        /// leaves the red error square (BaseContent.BadTex) in place and logs an error, so the icon the game
+        /// holds is what a player sees.
+        /// </summary>
+        [Then("Megabees Renew: the thing category {string} has an icon that loaded")]
+        public void CategoryIconLoaded(PickleContext ctx, string categoryDefName)
+        {
+            ThingCategoryDef category = DefDatabase<ThingCategoryDef>.GetNamedSilentFail(categoryDefName);
+            ctx.Require(category != null, $"no ThingCategoryDef named '{categoryDefName}': is the mod that adds it loaded?");
+            ctx.Assert(category.icon != null && category.icon != BaseContent.BadTex,
+                $"the icon of {categoryDefName} did not load (iconPath {category.iconPath})");
+        }
+
         private static ThingDef RequireRace(PickleContext ctx, string defName)
         {
             ThingDef race = DefDatabase<ThingDef>.GetNamedSilentFail(defName);

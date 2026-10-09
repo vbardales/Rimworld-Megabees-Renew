@@ -8,7 +8,7 @@ in game.
 
 ### Added
 
-- **Optional patch for Make Honey EVEN MORE Compatible** (`TSP.zal.patchhoney2`, Workshop 2959585309): its honey syrup recipe `KYD_HoneySyrup` lists `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so this port was left out. `Mod/Patches/Compat_MakeHoneyEvenMoreCompatible.xml` repoints both attributes at `nelim.megabees`, guarded by `PatchOperationFindMod`.
+- **Optional patch for Make Honey EVEN MORE Compatible** (`TSP.zal.patchhoney2`, Workshop 2959585309). That mod already accepts the megabee tallow in its honey syrup recipe by defName, but gives its "Mega Bees" category the icon `oldmegabee_east`, a texture only the original Megabees ships: the game logs `Could not load Texture2D` and the category shows the red error square. `Mod/Patches/Compat_MakeHoneyEvenMoreCompatible.xml` repoints that icon at `megabee_east`, guarded by `PatchOperationFindMod`; `About.xml` declares `<loadAfter>` for that mod.
 
 ### Changed
 
