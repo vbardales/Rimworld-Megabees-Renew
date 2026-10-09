@@ -53,7 +53,7 @@ The original [Megabees](https://steamcommunity.com/sharedfiles/filedetails/?id=2
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
-**AI-GENERATED**
+# AI-GENERATED
 
 The update work—code, tests and documentation—was carried out with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon and the Preview illustration were generated with DALL-E, by OpenAI.
 
@@ -63,7 +63,7 @@ The update work—code, tests and documentation—was carried out with the help 
 - SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862); Mlie and XeoNovaDan, for [Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); DizzyEevee, for [Better Crossbreeding](https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842); Mlie and Revolus, for [Dogs mate (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2441132298). Their files were read to decide what the megabee needed, and nothing of theirs was copied.
 - The tools this was tested with, for development only and never a dependency: [Pickle](https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), [RimLogging](https://steamcommunity.com/sharedfiles/filedetails/?id=3733484696) and [PickleTools](https://steamcommunity.com/sharedfiles/filedetails/?id=3806142401).
 
-Licence and sources: the original states no licence anywhere, and this port rests on the Workshop's own custom for abandoned mods, named credit and a takedown on request. `ATTRIBUTION.md`, in the mod folder and on GitHub, has the licence check and the port in detail.
+Licence and sources: the original states no licence anywhere, and this port rests on the Workshop's own custom for abandoned mods, named credit and a takedown on request. ATTRIBUTION.md, in the mod folder and on GitHub, has the licence check and the port in detail.
 
 [Source code on GitHub](https://github.com/vbardales/Rimworld-Megabees-Renew)
 ```
