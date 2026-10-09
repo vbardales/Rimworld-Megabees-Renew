@@ -36,7 +36,7 @@ class ModTests(unittest.TestCase):
 
     def test_metadata(self):
         a=E.parse(R/'Mod/About/About.xml').getroot()
-        self.assertEqual(a.findtext('packageId'),'nelim.megabeesrenew')
+        self.assertEqual(a.findtext('packageId'),'nelim.megabees')
         self.assertEqual(a.findtext('name'),'Megabees Renew (unofficial)')
         self.assertEqual(a.findtext('supportedVersions/li'),'1.6')
         self.assertTrue(a.findtext('description').startswith('UNOFFICIAL.'))

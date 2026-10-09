@@ -24,7 +24,7 @@
 Feature: A Dog Said... Animal Prosthetics 2 offers its surgeries to the megabee
 
   Scenario: this mod loads before ADS 2, which is what its lists depend on
-    Then mod "nelim.megabeesrenew" loads before "SamBucher.ADogSaidAnimalProsthetics2"
+    Then mod "nelim.megabees" loads before "SamBucher.ADogSaidAnimalProsthetics2"
 
   Scenario: control, Megascarab and Megaspider are offered all three categories
     Then Megabees Renew: the race "Megascarab" offers the recipe "InstallPegLegAnimal"

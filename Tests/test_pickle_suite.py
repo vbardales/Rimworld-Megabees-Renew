@@ -190,9 +190,9 @@ class PickleSuiteTests(unittest.TestCase):
 
     def test_the_companion_is_a_pickle_test_mod_of_this_mod(self):
         about = ET.parse(PICKLE / 'Mod/About/About.xml').getroot()
-        self.assertEqual(about.findtext('packageId'), 'nelim.megabeesrenew.pickletests')
+        self.assertEqual(about.findtext('packageId'), 'nelim.megabees.pickletests')
         deps = [e.text for e in about.findall('modDependencies/li/packageId')]
-        self.assertEqual(sorted(deps), ['nelim.megabeesrenew', 'rimworks.pickle'])
+        self.assertEqual(sorted(deps), ['nelim.megabees', 'rimworks.pickle'])
         for dep in about.findall('modDependencies/li'):
             self.assertTrue(dep.findtext('displayName'))
         self.assertIn('Pickle tests', about.findtext('name'))
@@ -226,9 +226,9 @@ class PickleSuiteTests(unittest.TestCase):
 
     def test_the_optional_mod_pass_loads_this_mod_before_ads2(self):
         order = [parts[0] for _, parts in read_map(PICKLE / 'wsl-deps.avec-ads2.map')]
-        self.assertLess(order.index('nelim.megabeesrenew'), order.index('SamBucher.ADogSaidAnimalProsthetics2'),
+        self.assertLess(order.index('nelim.megabees'), order.index('SamBucher.ADogSaidAnimalProsthetics2'),
                         'ADS 2 copies its lists once: this mod has to load first (About.xml loadBefore)')
-        self.assertEqual(sorted(order), sorted(['nelim.pickletools.loadaudit', 'nelim.megabeesrenew',
+        self.assertEqual(sorted(order), sorted(['nelim.pickletools.loadaudit', 'nelim.megabees',
                                                 'SamBucher.ADogSaidAnimalProsthetics2']))
         self.assertEqual({p[0] for _, p in read_map(PICKLE / 'wsl-deps.incompat-original.map')},
                          {'nelim.pickletools.loadaudit', 'zoura3025.megabees'})

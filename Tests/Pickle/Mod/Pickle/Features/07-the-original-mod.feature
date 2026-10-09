@@ -28,7 +28,7 @@ Feature: the original mod still conflicts with this one
 
   Scenario: both mods are loaded
     Then mod "zoura3025.megabees" is loaded
-    And mod "nelim.megabeesrenew" is loaded
+    And mod "nelim.megabees" is loaded
 
   Scenario: the original's own defs are read and fail on 1.6, next to this mod's
     Then Megabees Renew: the game log holds the text "<wildness>0.80</wildness> doesn't correspond to any field in type RaceProperties"

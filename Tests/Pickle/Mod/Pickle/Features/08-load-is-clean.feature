@@ -23,4 +23,4 @@
 Feature: nothing in the game's log comes from this mod
 
   Scenario: the load of the mod is clean
-    Then Nelim's Pickle Tools: the load of the mod "nelim.megabeesrenew" is clean
+    Then Nelim's Pickle Tools: the load of the mod "nelim.megabees" is clean

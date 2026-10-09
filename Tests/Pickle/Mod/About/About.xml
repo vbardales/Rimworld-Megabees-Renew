@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Megabees Renew - Pickle tests</name>
   <author>Nelim</author>
-  <packageId>nelim.megabeesrenew.pickletests</packageId>
+  <packageId>nelim.megabees.pickletests</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -13,7 +13,7 @@ The scenarios spawn their own megabees in Pickle's test colony, and leave nothin
 Some features only mean something in a pass that mounts a particular mod, and say so with a requirement tag; the pass matrix is in Tests/Pickle/README.md of the repository.</description>
   <modDependencies>
     <li>
-      <packageId>nelim.megabeesrenew</packageId>
+      <packageId>nelim.megabees</packageId>
       <displayName>Megabees Renew (unofficial)</displayName>
     </li>
     <li>
@@ -23,7 +23,7 @@ Some features only mean something in a pass that mounts a particular mod, and sa
     </li>
   </modDependencies>
   <loadAfter>
-    <li>nelim.megabeesrenew</li>
+    <li>nelim.megabees</li>
     <li>rimworks.pickle</li>
   </loadAfter>
 </ModMetaData>

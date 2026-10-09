@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Megabees Renew (unofficial)</name>
   <author>zoura3025 - 1.6 adapted by Nelim</author>
-  <packageId>nelim.megabeesrenew</packageId>
+  <packageId>nelim.megabees</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>

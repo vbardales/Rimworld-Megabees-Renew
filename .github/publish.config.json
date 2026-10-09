@@ -1,7 +1,7 @@
 {
   "templateStamp": "82de20b8aa50",
   "workshopId": "3811291235",
-  "packageId": "nelim.megabeesrenew",
+  "packageId": "nelim.megabees",
   "releaseTitle": "Megabees Renew {version}",
   "requirePaths": [
     "Defs"

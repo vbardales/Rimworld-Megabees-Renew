@@ -20,7 +20,7 @@ Tests/Pickle/
   wsl-deps.dlc-absent.map                 pass 5: Royalty and Ideology left out
   wsl-deps.make-honey.map                 pass 7: Make Honey EVEN MORE Compatible (TSP.zal.patchhoney2)
   Source/                                 the C# of the step assembly (Megabees.PickleSteps.csproj)
-  Mod/                                    the test companion, nelim.megabeesrenew.pickletests
+  Mod/                                    the test companion, nelim.megabees.pickletests
     About/About.xml
     Pickle/Features/*.feature             the scenarios
     Pickle/Assemblies/                    the built step DLL: git-ignored, rebuilt before a run

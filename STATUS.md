@@ -4,7 +4,7 @@ translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
 mod:          Megabees Renew (unofficial)
-packageId:    nelim.megabeesrenew
+packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
@@ -24,7 +24,7 @@ remaining:
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
 code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabeesrenew / preTest
+session:      megabees / preTest
 updated:      2026-10-09
 ---
 
@@ -44,3 +44,5 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 - **Next.** Test with Make Honey EVEN MORE Compatible (2959585309), after the non-regression. The cleanup of evidence and WSL waits for that test.
 
 WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
+
+Item taken out of public by Virginie 2026-10-09 (reported): 2 subscribers (herself included), before the packageId change `nelim.megabeesrenew` to `nelim.megabees` ships in 1.0.1. The item is private again until `1.0.1` is published and tested.

@@ -8,10 +8,11 @@ in game.
 
 ### Added
 
-- **Optional patch for Make Honey EVEN MORE Compatible** (`TSP.zal.patchhoney2`, Workshop 2959585309): its honey syrup recipe `KYD_HoneySyrup` lists `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so this port was left out. `Mod/Patches/Compat_MakeHoneyEvenMoreCompatible.xml` repoints both attributes at `nelim.megabeesrenew`, guarded by `PatchOperationFindMod`.
+- **Optional patch for Make Honey EVEN MORE Compatible** (`TSP.zal.patchhoney2`, Workshop 2959585309): its honey syrup recipe `KYD_HoneySyrup` lists `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so this port was left out. `Mod/Patches/Compat_MakeHoneyEvenMoreCompatible.xml` repoints both attributes at `nelim.megabees`, guarded by `PatchOperationFindMod`.
 
 ### Changed
 
+- **packageId `nelim.megabeesrenew` becomes `nelim.megabees`** (owner's decision, 2026-10-09: a `renew` suffix does not belong in the id, PUBLISHING.md). Same Workshop item. Anyone who subscribed to 1.0.0 has to enable the mod again, and a mod that named the old id in a `loadAfter` or `MayRequire` no longer matches.
 - Description: `[h1]` headings, links to the original Megabees and PickleTools. No change to the mod's defs.
 
 ## [1.0.0] — 2026-10-09

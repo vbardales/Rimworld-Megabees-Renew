@@ -5,7 +5,7 @@
   Its honey syrup recipe KYD_HoneySyrup (1.6/Defs/RecipeDefs/Recipes_HoneySyrup.xml, read 2026-10-09) accepts the
   original Megabees' tallow, but only through <li MayRequire="zoura3025.megabees">MegabeeTallow</li>, once in the
   ingredient filter and once in the fixedIngredientFilter. This port has another packageId
-  (nelim.megabeesrenew) and the same defName, so that MayRequire never matches and the recipe refuses the
+  (nelim.megabees) and the same defName, so that MayRequire never matches and the recipe refuses the
   tallow. Nothing else of that mod names the megabee in 1.6 (its 1.5 patches do, but 1.5 is not loaded).
 
   The fix is to point those two attributes at this mod: PatchOperationAttributeSet on the exact <li>, so no
@@ -33,7 +33,7 @@
 					<match Class="PatchOperationAttributeSet">
 						<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/ingredients/li/filter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
 						<attribute>MayRequire</attribute>
-						<value>nelim.megabeesrenew</value>
+						<value>nelim.megabees</value>
 					</match>
 				</li>
 
@@ -42,7 +42,7 @@
 					<match Class="PatchOperationAttributeSet">
 						<xpath>/Defs/RecipeDef[defName="KYD_HoneySyrup"]/fixedIngredientFilter/thingDefs/li[@MayRequire="zoura3025.megabees" and text()="MegabeeTallow"]</xpath>
 						<attribute>MayRequire</attribute>
-						<value>nelim.megabeesrenew</value>
+						<value>nelim.megabees</value>
 					</match>
 				</li>
 

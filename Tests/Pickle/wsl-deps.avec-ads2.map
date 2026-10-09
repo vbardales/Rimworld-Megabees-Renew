@@ -11,5 +11,5 @@
 # (STATUS.md, "Animal integrations", 2026-09-28), so a pass with them present would be a plain minimal pass
 # under another name.
 nelim.pickletools.loadaudit             path:PickleTools/LoadAudit/Mod
-nelim.megabeesrenew                     path:MegabeesRenew/Mod
+nelim.megabees                     path:MegabeesRenew/Mod
 SamBucher.ADogSaidAnimalProsthetics2    3238353862
