@@ -111,7 +111,7 @@ whether one is still needed. Register updated 2026-10-09 (`WORKSHOP_COMMENTS.md`
 
 | Recipient | Workshop | Registry | Action |
 |---|---|---|---|
-| Megabees (zoura3025) | 2830700043 | no row | Row added 2026-10-09, `drafted`; draft below (343 characters with the link, within the 150-350 guide). It is also how the author can reach me to ask for a takedown. Page not re-read (Steam answered 429): read its last comments right before posting |
+| Megabees (zoura3025) | 2830700043 | no row | Posted by the owner 2026-10-09 (row `posted`); text below (343 characters with the link, within the 150-350 guide). It is also how the author can reach me to ask for a takedown. Page not re-read (Steam answered 429): read its last comments right before posting |
 | A Dog Said... Animal Prosthetics 2 | 3238353862 | `posted` | Done 2026-10-09: this mod is in `Covers`. Post nothing |
 | [XND] Nocturnal Animals (Continued), Mlie and XeoNovaDan | 2269731409 | `posted` | Files read, no patch (the megabee has no insect analogue listed nocturnal). Done 2026-10-09: this mod is in `Covers`. Post nothing |
 | Better Crossbreeding (DizzyEevee) | 3520675842 | `drafted` | Files read, no patch. Done 2026-10-09: this mod is in `Covers`; the draft that exists is Funny Creatures Renew's. Post nothing from here |
