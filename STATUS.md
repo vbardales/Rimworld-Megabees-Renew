@@ -19,6 +19,7 @@ tested_on:    2026-09-29 (Pickle, 5 passes on Mod/ at 0145956; docs/runs/2026-09
 workshop:     3811291235 (1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb; item still private until Virginie makes it public)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
+  - unverified: test with Make Honey EVEN MORE Compatible (TSP) (Workshop 2959585309): requested by Virginie 2026-10-09; not read, not staged, no Pickle map yet. Read the mod, decide patch or none, then a pass (`wsl-deps.<name>.map`).
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
   - unverified: public page (description, change note, preview) not yet read: the item is private until Virginie makes it public by hand, subscribes to its comments and watches its activity; then verify and post zoura3025's comment (PUBLICATION.md). Non-regression after deploy, fail fast.
