@@ -74,8 +74,9 @@ Settled by the owner, 2026-10-07: DALL-E for the icon and the Preview illustrati
 Written now, sent when `1.0.0` goes up; they start with the version, alone on the first line, in BBCode. The `0.1.0` upload only created
 the item and had no notes of its own.
 
-```
 ### 1.0.0
+
+```text
 [b]1.0.0[/b]
 First release of the 1.6 update of Megabees, by zoura3025.
 [list]
