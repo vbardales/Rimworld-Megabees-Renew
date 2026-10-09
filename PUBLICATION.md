@@ -26,7 +26,7 @@ I am not the author of this mod. The bee is zoura3025's; all I did was the work 
 
 Original mod: [Megabees](https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043), last supporting 1.4, last updated in January 2023. Abandoned, not withdrawn.
 
-**WHAT IT ADDS**
+# WHAT IT ADDS
 
 One animal and the four things it makes. The megabee has body size 5.25, larger than a muffalo, and moves at 1.4 cells per second, slower than a colonist walking. Sixty-five years of life, worth 500 silver, wildness 0.80, and it cannot be trained at all. It eats rough vegetation and trees both, and it eats a great deal of it.
 
@@ -37,11 +37,11 @@ One animal and the four things it makes. The megabee has body size 5.25, larger 
 
 It also brings its own body plan: a thorax, an abdomen, a metathorax, a trophylactic stomach and a reproductive tract, so wounds and surgery land where a bee has parts rather than where a quadruped does.
 
-**WHAT CHANGED IN THE 1.6 UPDATE**
+# WHAT CHANGED IN THE 1.6 UPDATE
 
 One line of the original. Wildness stopped being a field of RaceProperties in 1.6 and became a stat declared under statBases. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses, so the bee tamed for almost nothing instead of sitting at 0.80. The original balance values are preserved. French translations and presentation assets have been added.
 
-**COMPATIBILITY**
+# COMPATIBILITY
 
 Nothing is required. One patch applies only when the other mod is loaded, and changes nothing otherwise.
 
@@ -49,7 +49,7 @@ Nothing is required. One patch applies only when the other mod is loaded, and ch
 
 The original Megabees defines the same defs and is declared incompatible. This is a content mod: removing it mid-save will lose any megabee, and any megabee wool, tallow, egg or salve already in play.
 
-**IF I GO QUIET**
+# IF I GO QUIET
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
@@ -57,9 +57,9 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 The update work—code, tests and documentation—was carried out with the help of AI assistants: Claude, by Anthropic, and Codex, by OpenAI. The icon and the Preview illustration were generated with DALL-E, by OpenAI.
 
-**THANKS**
+# THANKS
 
-- zoura3025, for the megabee, its body, its products and its textures.
+- zoura3025, for [the megabee](https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043), its body, its products and its textures.
 - SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862); Mlie and XeoNovaDan, for [Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); DizzyEevee, for [Better Crossbreeding](https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842); Mlie and Revolus, for [Dogs mate (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2441132298). Their files were read to decide what the megabee needed, and nothing of theirs was copied.
 - The tools this was tested with, for development only and never a dependency: [Pickle](https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), [RimLogging](https://steamcommunity.com/sharedfiles/filedetails/?id=3733484696) and PickleTools.
 
