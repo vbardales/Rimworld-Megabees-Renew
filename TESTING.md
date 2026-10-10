@@ -1,6 +1,6 @@
 # Testing — Megabees Renew
 
-Offline: `wsl python3 -m unittest discover -s Tests -v` (13 tests, 7 skip: lxml unavailable in this WSL) and `scripts/Check-DefInjected.ps1 -TransMod Mod` (40 keys). Functional scenarios: [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Pickle suite: [Tests/Pickle/](Tests/Pickle/README.md), 9 features, checked offline with `wsl python3 Tests/test_pickle_suite.py`. **Last played: six passes at 0e2e93b, 2026-10-10, green (`docs/runs/2026-10-10-0e2e93b-non-regression.txt`).**
+Offline: `wsl python3 -m unittest discover -s Tests -v` (25 tests, 2 skip: ADS 2 not installed in the WSL; needs lxml and `RIMWORLD_DIR=~/rimworld`) and `scripts/Check-DefInjected.ps1 -TransMod Mod` (40 keys). Functional scenarios: [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Pickle suite: [Tests/Pickle/](Tests/Pickle/README.md), 9 features, checked offline with `wsl python3 Tests/test_pickle_suite.py`. **Last played: six passes at 0e2e93b, 2026-10-10, green (`docs/runs/2026-10-10-0e2e93b-non-regression.txt`).**
 
 ## Passes (Tests/Pickle/README.md has the full matrix, filters and request commands)
 1. **Minimal** (`tools`): no optional mod, Core + DLC + Pickle + mod + PickleTools' load audit. Own EN and FR runs (`-Language`).

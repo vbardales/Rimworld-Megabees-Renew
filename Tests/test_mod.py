@@ -139,13 +139,18 @@ class CompatibilityPatchTests(unittest.TestCase):
 
     def test_every_operation_is_guarded(self):
         files = sorted((R / 'Mod/Patches').glob('*.xml'))
-        self.assertEqual([f.name for f in files], ['Compat_ADogSaidAnimalProsthetics2.xml'])
+        self.assertEqual([f.name for f in files],
+                         ['Compat_ADogSaidAnimalProsthetics2.xml', 'Compat_MakeHoneyEvenMoreCompatible.xml'])
         for file in files:
             root = E.parse(file).getroot()
             for op in root.findall('Operation'):
                 with self.subTest(file=file.name):
-                    # MayRequire on an <Operation> is read by nothing; only PatchOperationConditional works here.
+                    # MayRequire on an <Operation> is read by nothing; the guard is PatchOperationConditional,
+                    # or PatchOperationFindMod whose match is one (the mod is named by its displayed name).
                     self.assertNotIn('MayRequire', op.attrib)
+                    if op.get('Class') == 'PatchOperationFindMod':
+                        self.assertIsNone(op.find('nomatch'), 'a guard must do nothing when the mod is absent')
+                        op = op.find('match')
                     self.assertEqual(op.get('Class'), 'PatchOperationConditional')
                     self.assertIsNone(op.find('nomatch'), 'a guard must do nothing when the mod is absent')
 
