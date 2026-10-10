@@ -8,26 +8,26 @@ packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   private
 detached:     yes
-workflow_stage: publish[1.0.1]
+workflow_stage: followUp[1.0.1]
 licence:      open
 licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Megabees, 2830700043) answered the thanks comment on 2026-10-09 with an explicit permission (I do not mind people maintaining my mods while I am away). Before: silent since 2026-09-13 (no licence anywhere, abandoned at 1.4)."
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
-tested_on:    2026-10-09 (non-regression after deploy, 5 passes at 3875ccc, all green; docs/runs/2026-10-09-3875ccc-non-regression.txt; earlier 2026-09-29 at 0145956)
-workshop:     3811291235 (private since 2026-10-09; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0)
+tested_on:    2026-10-10 (5 passes plus make-honey at 41c1e6c, all green; docs/runs/2026-10-10-41c1e6c-passes.txt; deploy non-regression of 1.0.1 still to play)
+workshop:     3811291235 (private; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
-  - feature: `1.0.1` in progress (unreleased): optional patch `Compat_MakeHoneyEvenMoreCompatible.xml` (Make Honey EVEN MORE Compatible, Workshop 2959585309) written 2026-10-09 after reading its `Recipes_HoneySyrup.xml`: its `KYD_HoneySyrup` names `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so the port is left out. Pass 7 `make-honey` (feature 10, new step) written, offline checks green (test_pickle_suite 12 ok, unittest 25 ok); `dotnet build` of the step assembly 0 errors 0 warnings; pass 7 requested, nothing played yet. Next: read its report, replay the five others at the final SHA, then `prepublished`.
+  - todo: 1.0.1 follow-up by Virginie: replace the gallery image 0 by Art/Gallery/0-preview.png (by hand), set the item public when ready, re-enable the mod (packageId changed), then the thanks comments (TSP 2959585309 drafted in PUBLICATION.md, register row drafted). Then non-regression after deploy (AUDIT.md 14.a) and cleanup (14.c).
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `writeDocs[1.0.1]`.
+  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `followUp[1.0.1]`.
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
 echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
-session:      megabees / publish[1.0.1]
+session:      megabees / followUp[1.0.1]
 updated:      2026-10-09
-protocols_read_sha: c8f6aa103e59467e421b817b3207367e3f70de3a
+protocols_read_sha: 8dc7759df76e83f3ebe7489e18035a62f07089fe
 ---
 
 # Megabees Renew — status
@@ -43,7 +43,7 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 - **Settings.** `not_applicable`: fixed content balance, no settings page or shortcut.
 - **Compatibility.** Optional ADS 2 patch (`loadBefore`); no patch for XND Nocturnal Animals, Better Crossbreeding, Dogs mate (written reasons in `docs/runs`). Declared incompatible with the original (`zoura3025.megabees`). Hard dependencies: none.
 - **Upstream.** Original has no repository (About.xml has no `<url>`); no PR possible. Licence `open` (permission quoted in ATTRIBUTION.md, identical in `Mod/`).
-- **Next.** 1.0.1 in preparation (not published, workflow_stage keeps published[1.0.0] until then): licence `open` applied 2026-10-10 (no `(unofficial)`, no UNOFFICIAL paragraph, Preview and 0-preview regenerated, ATTRIBUTION permission section); pass 7 (make-honey, patch on) to replay on the final tree, passes 1-5 replay, code review from e306e4c, echo_review, dry-run, publish. After publish: replace the gallery image 0 and the description by hand, rename the item.
+- **Next.** 1.0.1 uploaded 2026-10-10 (item private). Owner: gallery image 0, public switch, thanks comments. Session: non-regression after deploy, then cleanup of evidence and WSL (Universal Processor 2633514537, make-honey deps) when the last ticket is played.
 - **Echo.** Kept, validated by Virginie 2026-10-10 with the accepted gallery in hand (larva line-art still fits the three photos; panel shortened after the tag was removed).
 
 WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
