@@ -24,7 +24,7 @@ remaining:
 code_review_sha: d0908b502440c775c6df61046b462bbeecbafaf6
 echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7
-publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
+publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
 session:      megabees / writeDocs[1.0.1]
 updated:      2026-10-09
 protocols_read_sha: fcc251e46f641645cf3c59c4fc786ebd82d2038a
