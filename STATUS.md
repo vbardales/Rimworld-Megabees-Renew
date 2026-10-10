@@ -8,7 +8,7 @@ packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-workflow_stage: prepareRelease[1.0.1]
+workflow_stage: mountPreview[1.0.1]
 licence:      open
 licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Megabees, 2830700043) answered the thanks comment on 2026-10-09 with an explicit permission (I do not mind people maintaining my mods while I am away). Before: silent since 2026-09-13 (no licence anywhere, abandoned at 1.4)."
 upstream_mod_remotes: N/A
@@ -24,7 +24,7 @@ remaining:
   - unverified: echo review (AGENTS.md closing pass step 4, AUDIT.md step 10): with the gallery captures in hand, decide whether `Art/echo.png` still fits (keep or redo, with the reason) and record `echo_review: <date> keep|redo - <reason>`; required before `prepublished` of the next version. Not done.
 code_review_sha: e906b1c95c69d172be692594354f72862a674ab0
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabees / prepareRelease[1.0.1]
+session:      megabees / mountPreview[1.0.1]
 updated:      2026-10-09
 protocols_read_sha: fa996cf7dd2b7a943321398c7048b336f1c3c50e
 ---
