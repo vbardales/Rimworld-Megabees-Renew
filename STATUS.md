@@ -43,7 +43,7 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 - **Settings.** `not_applicable`: fixed content balance, no settings page or shortcut.
 - **Compatibility.** Optional ADS 2 patch (`loadBefore`); no patch for XND Nocturnal Animals, Better Crossbreeding, Dogs mate (written reasons in `docs/runs`). Declared incompatible with the original (`zoura3025.megabees`). Hard dependencies: none.
 - **Upstream.** Original has no repository (About.xml has no `<url>`); no PR possible. Licence `open` (permission quoted in ATTRIBUTION.md, identical in `Mod/`).
-- **Next.** 1.0.1 uploaded 2026-10-10 (item private). Owner: gallery image 0, public switch, thanks comments. Session: non-regression after deploy, then cleanup of evidence and WSL (Universal Processor 2633514537, make-honey deps) when the last ticket is played.
+- **Next.** 1.0.1 uploaded 2026-10-10, item public, thanks comments posted (TSP, original), Use This Instead reported. Session: non-regression after deploy, then cleanup of evidence and WSL (Universal Processor 2633514537, make-honey deps) when the last ticket is played.
 - **Echo.** Kept, validated by Virginie 2026-10-10 with the accepted gallery in hand (larva line-art still fits the three photos; panel shortened after the tag was removed).
 
 WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
