@@ -9,8 +9,8 @@ repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
 workflow_stage: published[1.0.0]
-licence:      silent
-licence_at:   2026-09-13
+licence:      open
+licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Megabees, 2830700043) answered the thanks comment on 2026-10-09 with an explicit permission (I do not mind people maintaining my mods while I am away). Before: silent since 2026-09-13 (no licence anywhere, abandoned at 1.4)."
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
@@ -48,6 +48,6 @@ WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Univers
 
 Item taken out of public by Virginie 2026-10-09 (reported): 2 subscribers (herself included), before the packageId change `nelim.megabeesrenew` to `nelim.megabees` ships in 1.0.1. The item is private again until `1.0.1` is published and tested.
 
-Author's reply 2026-10-10 (reported by Virginie, pasted from the original's page): zoura3025, creator of Megabees, answered the thanks comment: "No problem! Modding is a collaborative effort; I don't mind people maintaining my mods while I'm away. Thanks for the shout here <3". That is an explicit permission found in the Workshop comments (PUBLISHING.md, Licence). `licence` stays `silent` and the `(unofficial)` suffix and UNOFFICIAL paragraph stay until Virginie decides the new value and what changes; ATTRIBUTION.md (both copies) is to record the quote after the pass-7 `RUN_DONE`, since `Mod/` is frozen.
+Author's reply 2026-10-10 (reported by Virginie, pasted from the original's page): zoura3025, creator of Megabees, answered the thanks comment: "No problem! Modding is a collaborative effort; I don't mind people maintaining my mods while I'm away. Thanks for the shout here <3". That is an explicit permission found in the Workshop comments (PUBLISHING.md, Licence). Virginie then set `licence: open` (2026-10-10). Still to do after the pass-7 `RUN_DONE` (`Mod/` is frozen): ATTRIBUTION.md (both copies) records the quote and the new status; the `(unofficial)` suffix (`About.xml` name, Preview tag, `mod` field here, README title) and the UNOFFICIAL paragraph (description) only apply to `silent` (PUBLISHING.md, Licence), so they go if Virginie confirms; that means a Preview regeneration and a description update on the page.
 
 Pass 7 findings 2026-10-09 (make-honey): a control run without any patch of this port showed Make Honey EVEN MORE Compatible already accepts `MegabeeTallow` in `KYD_HoneySyrup` (its root patch puts the tallow in a category under Honey), so the first version of the patch (repointing two `MayRequire` attributes) was dropped. The real defect is its category icon `oldmegabee_east`, a texture only the original ships: the game logs "Could not load Texture2D" and the category shows the red square. `Compat_MakeHoneyEvenMoreCompatible.xml` repoints it at `megabee_east`; `About.xml` gains `<loadAfter>TSP.zal.patchhoney2</loadAfter>`. Control without the patch: scenario 3 failed as expected (`make-honey-icon-nopatch`, "the icon ... did not load").
