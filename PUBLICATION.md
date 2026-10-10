@@ -135,6 +135,12 @@ Hi :) your Mega Bees category under Honey asks for oldmegabee_east, a texture on
 Hi zoura3025 :) your megabee was stuck at 1.4, so I carried it to 1.6, credit and all: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew[/url]. Its wildness had silently stopped being read, so it tamed for nothing; that is the only change to your files. If you want it down, say so and it goes.
 ```
 
+**For Use This Instead** (Mlie, page 3396308787), posted by the owner 2026-10-10:
+
+```
+Hi Mlie, a replacement for your list, please. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew[/url] (nelim.megabees, RimWorld 1.6, by Nelim) carries [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043]Megabees[/url] (zoura3025.megabees, by zoura3025, last supporting 1.4) to 1.6. The original author gave permission to maintain it, and the original is declared incompatible. [b]Old:[/b] 2830700043, Megabees, zoura3025, zoura3025.megabees, 1.4. [b]New:[/b] 3811291235, Megabees Renew, Nelim, nelim.megabees, 1.6. Thanks!
+```
+
 ## Dependencies and DLC
 
 | Item | Decision | Why |
