@@ -8,7 +8,7 @@ packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   private
 detached:     yes
-workflow_stage: writeDocs[1.0.1]
+workflow_stage: prepareRelease[1.0.1]
 licence:      open
 licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Megabees, 2830700043) answered the thanks comment on 2026-10-09 with an explicit permission (I do not mind people maintaining my mods while I am away). Before: silent since 2026-09-13 (no licence anywhere, abandoned at 1.4)."
 upstream_mod_remotes: N/A
@@ -25,9 +25,9 @@ code_review_sha: d0908b502440c775c6df61046b462bbeecbafaf6
 echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
-session:      megabees / writeDocs[1.0.1]
+session:      megabees / prepareRelease[1.0.1]
 updated:      2026-10-09
-protocols_read_sha: fcc251e46f641645cf3c59c4fc786ebd82d2038a
+protocols_read_sha: 3eb0dde2cb2106c576f0eb4b3a5f3c2294327201
 ---
 
 # Megabees Renew — status
