@@ -14,7 +14,7 @@ Some features only mean something in a pass that mounts a particular mod, and sa
   <modDependencies>
     <li>
       <packageId>nelim.megabees</packageId>
-      <displayName>Megabees Renew (unofficial)</displayName>
+      <displayName>Megabees Renew</displayName>
     </li>
     <li>
       <packageId>rimworks.pickle</packageId>

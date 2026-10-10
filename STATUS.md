@@ -3,7 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-mod:          Megabees Renew (unofficial)
+mod:          Megabees Renew
 packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   public
@@ -26,7 +26,7 @@ code_review_sha: e306e4c69f4999efc8374c34897ef3345332458b
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
 session:      megabees / published[1.0.0]
 updated:      2026-10-09
-protocols_read_sha: 83a2aadef0db6a0f1239dec6eb06f6b651d9e32f
+protocols_read_sha: 742ef65b57aa69474295cd3543e5dd197eec025c
 ---
 
 # Megabees Renew — status
@@ -41,8 +41,8 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 - **Translations.** English native in `Mod/Defs`; French 30 keys reviewed by Virginie 2026-10-09; no pawn agreement (animal).
 - **Settings.** `not_applicable`: fixed content balance, no settings page or shortcut.
 - **Compatibility.** Optional ADS 2 patch (`loadBefore`); no patch for XND Nocturnal Animals, Better Crossbreeding, Dogs mate (written reasons in `docs/runs`). Declared incompatible with the original (`zoura3025.megabees`). Hard dependencies: none.
-- **Upstream.** Original has no repository (About.xml has no `<url>`); no PR possible. Licence `silent`; ATTRIBUTION.md identical in `Mod/`.
-- **Next.** Test with Make Honey EVEN MORE Compatible (2959585309), after the non-regression. The cleanup of evidence and WSL waits for that test.
+- **Upstream.** Original has no repository (About.xml has no `<url>`); no PR possible. Licence `open` (permission quoted in ATTRIBUTION.md, identical in `Mod/`).
+- **Next.** 1.0.1 in preparation (not published, workflow_stage keeps published[1.0.0] until then): licence `open` applied 2026-10-10 (no `(unofficial)`, no UNOFFICIAL paragraph, Preview and 0-preview regenerated, ATTRIBUTION permission section); pass 7 (make-honey, patch on) to replay on the final tree, passes 1-5 replay, code review from e306e4c, echo_review, dry-run, publish. After publish: replace the gallery image 0 and the description by hand, rename the item.
 
 WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
 

@@ -1,5 +1,5 @@
 {
-  "title": "Megabees Renew (unofficial)",
+  "title": "Megabees Renew",
   "titleSize": 46,
   "titleParts": [
     {
@@ -7,8 +7,6 @@
     }
   ],
   "suffix": "Renew",
-  "tag": "(unofficial)",
-  "tagInline": true,
   "copyLines": [
     "Giant, docile honeybees.",
     "Wool, eggs, tallow and salve."

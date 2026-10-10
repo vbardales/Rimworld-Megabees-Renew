@@ -12,7 +12,7 @@ This repository holds the port to RimWorld 1.6 and nothing else.
 | Workshop | [2830700043](https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043) |
 | Last version supported | 1.4 |
 | Last updated | 24 January 2023 |
-| Licence | none stated |
+| Licence | none written; explicit permission from the author, 2026-10-09 (see below) |
 
 **Abandoned, not withdrawn.** The item is still on the Workshop and still downloadable; it stopped
 at 1.4, missing 1.5 and 1.6. Nobody else has picked it up: Mlie has no continuation of it, and a
@@ -75,3 +75,11 @@ validation scripts and the Workshop preview were added with Codex (OpenAI).
 The preview uses OpenAI image generation with the original bee texture as a visual
 reference. The existing bee-smiley icon source was preserved and resized for delivery.
 This addition grants no licence over zoura3025's original material.
+
+## Permission
+
+On 2026-10-09, zoura3025 answered the thanks comment left on the original's Workshop page
+(2830700043): "No problem! Modding is a collaborative effort; I don't mind people maintaining my
+mods while I'm away. Thanks for the shout here <3". That is an explicit permission to maintain
+the mod, and it replaces the Workshop custom this port first rested on. Named credit stays, and the
+takedown on request stays too.

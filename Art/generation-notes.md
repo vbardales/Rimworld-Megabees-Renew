@@ -14,8 +14,8 @@ node ../scripts/Render-Preview.cjs
 It writes `Mod/About/Preview.png`, `Art/Gallery/0-preview.png`, `Art/Preview.ico` and
 `Art/ModIcon.ico`; reproducible layout checks are generated under `Art/.render/`.
 
-`Megabees` uses the RimWorld title font. `Renew`, `(unofficial)` and the description use
-Segoe UI; `Renew (unofficial)` stays on one line at one size. The line-art is flipped
+`Megabees` uses the RimWorld title font. `Renew` and the description use
+Segoe UI; `Renew` stays on one line at one size. The line-art is flipped
 horizontally and the ModIcon sits bottom-left at 15 degrees.
 
 ## Original background prompt

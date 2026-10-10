@@ -8,6 +8,8 @@ in game.
 
 ### Added
 
+- **Licence status `open`**: zoura3025 gave explicit permission to maintain the mod (2026-10-09). The `(unofficial)` suffix, the UNOFFICIAL paragraph, the Preview tag and the README notice are gone; `ATTRIBUTION.md` quotes the permission.
+
 - **Optional patch for Make Honey EVEN MORE Compatible** (`TSP.zal.patchhoney2`, Workshop 2959585309). That mod already accepts the megabee tallow in its honey syrup recipe by defName, but gives its "Mega Bees" category the icon `oldmegabee_east`, a texture only the original Megabees ships: the game logs `Could not load Texture2D` and the category shows the red error square. `Mod/Patches/Compat_MakeHoneyEvenMoreCompatible.xml` repoints that icon at `megabee_east`, guarded by `PatchOperationFindMod`; `About.xml` declares `<loadAfter>` for that mod.
 
 ### Changed

@@ -1,4 +1,4 @@
-# Publication: Megabees Renew (unofficial)
+# Publication: Megabees Renew
 
 What the Workshop page asks for and the repository holds nowhere else: the description, the change notes, the order of the
 captures, the messages to the mods this one is built on, the dependencies, and the answer to the content questions. It serves
@@ -11,16 +11,14 @@ The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, steps `tested -> p
 ## Steam description
 
 The single source, in Markdown: the CI converts it to the Steam description (BBCode) and to the plain-text `<description>` of
-`Mod/About/About.xml`, and stops when they differ. **`About.xml` was regenerated from this block on 2026-10-08 (plain text: bold marks dropped, links written `text (url)`); it is regenerated from this block, not the other way round.** The block below keeps that text, with the sections the rules add: it opens with the UNOFFICIAL paragraph, has `IF I GO
+`Mod/About/About.xml`, and stops when they differ. **`About.xml` was regenerated from this block on 2026-10-08 (plain text: bold marks dropped, links written `text (url)`); it is regenerated from this block, not the other way round.** The block below keeps that text, with the sections the rules add: it has `IF I GO
 QUIET`, `AI-GENERATED` and `THANKS` in that order after the body, then the pointer to `ATTRIBUTION.md` and the licence, and ends with
 the source link. It contains no code fence.
 
 ```markdown
-UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
-
 The megabee, brought forward to RimWorld 1.6. A stingless, docile, enormous honeybee engineered to produce rather than to sting.
 
-I am not the author of this mod. The bee is zoura3025's; all I did was the work needed to make it run on 1.6. Credit goes to them, mistakes in the update are mine. If they come back to it, or ask me to take this down, it comes down.
+I am not the author of this mod. The bee is zoura3025's; all I did was the work needed to make it run on 1.6. Credit goes to them, mistakes in the update are mine. They answered my thanks with their permission to maintain it. If they come back to it, or ask me to take this down, it comes down.
 
 Original mod: [Megabees](https://steamcommunity.com/sharedfiles/filedetails/?id=2830700043), last supporting 1.4, last updated in January 2023. Abandoned, not withdrawn.
 
@@ -126,13 +124,13 @@ whether one is still needed. Register updated 2026-10-09 (`WORKSHOP_COMMENTS.md`
 **For Make Honey EVEN MORE Compatible** (page 2959585309; authors per its About.xml: Zaljerem, Steaplay, TurtleShroom), not read yet:
 
 ```
-Hi :) your Mega Bees category under Honey asks for oldmegabee_east, a texture only the original ships, so with the 1.6 port the icon was a red square. I repointed it on my side, nothing of yours is copied: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew (unofficial)[/url]. Thanks for the patch!
+Hi :) your Mega Bees category under Honey asks for oldmegabee_east, a texture only the original ships, so with the 1.6 port the icon was a red square. I repointed it on my side, nothing of yours is copied: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew[/url]. Thanks for the patch!
 ```
 
 **For zoura3025**, on the page of the original:
 
 ```
-Hi zoura3025 :) your megabee was stuck at 1.4, so I carried it to 1.6, credit and all: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew (unofficial)[/url]. Its wildness had silently stopped being read, so it tamed for nothing; that is the only change to your files. If you want it down, say so and it goes.
+Hi zoura3025 :) your megabee was stuck at 1.4, so I carried it to 1.6, credit and all: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811291235]Megabees Renew[/url]. Its wildness had silently stopped being read, so it tamed for nothing; that is the only change to your files. If you want it down, say so and it goes.
 ```
 
 ## Dependencies and DLC
