@@ -33,8 +33,8 @@ the Japanese and Chinese forms 禁止, 転載, 無断, 二次配布, 不得.
 | A linked repository | there is none |
 | The Workshop page description | nothing about reuse |
 
-Silence grants nothing and forbids nothing. This port rests on the Workshop's own custom for
-abandoned mods: named credit, and a takedown on request.
+Silence grants nothing and forbids nothing. The port first rested on the Workshop's own custom for
+abandoned mods (named credit, and a takedown on request); the permission below now replaces it.
 
 ## What the port changed
 

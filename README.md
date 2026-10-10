@@ -48,8 +48,8 @@ The original **states no licence anywhere** — no file in the mod, nothing in i
 linked repository, and nothing on its Workshop page, which was read looking for a refusal rather
 than for a permission. Silence grants nothing and forbids nothing.
 
-This port rests on the Workshop's own custom for abandoned mods: named credit, and a takedown on
-request. If zoura3025 comes back to the bee, or asks for this to be taken down, it comes down.
+This port rests on zoura3025's explicit permission to maintain the mod (see ATTRIBUTION.md): named credit, and a takedown
+on request. If zoura3025 comes back to the bee, or asks for this to be taken down, it comes down.
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or
 any other of my mods, including publishing a continuation of it. All credit must be preserved.
