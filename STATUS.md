@@ -6,7 +6,7 @@ settings_audit: not_applicable
 mod:          Megabees Renew
 packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
-visibility:   private
+visibility:   public
 detached:     yes
 workflow_stage: followUp[1.0.1]
 licence:      open
@@ -15,7 +15,7 @@ upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
 tested_on:    2026-10-10 (5 passes plus make-honey at 41c1e6c, all green; docs/runs/2026-10-10-41c1e6c-passes.txt; deploy non-regression of 1.0.1 still to play)
-workshop:     3811291235 (private; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
+workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
   - todo: 1.0.1 follow-up by Virginie: replace the gallery image 0 by Art/Gallery/0-preview.png (by hand), set the item public when ready, re-enable the mod (packageId changed), then the thanks comments (TSP 2959585309 drafted in PUBLICATION.md, register row drafted). Then non-regression after deploy (AUDIT.md 14.a) and cleanup (14.c).
@@ -27,7 +27,7 @@ social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
 session:      megabees / followUp[1.0.1]
 updated:      2026-10-09
-protocols_read_sha: 8dc7759df76e83f3ebe7489e18035a62f07089fe
+protocols_read_sha: fc2fe915a7378bc22fdefadc18a2ccb246c9d5cb
 ---
 
 # Megabees Renew — status
