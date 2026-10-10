@@ -21,8 +21,8 @@ remaining:
   - feature: `1.0.1` in progress (unreleased): optional patch `Compat_MakeHoneyEvenMoreCompatible.xml` (Make Honey EVEN MORE Compatible, Workshop 2959585309) written 2026-10-09 after reading its `Recipes_HoneySyrup.xml`: its `KYD_HoneySyrup` names `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so the port is left out. Pass 7 `make-honey` (feature 10, new step) written, offline checks green (test_pickle_suite 12 ok, unittest 25 ok); `dotnet build` of the step assembly 0 errors 0 warnings; pass 7 requested, nothing played yet. Next: read its report, replay the five others at the final SHA, then `prepublished`.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
-  - unverified: echo review (AGENTS.md closing pass step 4, AUDIT.md step 10): with the gallery captures in hand, decide whether `Art/echo.png` still fits (keep or redo, with the reason) and record `echo_review: <date> keep|redo - <reason>`; required before `prepublished` of the next version. Not done.
 code_review_sha: e906b1c95c69d172be692594354f72862a674ab0
+echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
 session:      megabees / mountPreview[1.0.1]
 updated:      2026-10-09
@@ -43,6 +43,7 @@ Older dated sections (audits 2026-09-13 to 2026-10-09, dry-run, publication) are
 - **Compatibility.** Optional ADS 2 patch (`loadBefore`); no patch for XND Nocturnal Animals, Better Crossbreeding, Dogs mate (written reasons in `docs/runs`). Declared incompatible with the original (`zoura3025.megabees`). Hard dependencies: none.
 - **Upstream.** Original has no repository (About.xml has no `<url>`); no PR possible. Licence `open` (permission quoted in ATTRIBUTION.md, identical in `Mod/`).
 - **Next.** 1.0.1 in preparation (not published, workflow_stage keeps published[1.0.0] until then): licence `open` applied 2026-10-10 (no `(unofficial)`, no UNOFFICIAL paragraph, Preview and 0-preview regenerated, ATTRIBUTION permission section); pass 7 (make-honey, patch on) to replay on the final tree, passes 1-5 replay, code review from e306e4c, echo_review, dry-run, publish. After publish: replace the gallery image 0 and the description by hand, rename the item.
+- **Echo.** Kept, validated by Virginie 2026-10-10 with the accepted gallery in hand (larva line-art still fits the three photos; panel shortened after the tag was removed).
 
 WSL note 2026-10-09: pass 7 first failed at staging (exit 1, no report): Universal Processor (2633514537) was in no Workshop folder. Downloaded into the WSL cache with `scripts/download-workshop-wsl.sh` under `Use-Wsl.ps1`; to remove at the cleanup after the test, unless another mod's `wsl-deps` names it. Request retried as `make-honey-English-671ecaf-2`.
 
