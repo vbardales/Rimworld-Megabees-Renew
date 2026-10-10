@@ -21,7 +21,7 @@ remaining:
   - feature: `1.0.1` in progress (unreleased): optional patch `Compat_MakeHoneyEvenMoreCompatible.xml` (Make Honey EVEN MORE Compatible, Workshop 2959585309) written 2026-10-09 after reading its `Recipes_HoneySyrup.xml`: its `KYD_HoneySyrup` names `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so the port is left out. Pass 7 `make-honey` (feature 10, new step) written, offline checks green (test_pickle_suite 12 ok, unittest 25 ok); `dotnet build` of the step assembly 0 errors 0 warnings; pass 7 requested, nothing played yet. Next: read its report, replay the five others at the final SHA, then `prepublished`.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `writeDocs[1.0.1]`.
-code_review_sha: d0908b502440c775c6df61046b462bbeecbafaf6
+code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
 echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
