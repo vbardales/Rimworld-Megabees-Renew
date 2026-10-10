@@ -8,25 +8,26 @@ packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.0.1]
+workflow_stage: writeDocs[1.0.1]
 licence:      open
 licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Megabees, 2830700043) answered the thanks comment on 2026-10-09 with an explicit permission (I do not mind people maintaining my mods while I am away). Before: silent since 2026-09-13 (no licence anywhere, abandoned at 1.4)."
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
 tested_on:    2026-10-09 (non-regression after deploy, 5 passes at 3875ccc, all green; docs/runs/2026-10-09-3875ccc-non-regression.txt; earlier 2026-09-29 at 0145956)
-workshop:     3811291235 (public; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0)
+workshop:     3811291235 (private since 2026-10-09; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
   - feature: `1.0.1` in progress (unreleased): optional patch `Compat_MakeHoneyEvenMoreCompatible.xml` (Make Honey EVEN MORE Compatible, Workshop 2959585309) written 2026-10-09 after reading its `Recipes_HoneySyrup.xml`: its `KYD_HoneySyrup` names `MegabeeTallow` behind `MayRequire="zoura3025.megabees"`, the original's package id, so the port is left out. Pass 7 `make-honey` (feature 10, new step) written, offline checks green (test_pickle_suite 12 ok, unittest 25 ok); `dotnet build` of the step assembly 0 errors 0 warnings; pass 7 requested, nothing played yet. Next: read its report, replay the five others at the final SHA, then `prepublished`.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `published[1.0.0]`.
+  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `writeDocs[1.0.1]`.
+  - unverified: social preview (AUDIT.md 10.f): the repository is public and Preview.png changed (sha256 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7); Virginie re-uploads it by hand, then record `social_preview_sha256`.
 code_review_sha: e906b1c95c69d172be692594354f72862a674ab0
 echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 publication_changelog_review_sha: 313b07d02bf27b9a6f4e6853923f125688d0a14a
-session:      megabees / mountPreview[1.0.1]
+session:      megabees / writeDocs[1.0.1]
 updated:      2026-10-09
-protocols_read_sha: fa996cf7dd2b7a943321398c7048b336f1c3c50e
+protocols_read_sha: fcc251e46f641645cf3c59c4fc786ebd82d2038a
 ---
 
 # Megabees Renew — status
