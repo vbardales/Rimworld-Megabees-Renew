@@ -14,6 +14,8 @@ in game.
 
 ### Changed
 
+- English: three grammar fixes in inherited descriptions (`Megabee.description` twice, `WoolMegabee.description` `psuedo-wool` to `pseudo-wool`), allowed now that the author permitted maintenance. No change to the French.
+
 - **packageId `nelim.megabeesrenew` becomes `nelim.megabees`** (owner's decision, 2026-10-09: a `renew` suffix does not belong in the id, PUBLISHING.md). Same Workshop item. Anyone who subscribed to 1.0.0 has to enable the mod again, and a mod that named the old id in a `loadAfter` or `MayRequire` no longer matches.
 - Description: `[h1]` headings, links to the original Megabees and PickleTools. No change to the mod's defs.
 

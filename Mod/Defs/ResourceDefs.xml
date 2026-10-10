@@ -75,7 +75,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WoolMegabee</defName>
     <label>megabee wool</label>
-    <description>A stiff, fibrous psuedo-wool harvested from Megabees. Though it's not particularly soft, it has fair all-around temperature regulation and is resistant to heat. It's a good material for clothing or structures thanks to its rather incredible durability, and the sheer bounty of it that can be shorn from even a single megabee.</description>
+    <description>A stiff, fibrous pseudo-wool harvested from Megabees. Though it's not particularly soft, it has fair all-around temperature regulation and is resistant to heat. It's a good material for clothing or structures thanks to its rather incredible durability, and the sheer bounty of it that can be shorn from even a single megabee.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Wool</texPath>
       <graphicClass>Graphic_Single</graphicClass>

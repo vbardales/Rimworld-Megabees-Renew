@@ -189,7 +189,7 @@
     "defName": "Megabee",
     "xpath": "description",
     "key": "Megabee.description",
-    "english": "A result of rampant genetic engineering, Megabees are somewhat of an anomaly on the rim. They lack a stinger, and are extremely docile, but their huge body size and resemblance to honeybees tends to drive most predators away from attacking them.\\n\\nTheir bodies are heavily optimized for the production of resources; they are able to produce honey independent of any hive or structure, their fur has been engineered to behave more like wool, and they can even lay unfertilized eggs, like chickens.\\n\\nOf course, the downside of being living production machine is that Megabees require a considerable amount of food, and they'll readily eat what they can get; crops, trees, other plants, and everything in between.\\n\\nThough they're very docile creatures, they are somewhat fickle, and have a tendency to wander off. However, once tamed, Megabees can be very affectionate."
+    "english": "A result of rampant genetic engineering, Megabees are somewhat of an anomaly on the rim. They lack a stinger, and are extremely docile, but their huge body size and resemblance to honeybees tend to drive most predators away from attacking them.\\n\\nTheir bodies are heavily optimized for the production of resources; they are able to produce honey independent of any hive or structure, their fur has been engineered to behave more like wool, and they can even lay unfertilized eggs, like chickens.\\n\\nOf course, the downside of being a living production machine is that Megabees require a considerable amount of food, and they'll readily eat what they can get; crops, trees, other plants, and everything in between.\\n\\nThough they're very docile creatures, they are somewhat fickle, and have a tendency to wander off. However, once tamed, Megabees can be very affectionate."
   },
   {
     "file": "Mod/Defs/megabee.xml",
@@ -301,7 +301,7 @@
     "defName": "WoolMegabee",
     "xpath": "description",
     "key": "WoolMegabee.description",
-    "english": "A stiff, fibrous psuedo-wool harvested from Megabees. Though it's not particularly soft, it has fair all-around temperature regulation and is resistant to heat. It's a good material for clothing or structures thanks to its rather incredible durability, and the sheer bounty of it that can be shorn from even a single megabee."
+    "english": "A stiff, fibrous pseudo-wool harvested from Megabees. Though it's not particularly soft, it has fair all-around temperature regulation and is resistant to heat. It's a good material for clothing or structures thanks to its rather incredible durability, and the sheer bounty of it that can be shorn from even a single megabee."
   },
   {
     "file": "Mod/Defs/salveDefs.xml",

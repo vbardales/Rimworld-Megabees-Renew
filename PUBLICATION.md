@@ -4,8 +4,8 @@ What the Workshop page asks for and the repository holds nowhere else: the descr
 captures, the messages to the mods this one is built on, the dependencies, and the answer to the content questions. It serves
 twice: for the first upload of `1.0.0`, and for whoever takes the mod over.
 
-**State, 2026-10-09: published `1.0.0`.** The item `3811291235` was created by the prepublication `0.1.0` of 2026-10-01
-(`Mod/About/PublishedFileId.txt`, commit `8996319`), uploaded as `1.0.0` by CI run `37934952391` on 2026-10-09 and made public by the owner.
+**State, 2026-10-10: `1.0.0` was published, then the item was put back to private, waiting for `1.0.1`.** The item `3811291235` was created by the prepublication `0.1.0` of 2026-10-01
+(`Mod/About/PublishedFileId.txt`, commit `8996319`), uploaded as `1.0.0` by CI run `37934952391` on 2026-10-09, made public by the owner, then taken out of public on 2026-10-09 (2 subscribers) before the `packageId` change ships.
 The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, steps `tested -> prepublished` and `prepublished -> published`.
 
 ## Steam description
@@ -75,8 +75,10 @@ Settled by the owner, 2026-10-07: DALL-E for the icon and the Preview illustrati
 [b]1.0.1[/b]
 The category that Make Honey EVEN MORE Compatible gives the megabee tallow now shows its icon.
 [list]
+[*] IMPORTANT: the packageId changes from nelim.megabeesrenew to nelim.megabees. It is the same Workshop item, but if you subscribed to 1.0.0 you have to enable the mod again in the mod list, and any mod that named the old id in its load order has to be pointed at the new one.
 [*] Optional patch: that mod's category icon named a texture only the original Megabees ships, so the game logged an error and drew a red square.
-[*] Description: headings, and links to the original Megabees and to PickleTools.
+[*] The name no longer says unofficial: zoura3025, the original author, gave their permission to maintain the mod.
+[*] Three typos fixed in the English descriptions. Description: headings, and links to the original Megabees and to PickleTools.
 [/list]
 ```
 
@@ -153,7 +155,7 @@ colonist; no gore, no nudity, no sexual content.
 ## After an upload
 
 - `Mod/About/PublishedFileId.txt` is committed (`8996319`). Never delete it: lost, the next upload creates a second item.
-- RimWorld and the CI never set visibility; the item is public since 2026-10-09 and the owner did the production checklist by hand.
+- RimWorld and the CI never set visibility; the item is private again since 2026-10-09 (taken out of public by the owner, waiting for `1.0.1`); the owner did the production checklist by hand.
 - `CHANGELOG.md` holds `## [1.0.0] - 2026-10-09` above `## [0.1.0]`. The CI creates the tag and the release after a good upload: not by hand.
 - The publication is by CI: a dry-run of the exact SHA first, `publish` with the 40-character SHA, and only the owner approves
   `steam-production`. A new description goes with `update_description`, or by hand on the page from the converter's output.

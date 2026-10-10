@@ -6,7 +6,7 @@ settings_audit: not_applicable
 mod:          Megabees Renew
 packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
-visibility:   public
+visibility:   private
 detached:     yes
 workflow_stage: writeDocs[1.0.1]
 licence:      open
