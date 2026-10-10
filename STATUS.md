@@ -14,11 +14,11 @@ licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Mega
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
-tested_on:    2026-10-10 (5 passes plus make-honey at 41c1e6c, all green; docs/runs/2026-10-10-41c1e6c-passes.txt; deploy non-regression of 1.0.1 still to play)
+tested_on:    2026-10-10 (non-regression after deploy of 1.0.1 at 0e2e93b, six passes all green; docs/runs/2026-10-10-0e2e93b-non-regression.txt)
 workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
   - unverified: CompatibilityPatchTests (7 tests) skipped, lxml unavailable in this WSL (no pip, no sudo); patch logic hand-verified once with plain ElementTree (docs/runs/2026-09-28-animal-integrations.txt) and, since 2026-09-29, played in game by Pickle 04 (avec-ads2). Install lxml and rerun before relying on the offline suite alone.
-  - todo: 1.0.1 follow-up by Virginie: replace the gallery image 0 by Art/Gallery/0-preview.png (by hand), set the item public when ready, re-enable the mod (packageId changed), then the thanks comments (TSP 2959585309 drafted in PUBLICATION.md, register row drafted). Then non-regression after deploy (AUDIT.md 14.a) and cleanup (14.c).
+  - todo: 1.0.1 follow-up by Virginie: replace the gallery image 0 by Art/Gallery/0-preview.png (by hand), set the item public when ready, re-enable the mod (packageId changed), then the thanks comments (TSP 2959585309 drafted in PUBLICATION.md, register row drafted). Non-regression after deploy done (green). Cleanup (14.c) next.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `followUp[1.0.1]`.
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
