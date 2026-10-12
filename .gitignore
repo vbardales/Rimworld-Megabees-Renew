@@ -17,6 +17,9 @@ __pycache__/
 
 # Local Explorer folder icons (desktop.ini already ignored above); never inside Mod/.
 *.ico
+# Publishable outputs of the Preview renderer (PUBLISHING.md, "Images"): tracked.
+!Art/ModIcon.ico
+!Art/Preview.ico
 
 # Pickle evidence stays on disk, never in git (screenshots and Player.log grow without bound).
 # What deserves history goes to docs/runs/ as one text line per run.
