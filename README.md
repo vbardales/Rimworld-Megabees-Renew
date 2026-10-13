@@ -66,3 +66,13 @@ See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence check and the port in detai
 Run `python -m unittest discover -s Tests -v` for the portable XML/resource checks.
 On a Windows RimWorld installation, also run the shared `scripts/Check-DefInjected.ps1`
 with `-TransMod Mod`. See Tests/RESULTS.md and TEST_SCENARIOS.md for scope and pending game checks.
+
+## Preview
+
+Sources in `Art/`: `Preview-source.png` (text-free illustration), `echo-preview.png` (megabee line-art drawn from it, flipped horizontally in the config), `ModIcon-source.png` (badge artwork, bottom-left at 15 degrees) and `Preview.config.json` (copy, palette, placement). Render from the mod root:
+
+```powershell
+node ../scripts/Render-Preview.cjs
+```
+
+It writes `Mod/About/Preview.png`, `Art/Gallery/0-preview.png`, `Art/Preview.ico` and `Art/ModIcon.ico`; layout checks go to `Art/.render/`. `Megabees` uses the RimWorld title font; `Renew` and the description use Segoe UI. The prompt of the background is in `docs/runs/preview-background-prompt.md`.
