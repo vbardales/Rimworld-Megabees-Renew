@@ -27,7 +27,7 @@ social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
 session:      megabees / playTests[1.1.0]
 updated:      2026-10-13
-protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
+protocols_read_sha: 86cf2bf7fd989021fbad0ac45602a2109a7a3aa7
 ---
 
 # Megabees Renew — status
