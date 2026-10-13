@@ -8,7 +8,7 @@ packageId:    nelim.megabees
 repo:         Rimworld-Megabees-Renew
 visibility:   public
 detached:     yes
-workflow_stage: dormant
+workflow_stage: playTests[1.1.0]
 licence:      open
 licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Megabees, 2830700043) answered the thanks comment on 2026-10-09 with an explicit permission (I do not mind people maintaining my mods while I am away). Before: silent since 2026-09-13 (no licence anywhere, abandoned at 1.4)."
 upstream_mod_remotes: N/A
@@ -17,15 +17,17 @@ showcase:     complete
 tested_on:    2026-10-10 (non-regression after deploy of 1.0.1 at 0e2e93b, six passes all green; docs/runs/2026-10-10-0e2e93b-non-regression.txt)
 workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
+  - unverified: 1.7 diagnostic filed 2026-10-13, ticket `20261013-144235-646-d174` (features 01, 02, 03, English, no map, `-Game /home/nelim/rimworld17`, `-PickleSrc /home/nelim/Rimworld-Pickle` Pickle#63, tree 727462b, evidence `Tests/Pickle/Evidence/p17-diag-english-727462b`). Features 04-10 not in this ticket (ADS 2, original, Make Honey, Sanctuary gallery need maps; 08 needs LoadAudit, no net10.0 build). Keep `Mod/` frozen until `RUN_DONE`.
+  - unverified: RimWorld 1.7 pass (AUDIT.md, "Passe 1.7"; XML only, no DLL): needs a green 1.7 Pickle run (English only). Then `<li>1.7</li>`, Preview badge 1.7 and `0-` copy, CHANGELOG, tag 1.1.0 (minor, update_tags=true). Set `tested_1_7` after the run.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `followUp[1.0.1]`.
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
 echo_review_sha: 79f0a04fde19a23afb83b1541825d788e929abec
 social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
-session:      megabees / dormant
-updated:      2026-10-11
-protocols_read_sha: 62af5f82742c841b95ec95288e9ac77833517ac0
+session:      megabees / playTests[1.1.0]
+updated:      2026-10-13
+protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
 ---
 
 # Megabees Renew — status

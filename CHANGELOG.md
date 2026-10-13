@@ -4,6 +4,10 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
+## [Unreleased]
+
+Target `1.1.0` (minor: the 1.7 tag). `<li>1.7</li>` goes into `supportedVersions` only after a green RimWorld 1.7 Pickle run.
+
 ## [1.0.1] — 2026-10-10
 
 ### Added
