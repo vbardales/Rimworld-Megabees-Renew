@@ -204,7 +204,7 @@ class PickleSuiteTests(unittest.TestCase):
     def test_every_map_is_well_formed_and_ends_with_a_newline(self):
         maps = sorted(PICKLE.glob('wsl-deps.*.map'))
         self.assertEqual([m.name for m in maps], ['wsl-deps.avec-ads2.map', 'wsl-deps.dlc-absent.map',
-                                                  'wsl-deps.incompat-original.map', 'wsl-deps.make-honey.map', 'wsl-deps.sanctuary.map',
+                                                  'wsl-deps.incompat-original.map', 'wsl-deps.make-honey.map', 'wsl-deps.minimal-17.map', 'wsl-deps.sanctuary.map',
                                                   'wsl-deps.tools.map'])
         for path in maps:
             with self.subTest(map=path.name):
