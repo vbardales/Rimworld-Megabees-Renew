@@ -23,7 +23,7 @@ remaining:
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `followUp[1.0.1]`.
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
-echo_review_sha: 25d245b6c45d87d5be354cfa1569889ec56e73f0
+echo_review_sha: 8705702cdad97f51dec66ee5659001d1dd838ce5
 social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f99e02c7
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
 session:      megabees / playTests[1.1.0]
