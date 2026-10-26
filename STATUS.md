@@ -14,11 +14,12 @@ licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Mega
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
+tested_1_7:   yes (English, minimal-17 replay green 5/5, 2026-10-15 ticket 20261015-225350-702-3974)
 tested_on:    2026-10-10 (non-regression after deploy of 1.0.1 at 0e2e93b, six passes all green; docs/runs/2026-10-10-0e2e93b-non-regression.txt)
 workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
   - unverified: GitHub social preview not yet re-uploaded with the new `Mod/About/Preview.png` (sha256 `9d033d03...96ed`); then set `social_preview_sha256` (PUBLISHING.md, "Image de partage"). Owner gesture.
-  - unverified: 1.7 diagnostic ran (ticket `20261013-144235-646-d174`, `docs/runs/2026-10-15-1.7-diagnostic.md`): 1 passed, 4 failed, all `Undefined step` (the `net48` step DLL has no 1.7 build); not a mod defect. `net10.0` steps built (WSL `~/pt17/mods`, map `wsl-deps.minimal-17.map`); replay 01-03 filed 2026-10-15, ticket `20261015-225350-702-3974`, evidence `Tests/Pickle/Evidence/p17-replay-english-7b3170f`. Waiting for `RUN_DONE`.
+  - unverified: 1.7 diagnostic ran (ticket `20261013-144235-646-d174`, `docs/runs/2026-10-15-1.7-diagnostic.md`): 1 passed, 4 failed, all `Undefined step` (the `net48` step DLL has no 1.7 build); not a mod defect. `net10.0` steps built (WSL `~/pt17/mods`, map `wsl-deps.minimal-17.map`); replay 01-03 filed 2026-10-15, ticket `20261015-225350-702-3974`, evidence `Tests/Pickle/Evidence/p17-replay-english-7b3170f`. Replay result (found on disk 2026-10-26, `Tests/Pickle/Evidence/p17-replay-english-7b3170f`, set minimal-17): 5 scenarios, 5 passed, 0 failed (summary.json `exitReason` passed).
   - unverified: RimWorld 1.7 pass (AUDIT.md, "Passe 1.7"; XML only, no DLL): needs a green 1.7 Pickle run (English only). Then `<li>1.7</li>`, Preview badge 1.7 and `0-` copy, CHANGELOG, tag 1.1.0 (minor, update_tags=true). Set `tested_1_7` after the run.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
   - unverified: Codex task title (set_thread_title unavailable in this session): set it to `followUp[1.0.1]`.
@@ -28,7 +29,7 @@ social_preview_sha256: 73449e48a5072d81cc3c1b30a9b85f890063e4cab27537069c960b36f
 publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
 session:      megabees / playTests[1.1.0]
 updated:      2026-10-13
-protocols_read_sha: 7bafac79376f69b0ecc5d31de811aef4f53a9987
+protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 ---
 
 # Megabees Renew — status
