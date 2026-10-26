@@ -18,10 +18,9 @@ tested_1_7:   yes
 tested_on:    2026-10-10 (non-regression after deploy of 1.0.1 at 0e2e93b, six passes all green; docs/runs/2026-10-10-0e2e93b-non-regression.txt)
 workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
+  - 1.1.0 prepared (7471d8a, 2026-10-26): `<li>1.7</li>` declared, Preview badge 1.7, CHANGELOG `[1.1.0]`, Steam change note. Left: Virginie re-uploads the social preview and records its sha256; code review (`code_review_sha`); publication through the CI (tag `v1.1.0`, update_tags=true).
   - unverified: 1.7 diagnostic ran (ticket `20261013-144235-646-d174`, `docs/runs/2026-10-15-1.7-diagnostic.md`): 1 passed, 4 failed, all `Undefined step` (the `net48` step DLL has no 1.7 build); not a mod defect. `net10.0` steps built (WSL `~/pt17/mods`, map `wsl-deps.minimal-17.map`); replay 01-03 filed 2026-10-15, ticket `20261015-225350-702-3974`, evidence `Tests/Pickle/Evidence/p17-replay-english-7b3170f`. Replay result (found on disk 2026-10-26, `Tests/Pickle/Evidence/p17-replay-english-7b3170f`, set minimal-17): 5 scenarios, 5 passed, 0 failed (summary.json `exitReason` passed).
-  - unverified: RimWorld 1.7 pass (AUDIT.md, "Passe 1.7"; XML only, no DLL): needs a green 1.7 Pickle run (English only). Then `<li>1.7</li>`, Preview badge 1.7 and `0-` copy, CHANGELOG, tag 1.1.0 (minor, update_tags=true). Set `tested_1_7` after the run.
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-  - unverified: Codex task title (set_thread_title unavailable in this session): set it to `followUp[1.0.1]`.
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
 echo_review_sha: 1004f15fdfd045ed22901621626e7cb3bde09682
 social_preview_sha256: 8cb8240c2a29dbadbda608f24e8c2f739b3c15725727b9db3b4f92e481e601fe
