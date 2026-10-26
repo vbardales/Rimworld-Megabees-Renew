@@ -18,12 +18,12 @@ tested_1_7:   yes
 tested_on:    2026-10-10 (non-regression after deploy of 1.0.1 at 0e2e93b, six passes all green; docs/runs/2026-10-10-0e2e93b-non-regression.txt)
 workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
-  - 1.1.0 prepared (7471d8a, 2026-10-26): `<li>1.7</li>` declared, Preview badge 1.7, CHANGELOG `[1.1.0]`, Steam change note. Left: Virginie re-uploads the social preview and records its sha256; code review (`code_review_sha`); publication through the CI (tag `v1.1.0`, update_tags=true).
+  - 1.1.0 prepared (7471d8a, 2026-10-26): `<li>1.7</li>` declared, Preview badge 1.7, CHANGELOG `[1.1.0]`, Steam change note. Social preview re-uploaded 2026-10-26 (sha256 recorded). Left: code review (`code_review_sha`); publication through the CI (tag `v1.1.0`, update_tags=true).
   - unverified: 1.7 diagnostic ran (ticket `20261013-144235-646-d174`, `docs/runs/2026-10-15-1.7-diagnostic.md`): 1 passed, 4 failed, all `Undefined step` (the `net48` step DLL has no 1.7 build); not a mod defect. `net10.0` steps built (WSL `~/pt17/mods`, map `wsl-deps.minimal-17.map`); replay 01-03 filed 2026-10-15, ticket `20261015-225350-702-3974`, evidence `Tests/Pickle/Evidence/p17-replay-english-7b3170f`. Replay result (found on disk 2026-10-26, `Tests/Pickle/Evidence/p17-replay-english-7b3170f`, set minimal-17): 5 scenarios, 5 passed, 0 failed (summary.json `exitReason` passed).
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
 echo_review_sha: 1004f15fdfd045ed22901621626e7cb3bde09682
-social_preview_sha256: 8cb8240c2a29dbadbda608f24e8c2f739b3c15725727b9db3b4f92e481e601fe
+social_preview_sha256: dea90a487219b88482163c74690836586158d3b7fa8b031ddd6d1395e84b26a8
 publication_changelog_review_sha: a5f469c35ffe6448a7cc5b1f394a66edcb291ef4
 session:      megabees / playTests[1.1.0]
 updated:      2026-10-13
