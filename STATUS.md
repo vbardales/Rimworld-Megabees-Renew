@@ -14,7 +14,7 @@ licence_at:   "2026-10-10: open, decided by Virginie. zoura3025 (creator of Mega
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
-tested_1_7:   yes (English, minimal-17 replay green 5/5, 2026-10-15 ticket 20261015-225350-702-3974)
+tested_1_7:   yes
 tested_on:    2026-10-10 (non-regression after deploy of 1.0.1 at 0e2e93b, six passes all green; docs/runs/2026-10-10-0e2e93b-non-regression.txt)
 workshop:     3811291235 (public since 2026-10-10; 1.0.0 uploaded 2026-10-09 by CI run 37934952391 at 02ceebb, tag v1.0.0; 1.0.1 uploaded 2026-10-10 by CI run 38054412347 at 48b94e9, tag v1.0.1, with preview, description and title)
 remaining:
