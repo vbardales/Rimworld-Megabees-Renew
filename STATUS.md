@@ -25,7 +25,7 @@ remaining:
 code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
 echo_review_sha: 1004f15fdfd045ed22901621626e7cb3bde09682
 social_preview_sha256: 8cb8240c2a29dbadbda608f24e8c2f739b3c15725727b9db3b4f92e481e601fe
-publication_changelog_review_sha: 09254f92aab40dcdf41cc4a3e2e27a6f179188a9
+publication_changelog_review_sha: a5f469c35ffe6448a7cc5b1f394a66edcb291ef4
 session:      megabees / playTests[1.1.0]
 updated:      2026-10-13
 protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
