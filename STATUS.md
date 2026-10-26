@@ -21,7 +21,7 @@ remaining:
   - 1.1.0 prepared (7471d8a, 2026-10-26): `<li>1.7</li>` declared, Preview badge 1.7, CHANGELOG `[1.1.0]`, Steam change note. Social preview re-uploaded 2026-10-26 (sha256 recorded). Left: code review (`code_review_sha`); publication through the CI (tag `v1.1.0`, update_tags=true).
   - unverified: 1.7 diagnostic ran (ticket `20261013-144235-646-d174`, `docs/runs/2026-10-15-1.7-diagnostic.md`): 1 passed, 4 failed, all `Undefined step` (the `net48` step DLL has no 1.7 build); not a mod defect. `net10.0` steps built (WSL `~/pt17/mods`, map `wsl-deps.minimal-17.map`); replay 01-03 filed 2026-10-15, ticket `20261015-225350-702-3974`, evidence `Tests/Pickle/Evidence/p17-replay-english-7b3170f`. Replay result (found on disk 2026-10-26, `Tests/Pickle/Evidence/p17-replay-english-7b3170f`, set minimal-17): 5 scenarios, 5 passed, 0 failed (summary.json `exitReason` passed).
   - unverified: Migration of a save made with the original mod: no such save exists; not a gate (TEST_SCENARIOS.md, "Existing colony").
-code_review_sha: db6bf5f7f5b96bb11ee402b071491a8065e9e706
+code_review_sha: a04e760e6329acd1cc325d3a8a2b6615ed7c876e
 echo_review_sha: 7471d8aba214ad223cf0ba7b348107e1a325f8c1
 social_preview_sha256: dea90a487219b88482163c74690836586158d3b7fa8b031ddd6d1395e84b26a8
 publication_changelog_review_sha: 7471d8aba214ad223cf0ba7b348107e1a325f8c1
