@@ -6,7 +6,11 @@ in game.
 
 ## [Unreleased]
 
-Target `1.1.0` (minor: the 1.7 tag). `<li>1.7</li>` goes into `supportedVersions` only after a green RimWorld 1.7 Pickle run.
+## [1.1.0] - 2026-10-26
+
+### Added
+
+- **RimWorld 1.7 support** (`<li>1.7</li>` in `supportedVersions`). A Pickle replay on 1.7 passed 5 of 5 scenarios (English only: the 1.7 install ships no other language). No change to the mod's defs.
 
 ## [1.0.1] — 2026-10-10
 

@@ -69,6 +69,16 @@ Licence and sources: the original states no licence, and zoura3025 gave their pe
 Settled by the owner, 2026-10-07: DALL-E for the icon and the Preview illustration, Claude and Codex for everything else.
 ## Steam change notes
 
+### 1.1.0
+
+```text
+[b]1.1.0[/b]
+The megabee now declares support for the latest RimWorld version.
+[list]
+[*] Tested on the new RimWorld version: the megabee, its products and its brood load and draw as before. No change to the defs.
+[/list]
+```
+
 ### 1.0.1
 
 ```text
