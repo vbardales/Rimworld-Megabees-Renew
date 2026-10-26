@@ -4,8 +4,8 @@ What the Workshop page asks for and the repository holds nowhere else: the descr
 captures, the messages to the mods this one is built on, the dependencies, and the answer to the content questions. It serves
 twice: for the first upload of `1.0.0`, and for whoever takes the mod over.
 
-**State, 2026-10-10: `1.0.0` was published, then the item was put back to private, waiting for `1.0.1`.** The item `3811291235` was created by the prepublication `0.1.0` of 2026-10-01
-(`Mod/About/PublishedFileId.txt`, commit `8996319`), uploaded as `1.0.0` by CI run `37934952391` on 2026-10-09, made public by the owner, then taken out of public on 2026-10-09 (2 subscribers) before the `packageId` change ships.
+**State, 2026-10-10: `1.0.0` was published, then the item was made private again, waiting for `1.0.1`.** The item `3811291235` was created by the prepublication `0.1.0` of 2026-10-01
+(`Mod/About/PublishedFileId.txt`, commit `8996319`), uploaded as `1.0.0` by CI run `37934952391` on 2026-10-09, made public by the owner, then made private again on 2026-10-09 (2 subscribers) before the `packageId` change ships.
 The rules this follows are in `PUBLISHING.md` and `AUDIT.md`, steps `tested -> prepublished` and `prepublished -> published`.
 
 ## Steam description
