@@ -1,9 +1,7 @@
-"""Offline checks of the Pickle suite in Tests/Pickle. They do not start a game.
+"""Exact values of the Pickle suite of this mod (Tests/Pickle). They do not start a game.
 
-A run confiscates the machine for tens of minutes, and an undefined or ambiguous step, a tag that selects nothing, or
-a pass map that stages the wrong folder costs a whole run before any scenario has played. Everything below is what can
-be established from the files alone: that each line of each feature matches exactly one known step, that the passes
-are consistent with the maps and the tags, and that the def names the scenarios point at exist.
+Step resolution, tags and @requires declarations are Check-Steps.ps1 (shared). Here only what is this mod's own:
+the companion mod, the dependency maps of each pass and the def names the scenarios point at.
 """
 import os
 from pathlib import Path
@@ -15,109 +13,33 @@ ROOT = Path(__file__).resolve().parents[1]
 COLLECTION = ROOT.parent
 PICKLE = ROOT / 'Tests' / 'Pickle'
 FEATURES = PICKLE / 'Mod' / 'Pickle' / 'Features'
-STEPS_CS = PICKLE / 'Source' / 'MegabeesSteps.cs'
 GAME = Path(os.environ.get('RIMWORLD_DIR', r'C:\Program Files (x86)\Steam\steamapps\common\RimWorld'))
 WORKSHOP = Path(os.environ.get('RIMWORLD_WORKSHOP',
                                r'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100'))
 
 PREFIX = 'Megabees Renew:'
-ALLOWED_TAGS = {'review', 'allow-errors', 'sans-facultatifs', 'dlc-absent', 'clean-load', 'gallery'}
-REQUIRES = re.compile(r'^requires:[A-Za-z0-9_.]+$')
 DLC = {'ludeon.rimworld.royalty', 'ludeon.rimworld.ideology'}
-# The two steps of PickleTools' load audit, from PickleTools/docs/steps.md (the tool is staged by every pass map).
-LOAD_AUDIT = ["Nelim's Pickle Tools: the load of the mod {string} is clean",
-              "Nelim's Pickle Tools: the load of the mod {string} is clean, apart from {string}"]
-
-# Steps used by 09-gallery: "Nelim's Sanctuary:" (SanctuaryBacklot, docs/steps.md, place steps) and "Nelim's Pickle Tools:" (NPT, generic tools).
-GALLERY = ["Nelim's Pickle Tools: the screen is clear",
-           "Nelim's Sanctuary: the animals are removed from the sanctuary {string}",
-           "Nelim's Sanctuary: the sanctuary {string} is emptied",
-           "Nelim's Pickle Tools: I place the decor {string} at \({int}, {int}\)",
-           "Nelim's Pickle Tools: the decor {string} at \({int}, {int}\) is lit",
-           "Nelim's Pickle Tools: the decor is removed",
-           "Nelim's Pickle Tools: I let {int} ticks pass",
-           "Nelim's Pickle Tools: {string} carries the item {string}",
-           "Nelim's Pickle Tools: an adult animal of kind {string} named {string} is spawned at \({int}, {int}\)",
-           "Nelim's Pickle Tools: an animal of kind {string} named {string} is spawned at \({int}, {int}\) at life stage {int}",
-           "Nelim's Pickle Tools: I frame the animal {string} at zoom {int}",
-           "Nelim's Pickle Tools: studio presentation mode is enabled",
-           "Nelim's Pickle Tools: {string} is undressed",
-           "Nelim's Sanctuary: I am at the sanctuary {string}",
-           "Nelim's Pickle Tools: I frame the cell \({int}, {int}\) at zoom {float}",
-           "Nelim's Pickle Tools: {string} stands at \({int}, {int}\) facing {word}",
-           "Nelim's Pickle Tools: {string} wears {string} dyed rgb \({int}, {int}, {int}\)",
-           "Nelim's Pickle Tools: {string} hair colour is rgb \({int}, {int}, {int}\)",
-           "Nelim's Pickle Tools: {string} facial expression is {string}",
-           "Nelim's Pickle Tools: the temperature of the map is {int} degrees"]
 
 
-def to_regex(expression):
-    """A Cucumber expression, as far as these steps use one: {string} {int} {float} {word} and escaped characters."""
-    out, i = [], 0
-    while i < len(expression):
-        if expression.startswith('{string}', i):
-            out.append(r'(?:"[^"]*"|\'[^\']*\')')
-            i += len('{string}')
-        elif expression.startswith('{int}', i):
-            out.append(r'-?\d+')
-            i += len('{int}')
-        elif expression.startswith('{float}', i):
-            out.append(r'-?\d+(?:\.\d+)?')
-            i += len('{float}')
-        elif expression.startswith('{word}', i):
-            out.append(r'[^\s]+')
-            i += len('{word}')
-        elif expression[i] == '\\' and i + 1 < len(expression):
-            out.append(re.escape(expression[i + 1]))
-            i += 2
-        else:
-            out.append(re.escape(expression[i]))
-            i += 1
-    return re.compile('^' + ''.join(out) + '$')
-
-
-def builtin_steps():
-    steps = []
-    for line in (PICKLE / 'pickle-steps.txt').read_text(encoding='utf-8').splitlines():
-        if line and not line.startswith('#'):
-            steps.append(line.split('\t', 1)[1])
-    return steps
-
-
-def custom_steps():
-    text = STEPS_CS.read_text(encoding='utf-8')
-    return re.findall(r'\[(?:Given|When|Then)\("((?:[^"\\]|\\.)*)"', text)
-
-
-def parse_features():
-    """(file, tags, scenario, keyword, step text) for every step line; tags are those in force for the scenario."""
-    steps, features = [], {}
+def feature_tags():
+    """file name -> tags of the Feature line."""
+    out = {}
     for file in sorted(FEATURES.glob('*.feature')):
-        feature_tags, scenario_tags, pending, scenario = set(), set(), set(), None
-        seen_feature = False
-        collected = []
+        pending, tags = set(), set()
         for raw in file.read_text(encoding='utf-8').splitlines():
             line = raw.strip()
-            if not line or line.startswith('#'):
-                continue
             if line.startswith('@'):
                 pending |= {t[1:] for t in line.split()}
-                continue
-            if line.startswith('Feature:'):
-                feature_tags, pending, seen_feature = pending, set(), True
-                continue
-            if line.startswith('Background:'):
-                scenario, scenario_tags, pending = 'Background', set(), set()
-                continue
-            if line.startswith(('Scenario:', 'Scenario Outline:')):
-                scenario, scenario_tags, pending = line.split(':', 1)[1].strip(), pending, set()
-                continue
-            match = re.match(r'^(Given|When|Then|And|But)\s+(.*)$', line)
-            if match:
-                collected.append((file.name, feature_tags | scenario_tags, scenario, match.group(1), match.group(2)))
-        steps.extend(collected)
-        features[file.name] = (feature_tags, seen_feature)
-    return steps, features
+            elif line.startswith('Feature:'):
+                tags, pending = pending, set()
+        out[file.name] = tags
+    return out
+
+
+def step_lines():
+    return [(f.name, m.group(1)) for f in sorted(FEATURES.glob('*.feature'))
+            for raw in f.read_text(encoding='utf-8').splitlines()
+            for m in [re.match(r'^\s*(?:Given|When|Then|And|But)\s+(.*)$', raw)] if m]
 
 
 def read_map(path):
@@ -130,64 +52,6 @@ def read_map(path):
 
 
 class PickleSuiteTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.steps, cls.features = parse_features()
-        cls.custom = custom_steps()
-        cls.known = builtin_steps() + LOAD_AUDIT + GALLERY + cls.custom
-        cls.compiled = [(e, to_regex(e)) for e in cls.known]
-
-    def test_there_are_features_and_steps(self):
-        self.assertGreaterEqual(len(self.features), 8)
-        self.assertGreater(len(self.steps), 25)
-        self.assertGreater(len(builtin_steps()), 190, 'pickle-steps.txt looks truncated')
-
-    def test_every_step_line_matches_exactly_one_step(self):
-        for file, _, scenario, keyword, text in self.steps:
-            with self.subTest(file=file, scenario=scenario, step=text):
-                matches = [e for e, rx in self.compiled if rx.match(text)]
-                self.assertTrue(matches, 'undefined step: ' + text)
-                self.assertEqual(len(matches), 1, 'ambiguous step: ' + text + ' matches ' + repr(matches))
-
-    def test_custom_steps_are_well_formed_and_all_used(self):
-        self.assertGreater(len(self.custom), 5)
-        texts = [t for _, _, _, _, t in self.steps]
-        for expression in self.custom:
-            with self.subTest(step=expression):
-                self.assertTrue(expression.startswith(PREFIX), 'a step text must carry the mod name')
-                # Cucumber reads these as optional text and alternatives.
-                self.assertNotRegex(re.sub(r'\{[a-z]*\}', '', expression), r'[()/]')
-                regex = to_regex(expression)
-                self.assertTrue(any(regex.match(t) for t in texts), 'no feature uses this step: delete it')
-        self.assertEqual(len(self.custom), len(set(self.custom)), 'a step is declared twice')
-
-    def test_no_custom_step_collides_with_a_builtin(self):
-        builtin = [to_regex(e) for e in builtin_steps() + LOAD_AUDIT]
-        for expression in self.custom:
-            sample = re.sub(r'\{string\}', '"x"', expression)
-            sample = re.sub(r'\{int\}', '1', sample)
-            sample = re.sub(r'\{float\}', '1.0', sample)
-            sample = re.sub(r'\{word\}', 'word', sample)
-            with self.subTest(step=expression):
-                self.assertFalse([rx for rx in builtin if rx.match(sample)])
-
-    def test_tags_are_known_and_nothing_is_set_aside(self):
-        for file, (tags, seen) in self.features.items():
-            self.assertTrue(seen, file + ' has no Feature line')
-            for tag in tags:
-                with self.subTest(file=file, tag=tag):
-                    self.assertNotEqual(tag, 'wip', 'a scenario set aside is not a scenario passed')
-                    self.assertTrue(tag in ALLOWED_TAGS or REQUIRES.match(tag), 'unknown tag @' + tag)
-        for file, tags, scenario, _, _ in self.steps:
-            for tag in tags:
-                self.assertNotEqual(tag, 'wip', file)
-                self.assertTrue(tag in ALLOWED_TAGS or REQUIRES.match(tag), f'{file}: unknown tag @{tag}')
-
-    def test_features_are_numbered_and_named_after_what_they_show(self):
-        names = [f.name for f in sorted(FEATURES.glob('*.feature'))]
-        for index, name in enumerate(names, 1):
-            self.assertRegex(name, rf'^{index:02d}-[a-z0-9-]+\.feature$')
-
     def test_the_companion_is_a_pickle_test_mod_of_this_mod(self):
         about = ET.parse(PICKLE / 'Mod/About/About.xml').getroot()
         self.assertEqual(about.findtext('packageId'), 'nelim.megabees.pickletests')
@@ -248,7 +112,7 @@ class PickleSuiteTests(unittest.TestCase):
             'nelim.pickletools.stagedecor': 'wsl-deps.sanctuary.map',
             'nelim.pickletools.colonistrace': 'wsl-deps.sanctuary.map',
         }
-        for file, (tags, _) in self.features.items():
+        for file, tags in feature_tags().items():
             for tag in tags:
                 if tag.startswith('requires:'):
                     with self.subTest(file=file, tag=tag):
@@ -261,29 +125,19 @@ class PickleSuiteTests(unittest.TestCase):
         core = GAME / 'Data/Core/Defs'
         if not core.is_dir():
             self.skipTest('no installed game')
-        kinds, things = set(), set()
-        for file in core.rglob('*.xml'):
-            for definition in ET.parse(file).getroot():
-                name = definition.findtext('defName')
-                if definition.tag == 'PawnKindDef':
-                    kinds.add(name)
-                elif definition.tag == 'ThingDef':
-                    things.add(name)
-        for file in (ROOT / 'Mod/Defs').rglob('*.xml'):
-            for definition in ET.parse(file).getroot():
-                name = definition.findtext('defName')
-                (kinds if definition.tag == 'PawnKindDef' else things).add(name)
+        things = set()
+        for folder in (core, ROOT / 'Mod/Defs'):
+            for file in folder.rglob('*.xml'):
+                things.update(d.findtext('defName') for d in ET.parse(file).getroot() if d.tag == 'ThingDef')
         recipes = set()
         ads = WORKSHOP / '3238353862/1.6/Defs/HediffDefs'
         if ads.is_dir():
             for file in ads.glob('*.xml'):
                 recipes.update(re.findall(r'<defName>([^<]+)</defName>', file.read_text(encoding='utf-8')))
-        for file, _, scenario, _, text in self.steps:
-            with self.subTest(file=file, step=text):
-                quoted = re.findall(r'"([^"]*)"', text)
-                if re.search(r'is spawned at', text):
-                    pass  # the kind is fixed ("Megabee"), not a step argument
-                elif text.startswith(PREFIX + ' the race'):
+        for file, text in step_lines():
+            if text.startswith(PREFIX + ' the race'):
+                with self.subTest(file=file, step=text):
+                    quoted = re.findall(r'"([^"]*)"', text)
                     self.assertIn(quoted[0], things, 'not a ThingDef')
                     if 'recipe' in text and recipes:
                         self.assertIn(quoted[1], recipes, 'not a recipe of the installed ADS 2')

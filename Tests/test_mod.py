@@ -1,39 +1,10 @@
-"""Portable regression checks for the delivered XML and resources."""
-import unittest, struct, json, re
+"""Exact values and fixtures of this mod. XML parse, duplicate defs and French coverage are Check-ModBasics and Check-Translations."""
+import unittest, struct
 from pathlib import Path
 import xml.etree.ElementTree as E
 R=Path(__file__).resolve().parents[1]
 
 class ModTests(unittest.TestCase):
-    def test_xml_and_duplicate_defs(self):
-        seen=set()
-        for f in (R/'Mod').rglob('*.xml'):
-            root=E.parse(f).getroot()
-            if root.tag=='Defs':
-                for d in root:
-                    k=(d.tag,d.findtext('defName'))
-                    self.assertNotIn(k,seen); seen.add(k)
-        self.assertEqual(len(seen),13)
-
-    def test_translation_coverage_and_paths(self):
-        inventory=json.loads((R/'Tests/translation-inventory.json').read_text(encoding='utf-8'))
-        actual={}
-        for f in (R/'Mod/Languages/French/DefInjected').glob('*/*.xml'):
-            for n in E.parse(f).getroot():
-                k=(f.parent.name,n.tag); self.assertNotIn(k,actual); actual[k]=n.text
-                self.assertTrue(n.text and n.text.strip()); self.assertNotRegex(n.text,r'TODO|TODO_TRANSLATE')
-        found=0
-        for f in (R/'Mod/Defs').glob('*.xml'):
-            found+=sum(n.tag in {'label','labelMale','labelPlural','description','customLabel'} for n in E.parse(f).iter())
-        self.assertEqual(len(inventory),found)
-        self.assertEqual(set(actual),{(i['type'],i['key']) for i in inventory})
-        for i in inventory:
-            d=E.parse(R/i['file']).find(f"{i['type']}[defName='{i['defName']}']")
-            self.assertIsNotNone(d)
-            n=d.find(i['xpath']); self.assertIsNotNone(n)
-            self.assertEqual(n.text,i['english'],i['key']+' source changed; review translation')
-            self.assertEqual(re.findall(r'\{[^}]+\}',n.text),re.findall(r'\{[^}]+\}',actual[(i['type'],i['key'])]))
-
     def test_metadata(self):
         a=E.parse(R/'Mod/About/About.xml').getroot()
         self.assertEqual(a.findtext('packageId'),'nelim.megabees')
