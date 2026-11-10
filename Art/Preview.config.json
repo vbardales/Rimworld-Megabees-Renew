@@ -1,26 +1,18 @@
 {
   "panel": {
     "title": "Megabees Renew",
-    "titleSize": 46,
     "titleParts": [
-      {
-        "text": "Megabees"
-      }
+      { "text": "Megabees" },
+      { "text": "Renew", "suffix": true }
     ],
-    "suffix": "Renew",
-    "copyLines": [
-      "Giant, docile honeybees.",
-      "Wool, eggs, tallow and salve."
-    ]
+    "description": "Giant, docile honeybees. Wool, eggs, tallow and salve."
   },
-  "backgroundFile": "Preview-source.png",
-  "echo": {
-    "file": "echo-source.png"
-  },
+  "background": { "file": "Preview-source.png" },
   "icon": {
     "file": "ModIcon-source.png",
     "corner": "bottom-left"
   },
+  "echo": { "file": "echo-source.png" },
   "palette": {
     "veil": "#262A1D",
     "inkPrimary": "#F2ECE1",
